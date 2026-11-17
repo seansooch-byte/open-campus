@@ -34,3 +34,9 @@ Append-only. A later entry supersedes an earlier one; earlier entries are never 
 - **Incremental, not a rewrite:** the imported MCAT enums on topics, cards and questions stay until the first topic is drafted, because only then is the right shape for a coded topic known. The MCAT taxonomy is now required only while such content exists. Alternative considered: replace every enum now (Track A step 2 in one go), rejected because nothing would exercise the new shapes yet.
 - **Generated plan:** each course's README (topic plan and per-code coverage table) is rendered from `course.json` and checked for staleness, so the T1 table cannot drift from the data.
 - **GE-111 at T1:** 19 topics cover all 19 leaf codes. The T1 gate also asks for human sampling of the Planner's output; that review is Sean's.
+
+## 2026-11-17: the library app shows courses, in the Open Campus design
+
+- **What:** the imported web app's home and layout (still titled for the pre-med library it came from) became the Open Campus library: a course list with tiers and a course page showing anchors, the topic plan and per-area coverage. It uses the landing page's tokens (Newsreader, IBM Plex, paper and forest green) rather than the imported zinc and sky Tailwind look.
+- **Empty routes:** Next's static export fails on a dynamic route with no params, which broke the build while topics, cards and questions are empty. Each such route returns one placeholder param that renders notFound(), and a postbuild step deletes the placeholder pages. Alternatives considered: deleting the MCAT routes (they are the renderers the first drafted topic will reuse) or fixture content in `content/` (would ship fake study material).
+- **Not deployed:** campus.seansooch.dev still serves the landing page; the app moves to its front door when a course is worth studying (SPEC: landing page moves when the web app is ready).

@@ -2,10 +2,10 @@ import { readdir, readFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import matter from 'gray-matter';
-import { CardDeckSchema, QuestionSetSchema, TopicFrontmatterSchema, type CardDeck, type QuestionSet, type TopicFrontmatter } from '@open-campus/schema';
+import { CardDeckSchema, CourseSchema, QuestionSetSchema, StandardSchema, TopicFrontmatterSchema, type CardDeck, type Course, type QuestionSet, type Standard, type TopicFrontmatter } from '@open-campus/schema';
 
-// Build-time only. `next build` runs with cwd = apps/web.
-const ROOT = process.env.CONTENT_DIR ?? resolve(process.cwd(), '../../content');
+// Build-time only. `next build` runs with cwd = apps/web; tests run from the repo root.
+const ROOT = process.env.CONTENT_DIR ?? (existsSync(resolve(process.cwd(), 'content')) ? resolve(process.cwd(), 'content') : resolve(process.cwd(), '../../content'));
 
 export type Topic = { subject: string; slug: string; frontmatter: TopicFrontmatter; body: string; deck?: CardDeck; dir: string };
 export type SetEntry = { section: string; slug: string; set: QuestionSet };
@@ -46,4 +46,24 @@ export async function loadSets(): Promise<SetEntry[]> {
 
 export async function loadDiagramFile(topic: Topic, file: string): Promise<string> {
   return readFile(join(topic.dir, file), 'utf8');
+}
+
+export type CourseEntry = { course: Course; standards: Standard[] };
+
+async function jsonFiles(path: string): Promise<string[]> {
+  if (!existsSync(path)) return [];
+  return (await readdir(path)).filter((n) => n.endsWith('.json')).sort();
+}
+
+/** Every course with the standards it anchors to. tools/ validate has already checked the references. */
+export async function loadCourses(): Promise<CourseEntry[]> {
+  const standards = await Promise.all((await jsonFiles(join(ROOT, 'standards'))).map(async (n) => StandardSchema.parse(JSON.parse(await readFile(join(ROOT, 'standards', n), 'utf8')))));
+  const courses: CourseEntry[] = [];
+  for (const id of await dirs(join(ROOT, 'courses'))) {
+    const file = join(ROOT, 'courses', id, 'course.json');
+    if (!existsSync(file)) continue;
+    const course = CourseSchema.parse(JSON.parse(await readFile(file, 'utf8')));
+    courses.push({ course, standards: standards.filter((s) => course.anchors.some((a) => a.standard === s.id)) });
+  }
+  return courses;
 }

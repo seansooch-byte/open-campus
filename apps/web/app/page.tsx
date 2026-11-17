@@ -1,42 +1,46 @@
 import { Badge } from '@open-campus/ui';
-import { loadSets, loadTopics } from '../lib/content';
+import { loadCourses, loadSets, loadTopics } from '../lib/content';
 import { Search } from './search';
 
 export default async function Home() {
-  const [topics, sets] = await Promise.all([loadTopics(), loadSets()]);
-  const subjects = [...new Set(topics.map((t) => t.subject))];
+  const [courses, topics, sets] = await Promise.all([loadCourses(), loadTopics(), loadSets()]);
   return (
-    <div className="space-y-8">
-      <h1 className="text-3xl font-bold">Pre-Med Library</h1>
+    <div className="home">
+      <header className="course-head">
+        <p className="kicker">The library</p>
+        <h1>Courses</h1>
+        <p className="lede">Each course is planned against an outside exam or standard by code. A course is ready to study when it reaches T4 Examined; until then its tier says how far along it is.</p>
+      </header>
       <Search />
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Topics</h2>
-        {subjects.map((subject) => (
-          <div key={subject}>
-            <h3 className="font-semibold capitalize">{subject.replace(/-/g, ' ')}</h3>
-            <ul className="list-disc pl-6">
-              {topics.filter((t) => t.subject === subject).map((t) => (
-                <li key={t.slug}>
-                  <a href={`/topics/${t.subject}/${t.slug}/`}>{t.frontmatter.title}</a>{' '}
-                  {t.frontmatter.example && <Badge tone="info">Example</Badge>}{' '}
-                  {t.deck && <a href={`/cards/${t.subject}/${t.slug}/`} className="text-sm">cards</a>}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <ul className="course-list">
+        {courses.map(({ course }) => (
+          <li key={course.id}>
+            <a href={`/courses/${course.id}/`}><span className="codes">{course.code}</span> {course.title}</a>
+            <span className="tier-badge">{course.tier}</span>
+            <span className="note">{course.topics.length} topics</span>
+          </li>
         ))}
-      </section>
-      <section>
-        <h2 className="text-2xl font-semibold">Question sets</h2>
-        <ul className="list-disc pl-6">
-          {sets.map((s) => (
-            <li key={`${s.section}/${s.slug}`}>
-              <a href={`/questions/${s.section}/${s.slug}/`}>{s.set.title}</a> <Badge>{s.section.toUpperCase()}</Badge>{' '}
-              {s.set.example && <Badge tone="info">Example</Badge>}
-            </li>
-          ))}
-        </ul>
-      </section>
+      </ul>
+      {topics.length > 0 && (
+        <section>
+          <h2>Topics</h2>
+          <ul className="plain">
+            {topics.map((t) => (
+              <li key={`${t.subject}/${t.slug}`}><a href={`/topics/${t.subject}/${t.slug}/`}>{t.frontmatter.title}</a>{' '}
+                {t.frontmatter.example && <Badge tone="info">Example</Badge>}{' '}
+                {t.deck && <a href={`/cards/${t.subject}/${t.slug}/`}>cards</a>}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {sets.length > 0 && (
+        <section>
+          <h2>Question sets</h2>
+          <ul className="plain">
+            {sets.map((s) => <li key={`${s.section}/${s.slug}`}><a href={`/questions/${s.section}/${s.slug}/`}>{s.set.title}</a></li>)}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }

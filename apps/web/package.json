@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NEXT_TELEMETRY_DISABLED=1 next dev",
     "build": "NEXT_TELEMETRY_DISABLED=1 next build",
-    "postbuild": "pagefind --site out",
+    "postbuild": "node scripts/prune-placeholders.mjs && pagefind --site out",
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {

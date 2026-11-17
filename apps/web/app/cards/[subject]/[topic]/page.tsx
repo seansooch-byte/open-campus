@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
 import { Badge, Deck } from '@open-campus/ui';
 import { loadTopics } from '../../../../lib/content';
+import { PLACEHOLDER, staticParamsOrPlaceholder } from '../../../../lib/courses';
 
 type Params = { subject: string; topic: string };
 
 export async function generateStaticParams(): Promise<Params[]> {
-  return (await loadTopics()).filter((t) => t.deck).map((t) => ({ subject: t.subject, topic: t.slug }));
+  return staticParamsOrPlaceholder((await loadTopics()).filter((t) => t.deck).map((t) => ({ subject: t.subject, topic: t.slug })), { subject: PLACEHOLDER, topic: PLACEHOLDER });
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {

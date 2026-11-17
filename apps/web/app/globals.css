@@ -2,18 +2,57 @@
 @import 'katex/dist/katex.min.css';
 @source '../../../packages/ui/src';
 
-body {
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  background: #fff;
-  color: #18181b;
+/* Open Campus tokens, shared with site/assets/site.css. */
+:root {
+  --paper:#FAF8F3; --sheet:#FFFFFF; --ink:#171A19; --soft:#545955; --mute:#80857F; --rule:#E3DFD5;
+  --brand:#1F4D40; --brand-wash:#E6EEEA;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
+body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.55; }
+a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+.masthead { display: flex; gap: 1.5rem; align-items: baseline; padding: .9rem 1.25rem; border-bottom: 1px solid var(--rule); font-size: .9rem; }
+.masthead a { text-decoration: none; color: var(--soft); }
+.masthead .mark { font-family: var(--mono); font-weight: 600; color: var(--brand); letter-spacing: .02em; }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #09090b;
-    color: #e4e4e7;
-  }
-  a { color: #7dd3fc; }
+h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.2rem, 6vw, 3.1rem); line-height: 1.05; letter-spacing: -.01em; }
+h2 { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; margin: 3rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+h3 { font-weight: 600; font-size: 1rem; margin: 1.75rem 0 .5rem; display: flex; gap: .6rem; align-items: baseline; }
+.kicker, .codes, .num, .tier-badge, .weight { font-family: var(--mono); font-size: .78rem; letter-spacing: .02em; }
+.kicker { color: var(--brand); text-transform: uppercase; margin-bottom: .6rem; }
+.lede { font-family: var(--serif); font-size: 1.25rem; color: var(--soft); margin-top: 1rem; }
+.note, .prereq { color: var(--mute); font-size: .9rem; }
+.tier { margin-top: 1.25rem; color: var(--soft); font-size: .95rem; }
+.tier-badge { display: inline-block; background: var(--brand-wash); color: var(--brand); padding: .15rem .5rem; border-radius: 3px; font-weight: 600; margin-right: .5rem; }
+.weight { margin-left: auto; color: var(--brand); font-weight: 600; }
+.codes { color: var(--mute); white-space: nowrap; }
+ul.plain { list-style: none; padding: 0; }
+ul.plain li { margin: .35rem 0; }
+
+ol.topics { list-style: none; padding: 0; }
+ol.topics > li { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+.topic-line { display: grid; grid-template-columns: 2.2rem 1fr auto; gap: .5rem; align-items: baseline; }
+.num { color: var(--brand); font-weight: 600; }
+.topic-title { font-weight: 500; }
+.objectives { margin: .4rem 0 0 2.7rem; padding-left: 1rem; list-style: disc; color: var(--soft); font-size: .92rem; }
+.prereq { margin: .3rem 0 0 2.7rem; }
+
+table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: .92rem; background: var(--sheet); border: 1px solid var(--rule); }
+th { text-align: left; font-weight: 600; font-size: .78rem; color: var(--soft); text-transform: uppercase; letter-spacing: .03em; }
+th, td { padding: .5rem .7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th:nth-child(1) { width: 5.5rem; } th:nth-child(2) { width: 45%; }
+.home .lede { margin-bottom: 1.75rem; }
+
+.course-list { list-style: none; padding: 0; margin-top: 2rem; border-top: 1px solid var(--rule); }
+.course-list li { display: flex; gap: .75rem; align-items: baseline; padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+.course-list a { font-family: var(--serif); font-size: 1.3rem; text-decoration: none; color: var(--ink); flex: 1; }
+.course-list .tier-badge { margin: 0; }
+
+@media (max-width: 560px) {
+  .topic-line { grid-template-columns: 2rem 1fr; }
+  .topic-line .codes { grid-column: 2; }
+  .objectives, .prereq { margin-left: 2.5rem; }
 }
-
-a { color: #0369a1; text-decoration: underline; }

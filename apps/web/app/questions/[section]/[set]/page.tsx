@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
 import { QuestionPlayer } from '@open-campus/ui';
 import { loadSets } from '../../../../lib/content';
+import { PLACEHOLDER, staticParamsOrPlaceholder } from '../../../../lib/courses';
 
 type Params = { section: string; set: string };
 
 export async function generateStaticParams(): Promise<Params[]> {
-  return (await loadSets()).map((s) => ({ section: s.section, set: s.slug }));
+  return staticParamsOrPlaceholder((await loadSets()).map((s) => ({ section: s.section, set: s.slug })), { section: PLACEHOLDER, set: PLACEHOLDER });
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {

@@ -3,11 +3,12 @@ import { renderSmilesToSvg } from '@open-campus/tools/diagrams';
 import { Deck, TopicPage, type TopicDiagram } from '@open-campus/ui';
 import { loadDiagramFile, loadTopics } from '../../../../lib/content';
 import { Mdx } from '../../../../lib/mdx';
+import { PLACEHOLDER, staticParamsOrPlaceholder } from '../../../../lib/courses';
 
 type Params = { subject: string; topic: string };
 
 export async function generateStaticParams(): Promise<Params[]> {
-  return (await loadTopics()).map((t) => ({ subject: t.subject, topic: t.slug }));
+  return staticParamsOrPlaceholder((await loadTopics()).map((t) => ({ subject: t.subject, topic: t.slug })), { subject: PLACEHOLDER, topic: PLACEHOLDER });
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {
