@@ -48,6 +48,12 @@ a:hover{text-decoration-thickness:2px}
   .part{display:grid;grid-template-columns:220px 700px;gap:56px;justify-content:center}
   .part > .label{position:sticky;top:88px;align-self:start}
   .col{margin:0}
+  /* The hero spans the whole grid (label column plus text column); the ending and the
+     sources sit in the text column, so every left edge on the page lines up. */
+  .hero.col{max-width:976px;margin:0 auto}
+  .hero .deck{max-width:40ch}
+  .cta.col,.refs.col{max-width:976px;margin:0 auto;padding-left:276px}
+  footer .col{max-width:976px;margin:0 auto;padding-left:276px}
 }
 
 /* Hero */
