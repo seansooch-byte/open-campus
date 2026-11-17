@@ -9,17 +9,22 @@ export async function walk(root:string):Promise<string[]> {
  const entries=await readdir(root,{withFileTypes:true});
  return (await Promise.all(entries.map(e=>e.isDirectory()?walk(join(root,e.name)):Promise.resolve([join(root,e.name)])))).flat().sort();
 }
-export const schemas:Record<string,z.ZodType>={topic:s.TopicFrontmatterSchema,cards:s.CardDeckSchema,questions:s.QuestionSetSchema,exam:s.ExamSchema,guide:s.GuideFrontmatterSchema,school:s.SchoolProfileSchema,path:s.PathSchema,taxonomy:s.TaxonomySchema,standard:s.StandardSchema,course:s.CourseSchema};
+export const schemas:Record<string,z.ZodType>={standard:s.StandardSchema,course:s.CourseSchema,topic:s.TopicFrontmatterSchema,cards:s.CardDeckSchema,questions:s.QuestionSetSchema,exam:s.ExamSchema};
+// Everything a learner studies lives inside its course: courses/<course>/{course.json, topics/<topic>/, questions/, exams/}.
+const layout:[RegExp,string][]=[
+ [/^standards\/[^/]+\.json$/,'standard'],
+ [/^courses\/[^/]+\/course\.json$/,'course'],
+ [/^courses\/[^/]+\/topics\/[^/]+\/topic\.mdx$/,'topic'],
+ [/^courses\/[^/]+\/topics\/[^/]+\/cards\.json$/,'cards'],
+ [/^courses\/[^/]+\/questions\/[^/]+\.json$/,'questions'],
+ [/^courses\/[^/]+\/exams\/[^/]+\.json$/,'exam'],
+];
 export function contentType(file:string):string|undefined {
- if(/^subjects\/[^/]+\/[^/]+\/topic\.mdx$/.test(file)) return 'topic';
- if(/^subjects\/[^/]+\/[^/]+\/cards\.json$/.test(file)) return 'cards';
- if(/^questions\/(bio-biochem|chem-phys|psych-soc|cars)\/[^/]+\.json$/.test(file)) return 'questions';
- for(const [dir,type,ext] of [['exams','exam','json'],['guides','guide','mdx'],['schools','school','json'],['paths','path','json']]) if(new RegExp(`^${dir}/[^/]+\\.${ext}$`).test(file)) return type;
- if(file==='taxonomy/aamc-outline.json') return 'taxonomy';
- if(/^standards\/[^/]+\.json$/.test(file)) return 'standard';
- if(/^courses\/[^/]+\/course\.json$/.test(file)) return 'course';
+ return layout.find(([re])=>re.test(file))?.[1];
 }
-const ignorable=/(?:^|\/)(?:\.gitkeep|README\.md)$|^subjects\/[^/]+\/[^/]+\/diagrams\/(?:[^/]+\/)*[^/]+\.(?:svg|mmd|smi)$/;
+/** The course directory a content file belongs to, if any. */
+export function courseOf(file:string):string|undefined { return /^courses\/([^/]+)\//.exec(file)?.[1]; }
+const ignorable=/(?:^|\/)(?:\.gitkeep|README\.md)$|^courses\/[^/]+\/topics\/[^/]+\/diagrams\/(?:[^/]+\/)*[^/]+\.(?:svg|mmd|smi)$/;
 export async function loadContent(root:string):Promise<{items:Item[];issues:Issue[];files:string[]}> {
  const files=await walk(root), items:Item[]=[], issues:Issue[]=[];
  for(const absolute of files) {

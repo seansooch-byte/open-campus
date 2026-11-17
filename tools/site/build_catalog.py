@@ -106,6 +106,7 @@ def build() -> str:
   <nav aria-label="Site">
     <a href="/">The case</a>
     <a href="/catalog/" class="keep" aria-current="page">Catalog</a>
+    <a href="/library/" class="keep">Library</a>
     <a href="https://github.com/seansooch-byte/open-campus">Source</a>
   </nav>
 </div></header>

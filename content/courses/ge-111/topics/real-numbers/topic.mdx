@@ -1,0 +1,138 @@
+---
+id: real-numbers
+version: 1
+updated: '2026-11-17'
+verification:
+  drafted_by: claude
+  verified_by: codex
+  model: gpt-5.6-sol
+  date: '2026-11-17'
+  result: fixed
+  notes: "Drafted by claude-opus-5-5. Three verifier passes: round 1 found 4 problems (a misnamed number family, an overclaim about the field properties, an imprecise root card, a wrong distractor explanation), round 2 found 1 (union gap explanations), round 3 passed with no findings."
+---
+Algebra is arithmetic with the numbers left unnamed. Before a letter can stand for a number, you need to know which numbers it might stand for, which rules every one of them obeys, and how to describe a whole stretch of them at once. This topic covers those three things.
+
+## The families of real numbers
+
+The real numbers are every number that has a place on the number line. They sort into families, each one inside the next.
+
+- **Natural numbers** are the counting numbers: $1, 2, 3, 4, \ldots$ Some books start them at $0$; in this course they start at $1$.
+- **Whole numbers** are the natural numbers together with $0$.
+- **Integers** add the negatives: $\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots$
+- **Rational numbers** are every number that can be written as a fraction $\frac{p}{q}$ of two integers with $q \neq 0$. Every integer is rational, because $n = \frac{n}{1}$.
+- **Irrational numbers** are the real numbers that are not rational. Their decimals never end and never settle into a repeating block.
+
+So natural numbers sit inside the whole numbers, which sit inside the integers, which sit inside the rationals. The rationals and the irrationals split the real numbers between them with no overlap: every real number is exactly one of the two.
+
+### Telling rational from irrational by the decimal
+
+A fraction's decimal either stops or repeats forever. $\frac{3}{8} = 0.375$ stops. $\frac{2}{3} = 0.666\ldots$ repeats one digit; $\frac{3}{11} = 0.272727\ldots$ repeats the block $27$. The reverse is also true: any decimal that stops or repeats can be turned back into a fraction.
+
+**Worked example.** Write $0.272727\ldots$ as a fraction. Call it $x$. The repeating block has two digits, so multiply by $100$:
+
+$$
+100x = 27.272727\ldots
+$$
+
+Subtract the original $x = 0.272727\ldots$ and the repeating tails cancel:
+
+$$
+99x = 27, \qquad x = \frac{27}{99} = \frac{3}{11}.
+$$
+
+An irrational number has a decimal that does neither. The best known are $\pi = 3.14159\ldots$ and the square roots of whole numbers that are not perfect squares, such as $\sqrt{2}$, $\sqrt{5}$ and $\sqrt{10}$.
+
+### Square roots are a common trap
+
+A square root sign does not make a number irrational. $\sqrt{16} = 4$, an integer, and $\sqrt{\frac{9}{25}} = \frac{3}{5}$, a rational number. Simplify first, then classify. In the same way $\frac{\sqrt{8}}{\sqrt{2}} = \sqrt{4} = 2$ is an integer, even though each piece alone is irrational.
+
+**Worked example.** Classify each number by the smallest family it belongs to.
+
+| Number | Smallest family | Why |
+|---|---|---|
+| $7$ | natural | a counting number |
+| $0$ | whole | not a counting number, but whole |
+| $-12$ | integer | a negative integer |
+| $-\frac{5}{4}$ | rational | a fraction of integers |
+| $2.5$ | rational | it stops: $\frac{5}{2}$ |
+| $0.\overline{3}$ | rational | it repeats: $\frac{1}{3}$ |
+| $\sqrt{49}$ | natural | it equals $7$ |
+| $\sqrt{7}$ | irrational | $7$ is not a perfect square |
+| $\pi$ | irrational | its decimal never ends or repeats |
+
+Each number also belongs to every larger family: $7$ is a whole number, an integer, a rational number and a real number too.
+
+## The rules every real number obeys
+
+Addition and multiplication of real numbers follow a short list of properties. They justify the basic steps of rearranging and simplifying an expression; later topics add the rules for exponents and roots.
+
+| Property | Addition | Multiplication |
+|---|---|---|
+| Commutative | $a + b = b + a$ | $ab = ba$ |
+| Associative | $(a + b) + c = a + (b + c)$ | $(ab)c = a(bc)$ |
+| Identity | $a + 0 = a$ | $a \cdot 1 = a$ |
+| Inverse | $a + (-a) = 0$ | $a \cdot \frac{1}{a} = 1$ for $a \neq 0$ |
+
+The **distributive property** connects the two operations: $a(b + c) = ab + ac$. It is the property you will use most, because it is how parentheses get opened and how common factors get pulled out.
+
+Three consequences are worth holding on to.
+
+1. **Subtraction and division do not commute.** $7 - 2 = 5$ but $2 - 7 = -5$. Rewriting $a - b$ as $a + (-b)$ lets you use the addition rules safely.
+2. **A minus sign in front of parentheses distributes.** $-(a - b) = -a + b = b - a$. Forgetting to change the second sign is one of the most common algebra errors.
+3. **Zero has no reciprocal.** Division by zero is undefined: $\frac{5}{0}$ is not a number. But $\frac{0}{5} = 0$ is fine.
+
+## Order of operations
+
+When an expression has several operations, they are done in a fixed order:
+
+1. Grouping first: parentheses, brackets, the top and bottom of a fraction bar, and what sits under a root.
+2. Exponents and roots.
+3. Multiplication and division, together, from left to right.
+4. Addition and subtraction, together, from left to right.
+
+Multiplication does not come before division; they share a level and go left to right. So $12 \div 3 \cdot 2 = 4 \cdot 2 = 8$, not $12 \div 6 = 2$.
+
+Exponents bind tighter than a leading minus sign. $-3^2$ means $-(3^2) = -9$, while $(-3)^2 = 9$. The parentheses decide whether the negative is squared.
+
+**Worked example.** Evaluate $8 - 2(3 - 5)^2 \div 4$.
+
+$$
+\begin{aligned}
+8 - 2(3 - 5)^2 \div 4 &= 8 - 2(-2)^2 \div 4 && \text{grouping} \\
+&= 8 - 2 \cdot 4 \div 4 && \text{exponent} \\
+&= 8 - 8 \div 4 && \text{left to right} \\
+&= 8 - 2 = 6.
+\end{aligned}
+$$
+
+## Order on the number line and interval notation
+
+On the number line, $a < b$ means $a$ lies to the left of $b$. That is why $-5 < -2$ even though $5$ is bigger than $2$: $-5$ is farther left.
+
+Algebra often needs a whole stretch of the line at once, such as every $x$ with $-2 < x \le 5$. **Interval notation** writes that stretch with its two ends:
+
+- a square bracket means the endpoint is included;
+- a parenthesis means it is left out;
+- $\infty$ and $-\infty$ are not numbers, so they always take a parenthesis.
+
+| Inequality | Interval | On the number line |
+|---|---|---|
+| $-2 < x \le 5$ | $(-2, 5]$ | open dot at $-2$, closed dot at $5$ |
+| $0 \le x \le 1$ | $[0, 1]$ | closed dots at both ends |
+| $x \ge 3$ | $[3, \infty)$ | closed dot at $3$, arrow to the right |
+| $x < -1$ | $(-\infty, -1)$ | open dot at $-1$, arrow to the left |
+| every real number | $(-\infty, \infty)$ | the whole line |
+
+When a set is two separate pieces, join the intervals with the union symbol $\cup$. "Every $x$ with $x < -1$ or $x \ge 4$" is $(-\infty, -1) \cup [4, \infty)$.
+
+**Worked example.** Write the set of numbers greater than $-3$ and at most $2$ in interval notation. "Greater than $-3$" leaves $-3$ out, so it takes a parenthesis; "at most $2$" includes $2$, so it takes a bracket: $(-3, 2]$.
+
+A quick check for any interval: the left number must be the smaller one. $(5, -2]$ describes nothing.
+
+## Summary
+
+- Natural $\subset$ whole $\subset$ integer $\subset$ rational, and rational and irrational together make up the reals.
+- Rational decimals stop or repeat; irrational decimals do neither. Simplify a root before deciding.
+- The commutative, associative, identity, inverse and distributive properties justify the basic rearranging and simplifying steps. Subtraction and division do not commute, and division by zero is undefined.
+- Order: grouping, exponents, multiplication and division left to right, then addition and subtraction left to right. $-3^2 = -9$.
+- Brackets include an endpoint, parentheses exclude it, and infinity always gets a parenthesis.

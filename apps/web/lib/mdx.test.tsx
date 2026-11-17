@@ -15,4 +15,10 @@ describe('MDX pipeline', () => {
     expect(html).toContain('class="katex-display"');
     expect(html).toContain('mfrac');
   });
+  it('renders GFM tables with math inside cells', async () => {
+    const { content } = await compileMDX({ source: '| Number | Family |\n|---|---|\n| $-12$ | integer |\n', options: { mdxOptions } });
+    const html = renderToStaticMarkup(content);
+    expect(html).toContain('<table>');
+    expect(html).toMatch(/<td><span class="katex">/);
+  });
 });

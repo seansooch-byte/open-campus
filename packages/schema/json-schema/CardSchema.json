@@ -14,50 +14,12 @@
       "type": "string",
       "minLength": 1
     },
-    "categories": {
+    "codes": {
+      "minItems": 1,
       "type": "array",
       "items": {
         "type": "string",
-        "enum": [
-          "1A",
-          "1B",
-          "1C",
-          "1D",
-          "2A",
-          "2B",
-          "2C",
-          "3A",
-          "3B",
-          "4A",
-          "4B",
-          "4C",
-          "4D",
-          "4E",
-          "5A",
-          "5B",
-          "5C",
-          "5D",
-          "5E",
-          "6A",
-          "6B",
-          "6C",
-          "7A",
-          "7B",
-          "7C",
-          "8A",
-          "8B",
-          "8C",
-          "9A",
-          "9B",
-          "10A"
-        ]
-      }
-    },
-    "tags": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "minLength": 1
+        "pattern": "^[A-Z][A-Z0-9]*(?:[-.][A-Z0-9]+)*$"
       }
     },
     "clinical": {

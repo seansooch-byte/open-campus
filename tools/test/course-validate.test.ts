@@ -10,7 +10,7 @@ async function put(file:string,data:object) {await mkdir(dirname(join(root,file)
 const errors=async()=>(await validate(root)).filter(i=>i.severity==='error');
 beforeEach(async()=>{root=await mkdtemp(join(tmpdir(),'oc-course-'));await put('standards/demo-exam.json',standard);});
 afterEach(async()=>rm(root,{recursive:true,force:true}));
-it('a course-only tree validates without the legacy MCAT taxonomy',async()=>{await put('courses/ge-901/course.json',course());expect(await errors()).toEqual([]);});
+it('a course-only tree validates',async()=>{await put('courses/ge-901/course.json',course());expect(await errors()).toEqual([]);});
 it('ids must match their paths',async()=>{
  await put('courses/ge-902/course.json',course());await put('standards/other.json',standard);
  expect((await errors()).filter(e=>e.rule==='path-id').map(e=>e.file).sort()).toEqual(['courses/ge-902/course.json','standards/other.json']);

@@ -28,13 +28,13 @@ it('computes five-word shingle Jaccard similarity',()=>{
 it('real examples have no originality errors and report empty references',async()=>{
  const issues=await lintOriginality(contentDir,refs);expect(issues.filter(i=>i.severity==='error')).toEqual([]);expect(issues.some(i=>i.rule==='verbatim'&&i.severity==='info')).toBe(true);
 },180_000); // one full lint of the growing content tree; ~50s locally, over 60s on the CI runner
-it('banned source fixture: allows only taxonomy note and source exemption',async()=>{
- const file=join(root,'taxonomy/aamc-outline.json'),taxonomy=JSON.parse(await readFile(file,'utf8'));
- taxonomy.note+=' AAMC Official Guide';await writeFile(file,JSON.stringify(taxonomy));
+it('banned source fixture: a standard may name its publisher, source and note, nothing else',async()=>{
+ const file=join(root,'standards/example-outline.json'),standard=JSON.parse(await readFile(file,'utf8'));
+ standard.note+=' AAMC Official Guide';standard.publisher='AAMC';await writeFile(file,JSON.stringify(standard));
  expect((await lintOriginality(root,refs)).filter(i=>i.rule==='banned-source')).toEqual([]);
- taxonomy.sections[0].title='Kaplan';await writeFile(file,JSON.stringify(taxonomy));
+ standard.nodes[0].title='Kaplan';await writeFile(file,JSON.stringify(standard));
  expect((await lintOriginality(root,refs)).some(i=>i.rule==='banned-source')).toBe(true);
- const topic=join(root,'subjects/biochemistry/example-amino-acid-structure/topic.mdx');
+ const topic=join(root,'courses/ex-100/topics/example-amino-acid-structure/topic.mdx');
  await writeFile(topic,(await readFile(topic,'utf8'))+'\nUWORLD\n');expect((await lintOriginality(root,refs)).some(i=>i.rule==='banned-source'&&i.file.endsWith('topic.mdx'))).toBe(true);
 },30000); // three full lints of the growing content tree; the default 5s is too tight on CI
 it('structure-numbering: flags x.y numbering in titles and headings, not decimals in prose or math',()=>{
@@ -58,8 +58,13 @@ it('structure-numbering: Setext headings and fence matching',()=>{
  // a ~~~ line does not close a ``` block, so the heading inside stays ignored
  expect(rules('```\n~~~\n# 1.1 still code\n```\nDone.')).toEqual([]);
 });
+it('structure-numbering: course plan topic titles are checked',async()=>{
+ const file=join(root,'courses/ex-100/course.json'),course=JSON.parse(await readFile(file,'utf8'));
+ course.topics[1].title='1.2 Peptide bonds';await writeFile(file,JSON.stringify(course));
+ expect((await lintOriginality(root,refs)).some(i=>i.rule==='structure-numbering'&&i.file.endsWith('course.json'))).toBe(true);
+});
 it('structure-numbering: lintOriginality reports it as an error',async()=>{
- const file=join(root,'subjects/biochemistry/example-amino-acid-structure/topic.mdx');
+ const file=join(root,'courses/ex-100/topics/example-amino-acid-structure/topic.mdx');
  await writeFile(file,(await readFile(file,'utf8'))+'\n## 1.1 Amino acids\n');
  expect((await lintOriginality(root,refs)).some(i=>i.rule==='structure-numbering'&&i.severity==='error')).toBe(true);
 });
@@ -68,7 +73,7 @@ it('verbatim fixture flags local references',async()=>{
  expect((await lintOriginality(root,refs)).some(i=>i.rule==='verbatim'&&i.severity==='error')).toBe(true);
 });
 async function deckPair(wordsA:string,wordsB:string) {
- const file=join(root,'subjects/biochemistry/example-amino-acid-structure/cards.json'),deck=JSON.parse(await readFile(file,'utf8'));
+ const file=join(root,'courses/ex-100/topics/example-amino-acid-structure/cards.json'),deck=JSON.parse(await readFile(file,'utf8'));
  deck.cards=[{id:'first',front:wordsA,back:'end',clinical:false},{id:'second',front:wordsB,back:'end',clinical:false}];await writeFile(file,JSON.stringify(deck));
  return (await lintOriginality(root,refs)).filter(i=>i.rule==='near-duplicate');
 }

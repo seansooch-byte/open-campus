@@ -1,8 +1,9 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {join} from 'node:path';
 import matter from 'gray-matter';
-import type {Item} from '../content.js';
-export type Kind='topic'|'card'|'question'|'guide';
+import {courseOf,type Item} from '../content.js';
+export type Kind='topic'|'card'|'question';
+const group=(file:string)=>`course: ${courseOf(file)??'none'}`;
 export type Verification={drafted_by?:string;verified_by?:string;result?:string;notes?:string;model?:string;date?:string};
 export type PendingItem={key:string;file:string;id:string;kind:Kind;group:string;title:string;claim:string;verification?:Verification;snapshot:unknown};
 export type Decision={decision:'pending'|'approved'|'rejected';notes:string};
@@ -16,12 +17,11 @@ const normalize=(o:any)=>o&&typeof o==='object'&&o.clinical===true&&o.sean_revie
 export function itemSnapshot(file:string,id:string,data:any,body=''):unknown {
  if(file.endsWith('.mdx')) {
   if(data?.id!==id) return undefined;
-  const guide=file.startsWith('guides/');
-  return snapshotOf(normalize(data),{body:body.trim(),kind:guide?'guide':'topic',group:guide?'guides':`subject: ${data.subject}`});
+  return snapshotOf(normalize(data),{body:body.trim(),kind:'topic',group:group(file)});
  }
  const c=data?.cards?.find((y:any)=>y.id===id), q=data?.questions?.find((y:any)=>y.id===id);
- if(c) return snapshotOf(normalize(c),{deckVerification:data.verification??null,kind:'card',group:`subject: ${file.split('/')[1]}`,topic:data.topic_id});
- if(q) return snapshotOf(normalize(q),{deckVerification:data.verification??null,kind:'question',group:`section: ${data.section}`,title:data.title});
+ if(c) return snapshotOf(normalize(c),{deckVerification:data.verification??null,kind:'card',group:group(file),topic:data.topic_id});
+ if(q) return snapshotOf(normalize(q),{deckVerification:data.verification??null,kind:'question',group:group(file),title:data.title});
 }
 /** Card or question ids that appear more than once within a file, as `<file>#<id>` keys. */
 export function duplicateKeys(items:Item[]):string[] {
@@ -34,21 +34,21 @@ export function duplicateKeys(items:Item[]):string[] {
 }
 const stable=(v:unknown):string=>JSON.stringify(v,(_,x)=>x&&typeof x==='object'&&!Array.isArray(x)?Object.fromEntries(Object.entries(x).sort(([a],[b])=>a.localeCompare(b))):x)??'undefined';
 const isPending=(o:any)=>o?.clinical===true&&(o.sean_review===undefined||o.sean_review==='pending');
-/** Every clinical item (topic, card, question, guide) whose sean_review is pending or missing, in file order. Example items are included: the flag is about review state only. */
+/** Every clinical item (topic, card, question) whose sean_review is pending or missing, in file order. Example items are included: the flag is about review state only. */
 export function findPending(items:Item[]):PendingItem[] {
  const out:PendingItem[]=[];
  for(const it of items) {
   const d=it.data, key=(id:string)=>`${it.file}#${id}`;
-  if((it.type==='topic'||it.type==='guide')&&isPending(d)) out.push({key:key(d.id),file:it.file,id:d.id,kind:it.type,group:it.type==='guide'?'guides':`subject: ${d.subject}`,title:d.title,claim:it.body.trim(),verification:d.verification,snapshot:itemSnapshot(it.file,d.id,d,it.body)});
+  if(it.type==='topic'&&isPending(d)) out.push({key:key(d.id),file:it.file,id:d.id,kind:'topic',group:group(it.file),title:`topic ${d.id}`,claim:it.body.trim(),verification:d.verification,snapshot:itemSnapshot(it.file,d.id,d,it.body)});
   else if(it.type==='cards') {
-   for(const c of d.cards) if(isPending(c)) out.push({key:key(c.id),file:it.file,id:c.id,kind:'card',group:`subject: ${it.file.split('/')[1]}`,title:`card in ${d.topic_id}`,claim:cardClaim(c),verification:c.verification??d.verification,snapshot:itemSnapshot(it.file,c.id,d)});
+   for(const c of d.cards) if(isPending(c)) out.push({key:key(c.id),file:it.file,id:c.id,kind:'card',group:group(it.file),title:`card in ${d.topic_id}`,claim:cardClaim(c),verification:c.verification??d.verification,snapshot:itemSnapshot(it.file,c.id,d)});
   } else if(it.type==='questions') {
-   for(const q of d.questions) if(isPending(q)) out.push({key:key(q.id),file:it.file,id:q.id,kind:'question',group:`section: ${d.section}`,title:`question in ${d.title}`,claim:questionClaim(q),verification:q.verification??d.verification,snapshot:itemSnapshot(it.file,q.id,d)});
+   for(const q of d.questions) if(isPending(q)) out.push({key:key(q.id),file:it.file,id:q.id,kind:'question',group:group(it.file),title:`question in ${d.title}`,claim:questionClaim(q),verification:q.verification??d.verification,snapshot:itemSnapshot(it.file,q.id,d)});
   }
  }
  return out;
 }
-/** Group pending items by subject/section/guides; groups and items are sorted so output is stable. */
+/** Group pending items by course; groups and items are sorted so output is stable. */
 export function groupPending(pending:PendingItem[]):[string,PendingItem[]][] {
  const groups=new Map<string,PendingItem[]>();
  for(const p of pending) groups.set(p.group,[...(groups.get(p.group)??[]),p]);

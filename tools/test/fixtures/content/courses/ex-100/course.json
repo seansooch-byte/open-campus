@@ -1,0 +1,45 @@
+{
+  "id": "ex-100",
+  "code": "EX-100",
+  "title": "Example Course",
+  "credits": 1,
+  "block": "supporting",
+  "tier": "T2",
+  "anchors": [
+    {
+      "standard": "example-outline"
+    }
+  ],
+  "topics": [
+    {
+      "id": "example-amino-acid-structure",
+      "title": "Example: the alpha carbon",
+      "codes": [
+        "EX-1.1",
+        "EX-1.2"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq"
+      ],
+      "objectives": [
+        "Identify the four groups attached to a typical alpha carbon.",
+        "Explain why glycine lacks a chiral alpha carbon."
+      ]
+    },
+    {
+      "id": "example-peptide-bonds",
+      "title": "Example: peptide bonds",
+      "codes": [
+        "EX-1.1"
+      ],
+      "requires": [
+        "prose"
+      ],
+      "prerequisites": [
+        "example-amino-acid-structure"
+      ]
+    }
+  ]
+}

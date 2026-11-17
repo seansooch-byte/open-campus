@@ -1,0 +1,93 @@
+{
+  "topic_id": "real-numbers",
+  "cards": [
+    {
+      "id": "natural-whole",
+      "front": "What separates the natural numbers from the whole numbers in this course?",
+      "back": "Natural numbers start at 1 (1, 2, 3, ...). Whole numbers add 0."
+    },
+    {
+      "id": "integers",
+      "front": "Which numbers are integers?",
+      "back": "The whole numbers and their negatives: ..., −2, −1, 0, 1, 2, ..."
+    },
+    {
+      "id": "rational-definition",
+      "front": "What makes a number rational?",
+      "back": "It can be written as p/q with p and q integers and q ≠ 0. Every integer is rational, since n = n/1."
+    },
+    {
+      "id": "rational-decimal",
+      "front": "How can you tell from its decimal whether a number is rational?",
+      "back": "A rational number's decimal stops or repeats forever. An irrational number's decimal does neither."
+    },
+    {
+      "id": "repeating-to-fraction",
+      "front": "How do you turn 0.272727... into a fraction?",
+      "back": "Let x = 0.2727..., multiply by 100 (the block has two digits), subtract: 99x = 27, so x = 27/99 = 3/11."
+    },
+    {
+      "id": "root-trap",
+      "front": "Is √16 irrational?",
+      "back": "No. √16 = 4, an integer. Simplify a root before classifying: for a nonnegative integer n, √n is irrational exactly when n is not a perfect square, as with √2 or √5."
+    },
+    {
+      "id": "distributive",
+      "front": "State the distributive property.",
+      "back": "a(b + c) = ab + ac. It opens parentheses and pulls out common factors."
+    },
+    {
+      "id": "minus-parentheses",
+      "front": "Simplify −(a − b).",
+      "back": "−a + b, which is b − a. The minus sign changes the sign of every term inside."
+    },
+    {
+      "id": "non-commuting",
+      "front": "Which of the four basic operations do not commute?",
+      "back": "Subtraction and division: 7 − 2 ≠ 2 − 7 and 8 ÷ 2 ≠ 2 ÷ 8."
+    },
+    {
+      "id": "divide-by-zero",
+      "front": "What are 0 ÷ 5 and 5 ÷ 0?",
+      "back": "0 ÷ 5 = 0. 5 ÷ 0 is undefined: zero has no reciprocal."
+    },
+    {
+      "id": "order-of-operations",
+      "front": "In what order are operations done?",
+      "back": "Grouping, then exponents and roots, then multiplication and division left to right, then addition and subtraction left to right."
+    },
+    {
+      "id": "same-level",
+      "front": "Evaluate 12 ÷ 3 · 2.",
+      "back": "8. Multiplication and division share a level, so go left to right: 12 ÷ 3 = 4, then 4 · 2 = 8."
+    },
+    {
+      "id": "negative-square",
+      "front": "What is −3²? What is (−3)²?",
+      "back": "−3² = −(3²) = −9, because the exponent binds before the minus sign. (−3)² = 9."
+    },
+    {
+      "id": "bracket-parenthesis",
+      "front": "In interval notation, what do [ and ( mean?",
+      "back": "A square bracket includes the endpoint; a parenthesis leaves it out. (−2, 5] includes 5 but not −2."
+    },
+    {
+      "id": "infinity",
+      "front": "Why is it [3, ∞) and never [3, ∞]?",
+      "back": "∞ is not a number that can be reached or included, so it always takes a parenthesis."
+    },
+    {
+      "id": "union",
+      "front": "Write x < −1 or x ≥ 4 in interval notation.",
+      "back": "(−∞, −1) ∪ [4, ∞). The union symbol joins the two separate pieces."
+    }
+  ],
+  "verification": {
+    "drafted_by": "claude",
+    "verified_by": "codex",
+    "model": "gpt-5.6-sol",
+    "date": "2026-11-17",
+    "result": "fixed",
+    "notes": "Drafted by claude-opus-5-5. Three verifier passes: round 1 found 4 problems (a misnamed number family, an overclaim about the field properties, an imprecise root card, a wrong distractor explanation), round 2 found 1 (union gap explanations), round 3 passed with no findings."
+  }
+}

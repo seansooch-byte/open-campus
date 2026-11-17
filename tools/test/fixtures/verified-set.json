@@ -1,8 +1,9 @@
 {
   "id": "verified-set",
-  "section": "bio-biochem",
-  "title": "Example \u2014 amino acid connectivity",
-  "topics": ["example-amino-acid-structure"],
+  "title": "Example: amino acid connectivity",
+  "topics": [
+    "example-amino-acid-structure"
+  ],
   "passage": null,
   "questions": [
     {
@@ -31,13 +32,11 @@
         }
       ],
       "answer": "B",
-      "tags": {
-        "fc": "FC1",
-        "category": "1A",
-        "skill": "S1"
-      },
       "difficulty": 1,
-      "clinical": false
+      "clinical": false,
+      "codes": [
+        "EX-1.1"
+      ]
     },
     {
       "id": "chiral-center",
@@ -65,13 +64,11 @@
         }
       ],
       "answer": "C",
-      "tags": {
-        "fc": "FC1",
-        "category": "1A",
-        "skill": "S2"
-      },
       "difficulty": 1,
-      "clinical": false
+      "clinical": false,
+      "codes": [
+        "EX-1.2"
+      ]
     }
   ],
   "verification": {

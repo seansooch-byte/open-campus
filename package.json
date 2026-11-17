@@ -9,6 +9,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit && pnpm --filter @open-campus/ui --filter @open-campus/web run typecheck",
     "build": "pnpm --filter @open-campus/web build",
+    "stage": "sh tools/site/stage-library.sh",
+    "ship": "sh tools/site/stage-library.sh && npx --yes wrangler@latest deploy",
     "test": "vitest run",
     "validate": "pnpm --silent --filter @open-campus/tools check",
     "coverage": "pnpm --silent --filter @open-campus/tools coverage",

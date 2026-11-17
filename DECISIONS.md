@@ -40,3 +40,18 @@ Append-only. A later entry supersedes an earlier one; earlier entries are never 
 - **What:** the imported web app's home and layout (still titled for the pre-med library it came from) became the Open Campus library: a course list with tiers and a course page showing anchors, the topic plan and per-area coverage. It uses the landing page's tokens (Newsreader, IBM Plex, paper and forest green) rather than the imported zinc and sky Tailwind look.
 - **Empty routes:** Next's static export fails on a dynamic route with no params, which broke the build while topics, cards and questions are empty. Each such route returns one placeholder param that renders notFound(), and a postbuild step deletes the placeholder pages. Alternatives considered: deleting the MCAT routes (they are the renderers the first drafted topic will reuse) or fixture content in `content/` (would ship fake study material).
 - **Not deployed:** campus.seansooch.dev still serves the landing page; the app moves to its front door when a course is worth studying (SPEC: landing page moves when the web app is ready).
+
+## 2026-11-17: everything a learner studies is keyed by outline code and lives in its course
+
+- **What:** topics, card decks, question sets and exams moved under `content/courses/<id>/` and are tagged by the codes of the course's standard. A topic file holds only what is drafted (body, diagrams, version, review state); its title, codes, objectives and prerequisites live once, in `course.json`. The validator checks every drafted item against its course plan and every card or question code against its topics.
+- **Removed:** the imported MCAT enums and taxonomy, and the pre-medicine guide, school profile and path schemas. The earlier entry deferred the enum change until the first topic was drafted; that topic is now drafted. Pre-medicine is AdmissionsAcademy's (SPEC 5.8), so its schemas had no owner here. Alternative considered: keeping the MCAT fields beside the new ones, rejected because every tool would carry two models.
+- **Coverage report:** the MCAT category and blueprint report became a per-code count of planned and drafted topics, cards and questions. The standard's own weights replace the blueprint file.
+- **Math in cards and questions:** written with Unicode (√, ², ≤, ∞, ∪) because the deck and player render plain text; lesson prose uses KaTeX. Rendering math in the players belongs to the `math` unit type.
+- **Tables in lessons:** `remark-gfm` was added to the MDX pipeline (the first new dependency since import), because classification and property tables are central to the algebra topics and raw pipe tables rendered as text.
+- **Verification of the first topic:** drafted by Claude Opus 5.5, checked by Codex `gpt-5.6-sol` against a fixed checklist with a JSON output schema (the CLI enforces it). Three passes: 4 findings, then 1, then none; recorded as `result: fixed` with the rounds in `notes`.
+
+## 2026-11-17: the library app lives at /library/
+
+- **What:** the Next.js app is built with `basePath: '/library'` and staged into `site/library/` (generated, gitignored) so the one Worker serves the landing page, the catalog and the library. `pnpm ship` builds, stages and deploys. The landing page and catalog link to it.
+- **Alternatives:** the app at `/` with the landing page moved (Sean chose `/library/` so nothing public moves); a second Worker on another hostname.
+- **Base path detail:** plain anchors do not get Next's basePath, so internal links go through `href()`; Pagefind gets `baseUrl` so result links carry the prefix.

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import './globals.css';
+import { href } from '../lib/paths';
 
 export const metadata = { title: 'Open Campus library' };
 
@@ -13,8 +14,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <nav className="masthead">
-          <a href="https://campus.seansooch.dev/" className="mark">Open Campus</a>
-          <a href="/">Library</a>
+          <a href="/" className="mark">Open Campus</a>
+          <a href={href('/')}>Library</a>
+          <a href="/catalog/">Catalog</a>
         </nav>
         <main>{children}</main>
       </body>

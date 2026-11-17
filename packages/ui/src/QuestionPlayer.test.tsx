@@ -6,7 +6,6 @@ import { QuestionPlayer } from './QuestionPlayer';
 
 const set: QuestionSet = {
   id: 'demo',
-  section: 'bio-biochem',
   title: 'Demo',
   topics: ['demo-topic'],
   passage: null,
@@ -20,7 +19,7 @@ const set: QuestionSet = {
       { key: 'D', text: 'Delta', explanation: 'Explains D.' },
     ],
     answer: 'B',
-    tags: { fc: 'FC1', category: '1A', skill: 'S1' },
+    codes: ['CA-4.1'],
     difficulty: 1,
     clinical: false,
   }],

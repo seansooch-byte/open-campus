@@ -50,8 +50,9 @@ export async function lintOriginality(root:string,referenceDir=fileURLToPath(new
  for(const file of files) {
   if(!/\.(json|mdx|svg|mmd|smi|txt)$/.test(file)) continue;
   let text=await readFile(file,'utf8');
-  if(['taxonomy/aamc-outline.json'].includes(relative(root,file).split('\\').join('/'))) {
-   try {const value=JSON.parse(text);delete value.note;delete value.source;text=JSON.stringify(value);} catch { /* parse failure already reported */ }
+  // A standard must name its publisher and source, so those fields (and its note) are exempt.
+  if(relative(root,file).split('\\').join('/').startsWith('standards/')) {
+   try {const value=JSON.parse(text);delete value.note;delete value.source;delete value.publisher;text=JSON.stringify(value);} catch { /* parse failure already reported */ }
   }
   for(const match of bannedMatches(text)) issues.push({file:relative(root,file),rule:'banned-source',message:`Contains banned source ${match}`,severity:'error'});
  }
@@ -78,6 +79,7 @@ export function structureNumberingIssues(items:Item[]):Issue[] {
  const flag=(file:string,what:string,text:string)=>issues.push({file,rule:'structure-numbering',message:numberingMessage(what,text),severity:'error'});
  for(const i of items) {
   if(i.type==='topic'||i.type==='questions') if(typeof i.data.title==='string'&&structureNumbering.test(i.data.title)) flag(i.file,i.type==='topic'?'Topic title':'Question set title',i.data.title);
+  if(i.type==='course') for(const t of i.data.topics) if(structureNumbering.test(t.title)) flag(i.file,'Topic title',t.title);
   if(i.type==='topic') {
    // CommonMark-style fences: close only on the same character with at least the opening length.
    let fence:{ch:string;len:number}|null=null;

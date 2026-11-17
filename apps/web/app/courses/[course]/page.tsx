@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { loadCourses } from '../../../lib/content';
 import { courseView } from '../../../lib/courses';
+import { href } from '../../../lib/paths';
 
 type Params = { course: string };
 
@@ -21,7 +22,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const entry = (await loadCourses()).find((c) => c.course.id === id);
   if (!entry) notFound();
   const { course } = entry;
-  const v = courseView(course, entry.standards);
+  const v = courseView(course, entry.standards, new Map(entry.topics.map((t) => [t.slug, t.frontmatter.verification])));
+  const draftedCount = v.topics.filter((t) => t.drafted).length;
   const outlined = course.tier === 'T1';
   return (
     <article data-pagefind-body className="course">
@@ -30,7 +32,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         <h1>{course.title}</h1>
         {course.summary && <p className="lede">{course.summary}</p>}
         <p className="tier"><span className="tier-badge">{course.tier} {TIERS[course.tier]}</span>
-          {outlined && ' The plan is set and every outline code is covered. Lessons, cards and questions are not written yet.'}</p>
+          {outlined && ` The plan is set and every outline code is covered. ${draftedCount} of ${v.topics.length} topics are drafted so far.`}</p>
       </header>
 
       <section>
@@ -48,7 +50,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         <ol className="topics">
           {v.topics.map((t) => (
             <li key={t.id} id={t.id}>
-              <div className="topic-line"><span className="num">{String(t.number).padStart(2, '0')}</span><span className="topic-title">{t.title}</span><span className="codes">{t.codes.join(' ')}</span></div>
+              <div className="topic-line"><span className="num">{String(t.number).padStart(2, '0')}</span><span className="topic-title">{t.drafted ? <a href={href(`/courses/${course.id}/${t.id}/`)}>{t.title}</a> : t.title}<span className={t.drafted ? 'status drafted' : 'status'}>{t.status}</span></span><span className="codes">{t.codes.join(' ')}</span></div>
               {t.objectives.length > 0 && <ul className="objectives">{t.objectives.map((o) => <li key={o}>{o}</li>)}</ul>}
               {t.prerequisites.length > 0 && <p className="prereq">After: {t.prerequisites.join(', ')}</p>}
             </li>

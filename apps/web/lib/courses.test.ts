@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CourseSchema, StandardSchema } from '@open-campus/schema';
-import { courseView, staticParamsOrPlaceholder, PLACEHOLDER } from './courses';
+import { courseView, staticParamsOrPlaceholder, topicStatus, PLACEHOLDER } from './courses';
 import { loadCourses } from './content';
 
 const std = StandardSchema.parse({ id: 'demo-exam', title: 'Demo Exam', publisher: 'Board', source: 'https://example.org', retrieved: '2026-11-17', version: 'v1', note: 'n', levels: [{ id: 'area', title: 'Area' }, { id: 'topic', title: 'Topic' }], nodes: [{ code: 'D-1', level: 'area', title: 'Ops', weight: 70 }, { code: 'D-1.1', level: 'topic', parent: 'D-1', title: 'Exponents' }, { code: 'D-2', level: 'area', title: 'Graphs', weight: 30 }, { code: 'D-2.1', level: 'topic', parent: 'D-2', title: 'Shifts' }] });
@@ -19,6 +19,19 @@ describe('courseView', () => {
   });
   it('lists prerequisite titles for each topic in order', () => {
     expect(courseView(course, [std]).topics.map((t) => [t.number, t.title, t.prerequisites])).toEqual([[1, 'Powers', []], [2, 'Moves', ['Powers']]]);
+  });
+});
+
+describe('topicStatus', () => {
+  const v = { drafted_by: 'claude', verified_by: 'codex', model: 'm', date: '2026-11-17', result: 'pass' } as const;
+  it('names planned, drafted and second-lane checked topics; a disputed check does not count', () => {
+    expect(topicStatus(false)).toBe('Planned');
+    expect(topicStatus(true)).toBe('Drafted, not yet checked');
+    expect(topicStatus(true, v)).toBe('Drafted and checked by a second model');
+    expect(topicStatus(true, { ...v, result: 'disputed' })).toBe('Drafted, not yet checked');
+  });
+  it('courseView marks drafted topics', () => {
+    expect(courseView(course, [std], new Map([['powers', undefined]])).topics.map((t) => [t.id, t.drafted])).toEqual([['powers', true], ['moves', false]]);
   });
 });
 

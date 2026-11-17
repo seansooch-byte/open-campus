@@ -10,61 +10,32 @@
       "type": "string",
       "minLength": 1
     },
-    "sections": {
+    "time_minutes": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "items": {
       "minItems": 1,
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "section": {
+          "set_id": {
             "type": "string",
-            "enum": [
-              "bio-biochem",
-              "chem-phys",
-              "psych-soc",
-              "cars"
-            ]
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
           },
-          "title": {
-            "type": "string",
-            "minLength": 1
-          },
-          "time_minutes": {
-            "type": "integer",
-            "exclusiveMinimum": 0,
-            "maximum": 9007199254740991
-          },
-          "items": {
+          "question_ids": {
             "minItems": 1,
             "type": "array",
             "items": {
-              "type": "object",
-              "properties": {
-                "set_id": {
-                  "type": "string",
-                  "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-                },
-                "question_ids": {
-                  "minItems": 1,
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-                  }
-                }
-              },
-              "required": [
-                "set_id"
-              ],
-              "additionalProperties": false
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
             }
           }
         },
         "required": [
-          "section",
-          "title",
-          "time_minutes",
-          "items"
+          "set_id"
         ],
         "additionalProperties": false
       }
@@ -73,7 +44,8 @@
   "required": [
     "id",
     "title",
-    "sections"
+    "time_minutes",
+    "items"
   ],
   "additionalProperties": false
 }

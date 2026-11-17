@@ -1,7 +1,8 @@
 // Cloudflare: one Worker on its own hostname, serving site/ as static files.
 // Deploy from the repo root with `npx wrangler deploy` (it creates the DNS record and certificate
-// for campus.seansooch.dev on first run). When the web app is ready, point assets.directory at its
-// static export instead of site/.
+// for campus.seansooch.dev on first run). `pnpm ship` first stages the library app's static export
+// at site/library/ (tools/site/stage-library.sh), so one Worker serves the landing page, the catalog
+// and the library.
 {
   "name": "open-campus",
   "compatibility_date": "2026-11-01",

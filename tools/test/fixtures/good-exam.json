@@ -1,18 +1,12 @@
 {
-  "id": "fl-1",
+  "id": "practice-1",
   "title": "Fixture exam",
-  "sections": [
+  "time_minutes": 95,
+  "items": [
     {
-      "section": "bio-biochem",
-      "title": "Biology",
-      "time_minutes": 95,
-      "items": [
-        {
-          "set_id": "verified-set",
-          "question_ids": [
-            "glycine-substituent"
-          ]
-        }
+      "set_id": "verified-set",
+      "question_ids": [
+        "glycine-substituent"
       ]
     }
   ]

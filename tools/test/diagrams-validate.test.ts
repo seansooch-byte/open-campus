@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validate } from '../src/validate.js';
 
-const smi = 'subjects/biochemistry/example-amino-acid-structure/diagrams/glycine.smi';
+const smi = 'courses/ex-100/topics/example-amino-acid-structure/diagrams/glycine.smi';
 let root: string;
 beforeEach(async () => {
   root = await mkdtemp(join(fileURLToPath(new URL('./', import.meta.url)), '.tmp-oc-'));

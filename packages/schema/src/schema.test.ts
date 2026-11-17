@@ -3,22 +3,17 @@ import {readFile,readdir} from 'node:fs/promises';
 import * as s from './index.js';
 import {exportedSchemas} from './export.js';
 const verification={drafted_by:'claude',verified_by:'codex',model:'independent-test',date:'2026-10-07',result:'pass'};
-const question={id:'q-one',stem:'Pick one.',choices:['A','B','C','D'].map(key=>({key,text:`Choice ${key}`,explanation:`Reason ${key}`})),answer:'A',tags:{fc:'FC1',category:'1A',skill:'S1'},difficulty:1};
-const taxonomy={outlineVersion:'2020 outline',source:'https://example.org/outline',retrieved:'2026-10-07',note:'Original titles',sections:[{id:'bio-biochem',title:'Cells'}],foundationalConcepts:[{id:'FC1',title:'Molecules',section:'bio-biochem',categories:[{id:'1A',title:'Proteins'}]}],skills:[{id:'S1',title:'Recall',kind:'sirs'},{id:'C1',title:'Locate',kind:'cars'}]};
+const question={id:'q-one',stem:'Pick one.',choices:['A','B','C','D'].map(key=>({key,text:`Choice ${key}`,explanation:`Reason ${key}`})),answer:'A',codes:['CA-4.1'],difficulty:1};
+const topic={id:'topic',version:1,updated:'2026-10-07'};
 const cases:[string,{safeParse:(data:unknown)=>{success:boolean}},object,object][]=[
  ['Verification',s.VerificationSchema,verification,{...verification,verified_by:'claude'}],
- ['AamcTag',s.AamcTagSchema,question.tags,{...question.tags,category:'99Z'}],
  ['DiagramRef',s.DiagramRefSchema,{id:'figure',file:'diagrams/figure.svg',kind:'svg',alt:'A figure'},{id:'figure',file:'../figure.svg',kind:'svg',alt:'A figure'}],
- ['TopicFrontmatter',s.TopicFrontmatterSchema,{id:'topic',title:'Topic',subject:'biology',categories:['1A'],learning_objectives:['Learn'],diagrams:[],version:1,updated:'2026-10-07'},{id:'topic',title:'Topic',subject:'biology',categories:['1A'],learning_objectives:[],diagrams:[],version:1,updated:'2026-10-07'}],
- ['Card',s.CardSchema,{id:'card',front:'Front',back:'Back'},{id:'card',front:'Front',back:'Back',clinical:true}],
+ ['TopicFrontmatter',s.TopicFrontmatterSchema,topic,{...topic,version:0}],
+ ['Card',s.CardSchema,{id:'card',front:'Front',back:'Back',codes:['CA-4.1']},{id:'card',front:'Front',back:'Back',clinical:true}],
  ['CardDeck',s.CardDeckSchema,{topic_id:'topic',cards:[{id:'card',front:'Front',back:'Back'}]},{topic_id:'topic',cards:[]}],
  ['Question',s.QuestionSchema,question,{...question,choices:question.choices.slice(0,3)}],
- ['QuestionSet',s.QuestionSetSchema,{id:'set',section:'bio-biochem',title:'Set',topics:['topic-one'],passage:null,questions:[question]},{id:'set',section:'bio-biochem',title:'Set',topics:['topic-one'],passage:null,questions:[question,question]}],
- ['Exam',s.ExamSchema,{id:'fl-1',title:'Exam',sections:[{section:'bio-biochem',title:'Biology',time_minutes:95,items:[{set_id:'set'}]}]},{id:'fl-1',title:'Exam',sections:[]}],
- ['GuideFrontmatter',s.GuideFrontmatterSchema,{id:'guide',title:'Guide',kind:'amcas',audience:'both',sources:[]},{id:'guide',title:'Guide',kind:'amcas',audience:'both',sources:[],clinical:true}],
- ['SchoolProfile',s.SchoolProfileSchema,{id:'school',name:'School',degree:'MD',state:'MI',website:'https://example.edu',facts:[{key:'name',value:'School',source_url:'https://example.edu',as_of:'2026-10-07'}]},{id:'school',name:'School',degree:'MD',state:'MI',website:'https://example.edu',facts:[{key:'name',value:'School',source_url:'https://example.edu'}]}],
- ['Path',s.PathSchema,{id:'path',title:'Path',track:'both',steps:[{id:'step',title:'Step',timing:'Before applying',description:'Prepare'}]},{id:'path',title:'Path',track:'both',steps:[{id:'bad slug',title:'Step',timing:'Soon',description:'Prepare'}]}],
- ['Taxonomy',s.TaxonomySchema,taxonomy,{...taxonomy,foundationalConcepts:[{...taxonomy.foundationalConcepts[0]!,categories:[{id:'2A',title:'Proteins'}]}]}],
+ ['QuestionSet',s.QuestionSetSchema,{id:'set',title:'Set',topics:['topic-one'],questions:[question]},{id:'set',title:'Set',topics:['topic-one'],questions:[question,question]}],
+ ['Exam',s.ExamSchema,{id:'practice-1',title:'Exam',time_minutes:90,items:[{set_id:'set'}]},{id:'practice-1',title:'Exam',time_minutes:90,items:[]}],
 ];
 describe('schema contracts',()=>{
  for(const [name,schema,good,bad] of cases) {
@@ -34,31 +29,23 @@ describe('schema contracts',()=>{
   expect(s.QuestionSchema.safeParse({...question,clinical:true}).success).toBe(false);
   expect(s.QuestionSchema.safeParse({...question,clinical:true,sean_review:'pending'}).success).toBe(true);
   expect(s.QuestionSchema.safeParse({...question,verification:{...verification,verified_by:'claude'}}).success).toBe(false);
-  const good=cases.find(c=>c[0]==='TopicFrontmatter')![2];
-  expect(s.TopicFrontmatterSchema.safeParse({...good,clinical:true}).success).toBe(false);
+  expect(s.TopicFrontmatterSchema.safeParse({...topic,clinical:true}).success).toBe(false);
  });
- it('taxonomy enforces https source, date format, skill kind and word limit',()=>{
-  expect(s.TaxonomySchema.safeParse({...taxonomy,source:'http://example.org'}).success).toBe(false);
-  expect(s.TaxonomySchema.safeParse({...taxonomy,retrieved:'10/07/2026'}).success).toBe(false);
-  expect(s.TaxonomySchema.safeParse({...taxonomy,skills:[{id:'S1',title:'Recall',kind:'other'}]}).success).toBe(false);
-  expect(s.TaxonomySchema.safeParse({...taxonomy,sections:[{id:'bio-biochem',title:'one two three four five six seven eight nine'}]}).success).toBe(false);
-  expect(s.TaxonomySchema.safeParse({...taxonomy,extra:1}).success).toBe(false);
- });
- it('topics may have no categories only when skills are given, and reject crosswalk fields',()=>{
-  const t=cases.find(c=>c[0]==='TopicFrontmatter')![2] as any;
-  expect(s.TopicFrontmatterSchema.safeParse({...t,categories:[]}).success).toBe(false);
-  expect(s.TopicFrontmatterSchema.safeParse({...t,categories:[],skills:['S4']}).success).toBe(true);
-  expect(s.TopicFrontmatterSchema.safeParse({...t,skills:[]}).success).toBe(false);
-  expect(s.TopicFrontmatterSchema.safeParse({...t,aa_lesson:'lesson-one'}).success).toBe(false);
- });
- it('uses AAMC skill and section ids',()=>{
-  expect(s.SkillSchema.options).toEqual(['S1','S2','S3','S4','C1','C2','C3']);
-  expect(s.SectionSchema.options).toEqual(['bio-biochem','chem-phys','psych-soc','cars']);
- });
- it('defaults clinical to false and prerequisites to empty',()=>{
+
+
+
+ it('defaults clinical to false, diagrams to empty and passage to null',()=>{
   expect(s.QuestionSchema.parse(question).clinical).toBe(false);
-  expect(s.TopicFrontmatterSchema.parse(cases.find(c=>c[0]==='TopicFrontmatter')![2]).prerequisites).toEqual([]);
+  expect(s.TopicFrontmatterSchema.parse(topic).diagrams).toEqual([]);
+  expect(s.QuestionSetSchema.parse({id:'set',title:'Set',topics:['t'],questions:[question]}).passage).toBeNull();
  });
+});
+it('topic files reject plan fields, and questions need outline codes',()=>{
+ expect(s.TopicFrontmatterSchema.safeParse({...topic,title:'Topic'}).success).toBe(false);
+ expect(s.TopicFrontmatterSchema.safeParse({...topic,subject:'biology'}).success).toBe(false);
+ expect(s.QuestionSchema.safeParse({...question,codes:[]}).success).toBe(false);
+ expect(s.QuestionSchema.safeParse({...question,codes:['ca-4.1']}).success).toBe(false);
+ expect(s.QuestionSchema.safeParse({...question,tags:{fc:'FC1',category:'1A',skill:'S1'}}).success).toBe(false);
 });
 it('committed JSON Schemas exactly match fresh exports',async()=>{
  const generated=exportedSchemas(), directory=new URL('../json-schema/',import.meta.url);
@@ -82,7 +69,7 @@ describe('exam eligibility',()=>{
 });
 
 it('question sets name their topics: non-empty, unique ids, main topic first',()=>{
- const base={id:'set',section:'bio-biochem',title:'Set',passage:null,questions:[question]};
+ const base={id:'set',title:'Set',questions:[question]};
  expect(s.QuestionSetSchema.safeParse(base).success).toBe(false);
  expect(s.QuestionSetSchema.safeParse({...base,topics:[]}).success).toBe(false);
  expect(s.QuestionSetSchema.safeParse({...base,topics:['a-topic','a-topic']}).success).toBe(false);

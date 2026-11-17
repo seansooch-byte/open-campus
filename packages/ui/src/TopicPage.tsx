@@ -1,6 +1,4 @@
 import type { ReactNode } from 'react';
-import type { TopicFrontmatter } from '@open-campus/schema';
-import { Badge } from './Badge';
 import { MermaidDiagram } from './MermaidDiagram';
 
 export type TopicDiagram = {
@@ -12,51 +10,63 @@ export type TopicDiagram = {
   content: string;
 };
 
-export function TopicPage({ topic, diagrams, children, deck }: {
-  topic: TopicFrontmatter;
+/** What the page states about a topic: its plan entry (title, codes, objectives) and its review state. */
+export type TopicHeader = {
+  title: string;
+  kicker: string;
+  codes: { code: string; title: string }[];
+  objectives: string[];
+  status: string;
+  example?: boolean;
+};
+
+export function TopicPage({ topic, diagrams, children, deck, after }: {
+  topic: TopicHeader;
   diagrams: TopicDiagram[];
   /** Rendered MDX body. */
   children: ReactNode;
   /** Rendered Deck for the topic's cards, if any. */
   deck?: ReactNode;
+  /** Anything that follows the cards, such as links to practice questions. */
+  after?: ReactNode;
 }) {
   return (
-    <article className="space-y-6">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-bold">{topic.title}</h1>
-        <div className="flex flex-wrap gap-2">
-          {topic.example && <Badge tone="info">Example</Badge>}
-          {topic.clinical && topic.sean_review !== 'approved' && <Badge tone="warn">Pending review</Badge>}
-          <Badge>{topic.subject}</Badge>
-          {topic.categories.map((c) => <Badge key={c}>{c}</Badge>)}
-        </div>
-      </header>
-      <section>
-        <h2 className="text-xl font-semibold">Learning objectives</h2>
-        <ul className="list-disc pl-6">
-          {topic.learning_objectives.map((o) => <li key={o}>{o}</li>)}
+    <article className="topic">
+      <header className="course-head">
+        <p className="kicker">{topic.kicker}</p>
+        <h1>{topic.title}</h1>
+        <p className="tier"><span className="tier-badge">{topic.example ? 'Example' : topic.status}</span></p>
+        <ul className="outline-codes">
+          {topic.codes.map((c) => <li key={c.code}><span className="codes">{c.code}</span> {c.title}</li>)}
         </ul>
-      </section>
-      <section className="prose-block space-y-4">{children}</section>
+      </header>
+      {topic.objectives.length > 0 && (
+        <section>
+          <h2>You will be able to</h2>
+          <ul className="objectives-list">{topic.objectives.map((o) => <li key={o}>{o}</li>)}</ul>
+        </section>
+      )}
+      <section className="prose">{children}</section>
       {diagrams.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold">Diagrams</h2>
+        <section>
+          <h2>Diagrams</h2>
           {diagrams.map((d) => (
-            <figure key={d.id} className="space-y-2">
+            <figure key={d.id}>
               {d.kind === 'svg' ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={d.content} alt={d.alt} className="max-w-sm bg-white p-2" />
+                <img src={d.content} alt={d.alt} />
               ) : d.kind === 'smiles' ? (
-                <div className="max-w-sm bg-white p-2" dangerouslySetInnerHTML={{ __html: d.content }} />
+                <div dangerouslySetInnerHTML={{ __html: d.content }} />
               ) : (
                 <MermaidDiagram source={d.content} alt={d.alt} />
               )}
-              {d.caption && <figcaption className="text-sm text-zinc-500">{d.caption}</figcaption>}
+              {d.caption && <figcaption>{d.caption}</figcaption>}
             </figure>
           ))}
         </section>
       )}
-      {deck && <section className="space-y-2"><h2 className="text-xl font-semibold">Cards</h2>{deck}</section>}
+      {deck && <section><h2>Cards</h2>{deck}</section>}
+      {after}
     </article>
   );
 }

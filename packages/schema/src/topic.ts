@@ -1,6 +1,8 @@
 import { z } from 'zod';
-import {IdSchema, TextSchema, DateSchema, CategorySchema, SkillSchema, SubjectSchema, sharedFields, clinicalReview} from './common.js';
+import {IdSchema, DateSchema, TextSchema, sharedFields, clinicalReview} from './common.js';
 export const DiagramRefSchema = z.strictObject({id: IdSchema, file: z.string().regex(/^diagrams\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(svg|mmd|smi)$/), kind: z.enum(['svg','mermaid','smiles']), alt: TextSchema, caption: TextSchema.optional()}).refine(d => d.file.endsWith({svg:'.svg',mermaid:'.mmd',smiles:'.smi'}[d.kind]), {message:'Diagram kind must match extension'});
 export type DiagramRef = z.infer<typeof DiagramRefSchema>;
-export const TopicFrontmatterSchema = z.strictObject({id: IdSchema,title: TextSchema,subject:SubjectSchema,categories:z.array(CategorySchema),skills:z.array(SkillSchema).min(1).optional(),prerequisites:z.array(IdSchema).default([]),learning_objectives:z.array(TextSchema).min(1),diagrams:z.array(DiagramRefSchema),version:z.number().int().min(1),updated:DateSchema,...sharedFields}).refine(clinicalReview,{message:'Clinical items require sean_review'}).refine(t=>t.categories.length>0||t.skills!==undefined,{message:'Topics need at least one category unless skills are given'});
+// A topic's title, outline codes, objectives and prerequisites live in its course plan (course.json);
+// the topic file carries only what is drafted: the body, its diagrams, version and review state.
+export const TopicFrontmatterSchema = z.strictObject({id: IdSchema, diagrams: z.array(DiagramRefSchema).default([]), version: z.number().int().min(1), updated: DateSchema, ...sharedFields}).refine(clinicalReview,{message:'Clinical items require sean_review'});
 export type TopicFrontmatter = z.infer<typeof TopicFrontmatterSchema>;

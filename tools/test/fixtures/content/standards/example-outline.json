@@ -1,0 +1,39 @@
+{
+  "id": "example-outline",
+  "title": "Example Outline",
+  "publisher": "Open Campus test fixtures",
+  "source": "https://example.org/outline",
+  "retrieved": "2026-11-17",
+  "version": "Fixture",
+  "note": "Test fixture only; codes assigned by Open Campus.",
+  "levels": [
+    {
+      "id": "area",
+      "title": "Area"
+    },
+    {
+      "id": "topic",
+      "title": "Topic"
+    }
+  ],
+  "nodes": [
+    {
+      "code": "EX-1",
+      "level": "area",
+      "title": "Amino acids",
+      "weight": 100
+    },
+    {
+      "code": "EX-1.1",
+      "level": "topic",
+      "parent": "EX-1",
+      "title": "Backbone and side chains"
+    },
+    {
+      "code": "EX-1.2",
+      "level": "topic",
+      "parent": "EX-1",
+      "title": "Chirality"
+    }
+  ]
+}

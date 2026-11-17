@@ -56,3 +56,32 @@ th:nth-child(1) { width: 5.5rem; } th:nth-child(2) { width: 45%; }
   .topic-line .codes { grid-column: 2; }
   .objectives, .prereq { margin-left: 2.5rem; }
 }
+
+/* Lesson prose: Tailwind's reset strips lists and spacing, so the reading styles are set here. */
+.prose { font-size: 1.04rem; margin-top: 2.5rem; }
+.prose > * + * { margin-top: 1rem; }
+.prose h2 { margin-top: 3rem; }
+.prose h3 { margin-top: 2rem; font-size: 1.05rem; }
+.prose ul { list-style: disc; padding-left: 1.4rem; }
+.prose ol { list-style: decimal; padding-left: 1.6rem; }
+.prose li + li { margin-top: .35rem; }
+.prose strong { font-weight: 600; }
+.prose table { margin-top: 1.25rem; table-layout: auto; }
+.prose td, .prose th { padding: .45rem .7rem; }
+.prose th { text-transform: none; letter-spacing: 0; font-size: .85rem; }
+.katex { font-size: 1.05em; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: .25rem 0; }
+
+.outline-codes { list-style: none; padding: 0; margin-top: .75rem; color: var(--soft); font-size: .92rem; }
+.objectives-list { list-style: none; padding: 0; counter-reset: obj; }
+.objectives-list li { counter-increment: obj; display: grid; grid-template-columns: 2rem 1fr; padding: .45rem 0; border-bottom: 1px solid var(--rule); }
+.objectives-list li::before { content: counter(obj, decimal-leading-zero); font-family: var(--mono); font-size: .78rem; color: var(--brand); font-weight: 600; padding-top: .2rem; }
+.status { display: block; font-family: var(--mono); font-size: .72rem; color: var(--mute); margin-top: .15rem; }
+.status.drafted { color: var(--brand); }
+.topic-foot { margin-top: 3rem; }
+.topic-foot .note { margin-top: 1.5rem; }
+.practice .kicker { margin-bottom: 1rem; }
+.practice legend { font-family: var(--serif); font-size: 1.15rem; }
+.practice fieldset { padding: 1.25rem 0; border-top: 1px solid var(--rule); }
+.practice button { background: var(--brand); color: var(--paper); font-family: var(--mono); font-size: .8rem; letter-spacing: .02em; }
+@media (max-width: 560px) { .prose table { font-size: .85rem; } .prose td, .prose th { padding: .4rem .45rem; } }
