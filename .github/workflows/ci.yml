@@ -29,6 +29,7 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm validate
+      - run: pnpm course-plan --check
       - run: pnpm lint:originality
       - run: pnpm build
       - run: test -f apps/web/out/index.html && test -d apps/web/out/pagefind

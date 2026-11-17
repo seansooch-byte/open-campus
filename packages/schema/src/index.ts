@@ -7,3 +7,5 @@ export * from './guide.js';
 export * from './school.js';
 export * from './path.js';
 export * from './taxonomy.js';
+export * from './standard.js';
+export * from './course.js';

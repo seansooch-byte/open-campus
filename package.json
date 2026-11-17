@@ -12,6 +12,7 @@
     "test": "vitest run",
     "validate": "pnpm --silent --filter @open-campus/tools check",
     "coverage": "pnpm --silent --filter @open-campus/tools coverage",
+    "course-plan": "pnpm --silent --filter @open-campus/tools course-plan",
     "clinical:packet": "pnpm --silent --filter @open-campus/tools clinical:packet",
     "clinical:apply": "pnpm --silent --filter @open-campus/tools clinical:apply",
     "lint:originality": "pnpm --silent --filter @open-campus/tools lint:originality"

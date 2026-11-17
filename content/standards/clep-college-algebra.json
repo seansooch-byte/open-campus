@@ -1,0 +1,68 @@
+{
+  "id": "clep-college-algebra",
+  "title": "CLEP College Algebra",
+  "publisher": "College Board",
+  "source": "https://clep.collegeboard.org/exam/college-algebra",
+  "retrieved": "2026-11-17",
+  "version": "Knowledge and skills outline as shown on the exam page; the page gives no edition or date",
+  "note": "College Board does not number the outline, so the CA codes are assigned by Open Campus in the page's order. Titles are short paraphrases, not the publisher's wording. Area weights are the published percentages.",
+  "levels": [
+    { "id": "area", "title": "Content area" },
+    { "id": "topic", "title": "Topic" }
+  ],
+  "nodes": [
+    { "code": "CA-1", "level": "area", "title": "Algebraic operations", "weight": 25 },
+    { "code": "CA-1.1", "level": "topic", "parent": "CA-1", "title": "Rules of exponents" },
+    { "code": "CA-1.2", "level": "topic", "parent": "CA-1", "title": "Factoring and expanding polynomials" },
+    { "code": "CA-1.3", "level": "topic", "parent": "CA-1", "title": "Rewriting algebraic expressions" },
+    { "code": "CA-1.4", "level": "topic", "parent": "CA-1", "title": "Absolute value" },
+    { "code": "CA-1.5", "level": "topic", "parent": "CA-1", "title": "Properties of logarithms" },
+    { "code": "CA-2", "level": "area", "title": "Equations and inequalities", "weight": 25 },
+    { "code": "CA-2.1", "level": "topic", "parent": "CA-2", "title": "Linear equations and inequalities" },
+    { "code": "CA-2.2", "level": "topic", "parent": "CA-2", "title": "Quadratic equations and inequalities" },
+    { "code": "CA-2.3", "level": "topic", "parent": "CA-2", "title": "Absolute value equations and inequalities" },
+    { "code": "CA-2.4", "level": "topic", "parent": "CA-2", "title": "Systems of equations and inequalities" },
+    { "code": "CA-2.5", "level": "topic", "parent": "CA-2", "title": "Exponential and logarithmic equations" },
+    { "code": "CA-3", "level": "area", "title": "Functions and their properties", "weight": 30 },
+    { "code": "CA-3.1", "level": "topic", "parent": "CA-3", "title": "Representing functions and modeling with them" },
+    { "code": "CA-3.2", "level": "topic", "parent": "CA-3", "title": "Domain and range" },
+    { "code": "CA-3.3", "level": "topic", "parent": "CA-3", "title": "Evaluating functions" },
+    { "code": "CA-3.4", "level": "topic", "parent": "CA-3", "title": "Combining and composing functions" },
+    { "code": "CA-3.5", "level": "topic", "parent": "CA-3", "title": "Graphs: intercepts, symmetry, transformations" },
+    { "code": "CA-3.6", "level": "topic", "parent": "CA-3", "title": "Inverse functions" },
+    { "code": "CA-4", "level": "area", "title": "Number systems and operations", "weight": 20 },
+    { "code": "CA-4.1", "level": "topic", "parent": "CA-4", "title": "Real numbers" },
+    { "code": "CA-4.2", "level": "topic", "parent": "CA-4", "title": "Complex numbers" },
+    { "code": "CA-4.3", "level": "topic", "parent": "CA-4", "title": "Factorials and the binomial theorem" }
+  ],
+  "dimensions": [
+    {
+      "id": "problem-kind",
+      "title": "Problem kind",
+      "values": [
+        { "id": "routine", "title": "Routine, straightforward problems", "weight": 50 },
+        { "id": "nonroutine", "title": "Non-routine: concepts and application", "weight": 50 }
+      ]
+    },
+    {
+      "id": "function-family",
+      "title": "Function families in scope",
+      "values": [
+        { "id": "linear", "title": "Linear" },
+        { "id": "polynomial", "title": "Polynomial, degree at most five" },
+        { "id": "rational", "title": "Rational" },
+        { "id": "absolute-value", "title": "Absolute value" },
+        { "id": "power", "title": "Power" },
+        { "id": "exponential", "title": "Exponential" },
+        { "id": "logarithmic", "title": "Logarithmic" },
+        { "id": "piecewise", "title": "Piecewise" }
+      ]
+    }
+  ],
+  "exam": {
+    "questions": 60,
+    "minutes": 90,
+    "calculator": "Built-in scientific, non-graphing calculator (TI-30XS MultiView)",
+    "credit": "ACE recommends a score of 50 for 3 semester hours; each college sets its own policy"
+  }
+}

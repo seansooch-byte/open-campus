@@ -13,7 +13,8 @@
     "coverage": "tsx src/cli.ts coverage",
     "clinical:packet": "tsx src/cli.ts clinical-packet",
     "clinical:apply": "tsx src/cli.ts clinical-apply",
-    "check": "tsx src/cli.ts all"
+    "check": "tsx src/cli.ts all",
+    "course-plan": "tsx src/cli.ts course-plan"
   },
   "dependencies": {
     "@open-campus/schema": "workspace:*",

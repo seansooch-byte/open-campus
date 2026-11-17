@@ -1,7 +1,7 @@
 import { dirname, basename, join } from 'node:path';
 import { access, readFile } from 'node:fs/promises';
 import { validateSmiles } from './diagrams/index.js';
-import { isExamEligible, type Taxonomy, type QuestionSet } from '@open-campus/schema';
+import { isExamEligible, courseCoverage, type Taxonomy, type QuestionSet, type Standard, type Course } from '@open-campus/schema';
 import {loadContent,type Issue} from './content.js';
 import {bannedDomain} from './originality/config.js';
 const expectedCategories:Record<string,string[]>={FC1:['1A','1B','1C','1D'],FC2:['2A','2B','2C'],FC3:['3A','3B'],FC4:['4A','4B','4C','4D','4E'],FC5:['5A','5B','5C','5D','5E'],FC6:['6A','6B','6C'],FC7:['7A','7B','7C'],FC8:['8A','8B','8C'],FC9:['9A','9B'],FC10:['10A']};
@@ -9,7 +9,10 @@ export async function validate(root:string):Promise<Issue[]> {
  const {items,issues}=await loadContent(root);
  const error=(file:string,rule:string,message:string)=>issues.push({file,rule,message,severity:'error'});
  const taxonomy=items.find(i=>i.type==='taxonomy')?.data as Taxonomy|undefined;
- if(!taxonomy) error('taxonomy/aamc-outline.json','taxonomy','A valid taxonomy is required');
+ // The MCAT taxonomy is the imported kernel's tag source; it is required only while content still uses those tags.
+ const usesTaxonomy=items.some(i=>i.type==='topic'||i.type==='cards'||i.type==='questions'||i.type==='exam');
+ if(!taxonomy&&usesTaxonomy) error('taxonomy/aamc-outline.json','taxonomy','A valid taxonomy is required');
+ validateCourses(items,error);
  const categories=new Map(taxonomy?.foundationalConcepts.flatMap(fc=>fc.categories.map(c=>[c.id,fc.id] as const))??[]);
  const skills=new Map(taxonomy?.skills.map(s=>[s.id,s.kind] as const)??[]);
  const fcs=new Set(taxonomy?.foundationalConcepts.map(fc=>fc.id));
@@ -42,6 +45,7 @@ export async function validate(root:string):Promise<Issue[]> {
   if(v.clinical&&v.sean_review==='pending') counts['clinical-pending']++;
  };
  for(const {file,type,data:d} of items) {
+  if(type==='standard'||type==='course') continue;
   if(type!=='taxonomy') {
    const id=type==='cards'?d.topic_id:d.id;
    const seen=ids.get(type)??new Set<string>();
@@ -122,4 +126,22 @@ export async function validate(root:string):Promise<Issue[]> {
  for(const id of topics.keys()) visit(id,[]);
  for(const [name,total] of Object.entries(counts)) issues.push({file:'content',rule:'verification',message:`${name}: ${total}`,severity:'info'});
  return issues;
+}
+
+const tierRank=(t:string)=>Number(t.slice(1));
+// Standards and courses: ids match paths, anchors resolve, and from T1 every leaf code in the slice is covered (contract item 1).
+function validateCourses(items:{file:string;type:string;data:any}[],error:(file:string,rule:string,message:string)=>void) {
+ const standards=items.filter(i=>i.type==='standard');
+ for(const {file,data} of standards) if(basename(file,'.json')!==data.id) error(file,'path-id','Standard ID must match filename');
+ const all=standards.map(i=>i.data as Standard);
+ for(const {file,data} of items.filter(i=>i.type==='course')) {
+  const c=data as Course;
+  if(basename(dirname(file))!==c.id) error(file,'path-id','Course ID must match its directory');
+  const r=courseCoverage(c,all);
+  for(const id of r.missingStandards) error(file,'anchor',`Missing standard ${id}`);
+  for(const a of r.unknownAnchorCodes) error(file,'anchor',`${a.standard} has no code ${a.code}`);
+  for(const code of r.duplicateCodes) error(file,'anchor',`Code ${code} is required by more than one anchor; topic codes would be ambiguous`);
+  for(const u of r.unknown) error(file,'coverage',`${u.topic}: ${u.code} is not a leaf code of an anchored standard`);
+  if(tierRank(c.tier)>=1) for(const m of r.missing) error(file,'coverage',`${m.standard} ${m.code} is not covered by any topic`);
+ }
 }

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "string",
+  "enum": [
+    "prose",
+    "cards",
+    "mcq",
+    "math",
+    "code",
+    "open",
+    "notebook",
+    "ledger",
+    "sim",
+    "structure",
+    "brief",
+    "audio",
+    "portfolio",
+    "proof"
+  ]
+}

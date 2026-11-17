@@ -26,3 +26,11 @@ Append-only. A later entry supersedes an earlier one; earlier entries are never 
 - **Honesty:** every program shows T0 Listed and the page says no course is ready to study. Majors with a researched course sequence are not called "outlined", because Outlined is the T1 tier.
 - **Public data only:** capability levels, human-review gates and sourcing notes from the research stay out; MCAT anchors are removed; pre-medicine is a partner link to AdmissionsAcademy.
 - **CIP codes:** the 60 seed majors' codes were checked against the NCES CIP 2020 file; other program codes come from the research and are not yet checked against that file.
+
+## 2026-11-17: standards and courses as data, driven by GE-111
+
+- **What:** a generic `StandardSchema` (levels, nodes with explicit parents, optional weights that must total 100 among siblings, optional dimensions such as routine versus non-routine) and a `CourseSchema` (anchors to standards, optionally to a slice of codes; topics in teaching order with codes, required unit types and earlier-only prerequisites; a tier). Coverage is computed over leaf codes only, so naming an area never counts as covering its topics.
+- **Codes we assign:** College Board publishes the CLEP College Algebra outline without numbers, so Open Campus assigns CA codes in page order and says so in the standard's `note`. Titles are our paraphrases, not the publisher's wording.
+- **Incremental, not a rewrite:** the imported MCAT enums on topics, cards and questions stay until the first topic is drafted, because only then is the right shape for a coded topic known. The MCAT taxonomy is now required only while such content exists. Alternative considered: replace every enum now (Track A step 2 in one go), rejected because nothing would exercise the new shapes yet.
+- **Generated plan:** each course's README (topic plan and per-code coverage table) is rendered from `course.json` and checked for staleness, so the T1 table cannot drift from the data.
+- **GE-111 at T1:** 19 topics cover all 19 leaf codes. The T1 gate also asks for human sampling of the Planner's output; that review is Sean's.

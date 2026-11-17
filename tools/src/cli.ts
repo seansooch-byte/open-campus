@@ -8,6 +8,13 @@ if(command==='coverage') {
  const {runCoverage}=await import('./coverage/cli.js');
  process.exit(await runCoverage(args));
 }
+if(command==='course-plan') {
+ const {writeCoursePlans}=await import('./course-plan.js');
+ const check=args.includes('--check'), root=resolve(args.find(a=>!a.startsWith('--'))??fileURLToPath(new URL('../../content/',import.meta.url)));
+ const stale=await writeCoursePlans(root,check);
+ console.log(stale.length?`${check?'stale':'wrote'}: ${stale.join(', ')}`:'course plans current');
+ process.exit(check&&stale.length?1:0);
+}
 if(command==='clinical-packet'||command==='clinical-apply') {
  const {runPacket,runApply}=await import('./clinical/cli.js');
  process.exit(await (command==='clinical-packet'?runPacket(args):runApply(args)));

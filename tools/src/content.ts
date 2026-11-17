@@ -9,13 +9,15 @@ export async function walk(root:string):Promise<string[]> {
  const entries=await readdir(root,{withFileTypes:true});
  return (await Promise.all(entries.map(e=>e.isDirectory()?walk(join(root,e.name)):Promise.resolve([join(root,e.name)])))).flat().sort();
 }
-export const schemas:Record<string,z.ZodType>={topic:s.TopicFrontmatterSchema,cards:s.CardDeckSchema,questions:s.QuestionSetSchema,exam:s.ExamSchema,guide:s.GuideFrontmatterSchema,school:s.SchoolProfileSchema,path:s.PathSchema,taxonomy:s.TaxonomySchema};
+export const schemas:Record<string,z.ZodType>={topic:s.TopicFrontmatterSchema,cards:s.CardDeckSchema,questions:s.QuestionSetSchema,exam:s.ExamSchema,guide:s.GuideFrontmatterSchema,school:s.SchoolProfileSchema,path:s.PathSchema,taxonomy:s.TaxonomySchema,standard:s.StandardSchema,course:s.CourseSchema};
 export function contentType(file:string):string|undefined {
  if(/^subjects\/[^/]+\/[^/]+\/topic\.mdx$/.test(file)) return 'topic';
  if(/^subjects\/[^/]+\/[^/]+\/cards\.json$/.test(file)) return 'cards';
  if(/^questions\/(bio-biochem|chem-phys|psych-soc|cars)\/[^/]+\.json$/.test(file)) return 'questions';
  for(const [dir,type,ext] of [['exams','exam','json'],['guides','guide','mdx'],['schools','school','json'],['paths','path','json']]) if(new RegExp(`^${dir}/[^/]+\\.${ext}$`).test(file)) return type;
  if(file==='taxonomy/aamc-outline.json') return 'taxonomy';
+ if(/^standards\/[^/]+\.json$/.test(file)) return 'standard';
+ if(/^courses\/[^/]+\/course\.json$/.test(file)) return 'course';
 }
 const ignorable=/(?:^|\/)(?:\.gitkeep|README\.md)$|^subjects\/[^/]+\/[^/]+\/diagrams\/(?:[^/]+\/)*[^/]+\.(?:svg|mmd|smi)$/;
 export async function loadContent(root:string):Promise<{items:Item[];issues:Issue[];files:string[]}> {

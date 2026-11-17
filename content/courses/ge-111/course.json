@@ -1,0 +1,416 @@
+{
+  "id": "ge-111",
+  "code": "GE-111",
+  "title": "College Algebra",
+  "credits": 3,
+  "block": "general-education",
+  "tier": "T1",
+  "summary": "Algebraic operations, equations and inequalities, functions and number systems at the level of a first college algebra course, anchored to every topic of the CLEP College Algebra outline.",
+  "anchors": [
+    {
+      "standard": "clep-college-algebra"
+    }
+  ],
+  "prerequisites": [],
+  "topics": [
+    {
+      "id": "real-numbers",
+      "title": "Real numbers and their properties",
+      "codes": [
+        "CA-4.1"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [],
+      "objectives": [
+        "Classify a number as natural, integer, rational or irrational",
+        "Use the field properties and order of operations to simplify numeric expressions",
+        "Read and write intervals on the number line"
+      ]
+    },
+    {
+      "id": "exponents-and-radicals",
+      "title": "Exponents and radicals",
+      "codes": [
+        "CA-1.1"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "real-numbers"
+      ],
+      "objectives": [
+        "Apply the product, quotient and power rules for integer exponents",
+        "Convert between rational exponents and radicals and simplify both"
+      ]
+    },
+    {
+      "id": "absolute-value",
+      "title": "Absolute value as distance",
+      "codes": [
+        "CA-1.4"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "real-numbers"
+      ],
+      "objectives": [
+        "Evaluate and simplify absolute value expressions",
+        "Interpret |a - b| as the distance between a and b"
+      ]
+    },
+    {
+      "id": "polynomials",
+      "title": "Polynomial arithmetic and factoring",
+      "codes": [
+        "CA-1.2"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "exponents-and-radicals"
+      ],
+      "objectives": [
+        "Add, subtract and multiply polynomials, including special products",
+        "Factor by common factor, grouping, trinomial patterns, difference of squares and sums or differences of cubes"
+      ]
+    },
+    {
+      "id": "rational-expressions",
+      "title": "Rational and radical expressions",
+      "codes": [
+        "CA-1.3"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "polynomials"
+      ],
+      "objectives": [
+        "Simplify, multiply, divide, add and subtract rational expressions, stating excluded values",
+        "Rationalize denominators and simplify complex fractions"
+      ]
+    },
+    {
+      "id": "linear-equations",
+      "title": "Linear equations and inequalities",
+      "codes": [
+        "CA-2.1"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "real-numbers"
+      ],
+      "objectives": [
+        "Solve linear equations, including literal equations for a named variable",
+        "Solve linear and compound inequalities and write the answer in interval notation"
+      ]
+    },
+    {
+      "id": "absolute-value-equations",
+      "title": "Absolute value equations and inequalities",
+      "codes": [
+        "CA-2.3"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "absolute-value",
+        "linear-equations"
+      ],
+      "objectives": [
+        "Solve |ax + b| = c by splitting into cases and checking each",
+        "Solve |ax + b| < c and |ax + b| > c as compound inequalities"
+      ]
+    },
+    {
+      "id": "complex-numbers",
+      "title": "Complex numbers",
+      "codes": [
+        "CA-4.2"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "exponents-and-radicals"
+      ],
+      "objectives": [
+        "Add, subtract, multiply and divide complex numbers in a + bi form",
+        "Simplify powers of i and square roots of negative numbers"
+      ]
+    },
+    {
+      "id": "quadratic-equations",
+      "title": "Quadratic equations and inequalities",
+      "codes": [
+        "CA-2.2"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "polynomials",
+        "linear-equations",
+        "complex-numbers"
+      ],
+      "objectives": [
+        "Solve quadratics by factoring, square roots, completing the square and the quadratic formula",
+        "Use the discriminant to predict the number and kind of roots",
+        "Solve quadratic inequalities with a sign chart"
+      ]
+    },
+    {
+      "id": "systems",
+      "title": "Systems of equations and inequalities",
+      "codes": [
+        "CA-2.4"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "linear-equations",
+        "quadratic-equations"
+      ],
+      "objectives": [
+        "Solve two- and three-variable linear systems by substitution and elimination",
+        "Solve a nonlinear system with one quadratic equation",
+        "Graph the solution region of a system of linear inequalities"
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "Functions and their representations",
+      "codes": [
+        "CA-3.1",
+        "CA-3.3"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "linear-equations"
+      ],
+      "objectives": [
+        "Decide whether a relation given as a table, graph, formula or description is a function",
+        "Evaluate functions, including at expressions such as f(x + h)",
+        "Build a linear model from a word problem and interpret slope and intercept"
+      ]
+    },
+    {
+      "id": "domain-and-range",
+      "title": "Domain and range",
+      "codes": [
+        "CA-3.2"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "functions",
+        "rational-expressions"
+      ],
+      "objectives": [
+        "Find the domain of polynomial, rational, radical and logarithmic formulas",
+        "Read domain and range from a graph and write them in interval notation"
+      ]
+    },
+    {
+      "id": "graphs-and-transformations",
+      "title": "Graphs, symmetry and transformations",
+      "codes": [
+        "CA-3.5"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "functions",
+        "absolute-value",
+        "quadratic-equations"
+      ],
+      "objectives": [
+        "Find intercepts and test for even, odd and axis symmetry",
+        "Graph shifts, reflections and stretches of the basic functions, including vertex form of a quadratic"
+      ]
+    },
+    {
+      "id": "polynomial-and-rational-functions",
+      "title": "Polynomial, rational, power and piecewise functions",
+      "codes": [
+        "CA-3.1",
+        "CA-3.5"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "graphs-and-transformations",
+        "polynomials",
+        "domain-and-range"
+      ],
+      "objectives": [
+        "Sketch a polynomial of degree at most five from its zeros, multiplicities and end behavior",
+        "Find the vertical and horizontal asymptotes and holes of a rational function",
+        "Evaluate and graph piecewise functions"
+      ]
+    },
+    {
+      "id": "combining-functions",
+      "title": "Combining and composing functions",
+      "codes": [
+        "CA-3.4"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "domain-and-range"
+      ],
+      "objectives": [
+        "Form sums, differences, products and quotients of functions with their domains",
+        "Compose functions and decompose a formula into a composition"
+      ]
+    },
+    {
+      "id": "inverse-functions",
+      "title": "Inverse functions",
+      "codes": [
+        "CA-3.6"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "combining-functions",
+        "graphs-and-transformations"
+      ],
+      "objectives": [
+        "Test a function for one-to-one with the horizontal line test",
+        "Find an inverse algebraically and verify it by composition",
+        "Relate the graphs of a function and its inverse"
+      ]
+    },
+    {
+      "id": "exponential-and-logarithmic-functions",
+      "title": "Exponential and logarithmic functions",
+      "codes": [
+        "CA-1.5",
+        "CA-3.1"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "inverse-functions",
+        "exponents-and-radicals"
+      ],
+      "objectives": [
+        "Graph exponential and logarithmic functions and state their domain, range and asymptote",
+        "Use the product, quotient and power properties and the change of base formula",
+        "Model growth and decay, including compound interest"
+      ]
+    },
+    {
+      "id": "exponential-and-logarithmic-equations",
+      "title": "Exponential and logarithmic equations",
+      "codes": [
+        "CA-2.5"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "exponential-and-logarithmic-functions"
+      ],
+      "objectives": [
+        "Solve exponential equations by matching bases or taking logarithms",
+        "Solve logarithmic equations and reject solutions outside the domain"
+      ]
+    },
+    {
+      "id": "binomial-theorem",
+      "title": "Factorials and the binomial theorem",
+      "codes": [
+        "CA-4.3"
+      ],
+      "requires": [
+        "prose",
+        "cards",
+        "mcq",
+        "math"
+      ],
+      "prerequisites": [
+        "polynomials"
+      ],
+      "objectives": [
+        "Simplify expressions with factorials and compute binomial coefficients",
+        "Expand (a + b)^n and find a single named term"
+      ]
+    }
+  ]
+}
