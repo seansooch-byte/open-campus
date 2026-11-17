@@ -39,7 +39,7 @@ flowchart LR
 | `tools/` | The gates: `validate`, `originality`, `coverage`, `clinical:packet` and `clinical:apply` |
 | `tools/test/fixtures/content` | Test fixtures only: one example topic, deck and question set (marked `example: true`) and the MCAT outline by code |
 | `content/` | Does not exist yet. The first course will create it |
-| `site/` | The landing page at campus.seansooch.dev |
+| `site/` | The landing page at campus.seansooch.dev, built from `site/src` and `site/data` by `tools/site/` |
 
 ## What was removed on import
 
@@ -47,7 +47,23 @@ A partner site's lesson crosswalk (its lesson map, the schemas and topic fields 
 
 ## The site
 
-`site/` holds the landing page served at https://campus.seansooch.dev by the Cloudflare Worker in `wrangler.jsonc` (static assets only, real 404s). Deploy from the repo root with `npx wrangler deploy`. When the web app is ready, point `assets.directory` at its static export.
+`site/` is served at https://campus.seansooch.dev by the Cloudflare Worker in `wrangler.jsonc` (static assets only, real 404s). Deploy from the repo root with `npx wrangler deploy`.
+
+The landing page is the case for Open Campus: a long-form argument with nine figures. It is generated, never hand-edited:
+
+```mermaid
+flowchart LR
+  DATA[site/data/*.json: research, each series with source URL and retrieval date] --> SPECS[tools/site/make_specs.py]
+  SPECS --> CJ[site/src/charts.json]
+  PAGE[site/src/page.html: the argument, with chart tokens] --> BUILD[tools/site/build.py]
+  CJ --> BUILD
+  CHARTS[tools/site/charts.py: static SVG, wide and narrow plots, data tables] --> BUILD
+  BUILD --> OUT[site/index.html]
+  JS[site/assets/charts.js: hover and keyboard readouts] --> OUT
+  CSS[site/assets/site.css] --> OUT
+```
+
+Rebuild with `python3 tools/site/make_specs.py && python3 tools/site/build.py`; test with `python3 -m unittest tools/site/test_charts.py`. The build refuses unknown or unused chart ids, leftover tokens, and em or en dashes. Bump the `?v=` on `site.css` and `charts.js` in `page.html` when either changes. When the web app is ready, the landing page moves to its front door.
 
 ## Known gap
 

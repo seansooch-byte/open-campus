@@ -11,3 +11,11 @@ Append-only. A later entry supersedes an earlier one; earlier entries are never 
 - **Pre-medicine:** offered by AdmissionsAcademy and only linked from Open Campus (SPEC.md 5.8). The science courses other majors need stay here.
 - **First program:** Accounting (CIP 52.0301), anchored to the CPA blueprints and CLEP Financial Accounting. Computer science was the alternative. The first course is GE-111 College Algebra; the `ledger` unit type is built second, after `math`.
 - **Build capacity:** built on subscriptions through headless runners (Claude Code, plus Codex or Grok as a second family), never a paid API. Runs are paced into usage windows and resumable; release cards record capacity used instead of dollars.
+
+## 2026-11-17: the landing page argues the case, with charts drawn at build time
+
+- **What:** the landing page became a long-form argument (the curve, the bill, who is left, what was tried, the answer) with nine figures, every number from a research file in `site/data` that names its source and retrieval date.
+- **Charts:** drawn as static SVG by a small Python generator, not a chart library, so the page stays static and loads no framework. Each figure has a wide and a narrow plot (phones get the narrow one; scaling one SVG made text about 6 px), a data table, and a hover and keyboard readout.
+- **Colour:** taken from a validated reference palette (orange for cost, blue and aqua for comparison, grey for context). A green and red pairing was tested and failed colour-blind separation.
+- **Honesty rules in the argument:** the page states that net price after grants fell at public colleges and that real tuition has eased since 2019, that a degree still pays, and that AI tutoring evidence is mixed. The claim of near-zero cost is limited to delivery.
+- **Design:** a new editorial design written from a blank page (Newsreader, IBM Plex Sans and Mono, paper and a brand green), replacing the first catalog-style landing page.

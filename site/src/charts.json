@@ -1,0 +1,2228 @@
+{
+ "charts": [
+  {
+   "id": "index",
+   "kind": "line",
+   "num": "Figure 1",
+   "title": "College prices rose more than three times as fast as prices overall",
+   "subtitle": "Each line set to 100 in 1980. Not adjusted for inflation, so the lines can be compared directly.",
+   "alt": "Line chart, 1980 to 2025, indexed to 100 in 1980. The college tuition price index reaches about 1,349; median household income about 494; average hourly earnings about 458; all consumer prices about 391.",
+   "unit": "",
+   "baseline": 100,
+   "series": [
+    {
+     "name": "College tuition and fees (CPI)",
+     "short": "Tuition",
+     "role": "cost",
+     "points": [
+      [
+       1980,
+       100.0
+      ],
+      [
+       1981,
+       112.4
+      ],
+      [
+       1982,
+       127.5
+      ],
+      [
+       1983,
+       140.8
+      ],
+      [
+       1984,
+       155.2
+      ],
+      [
+       1985,
+       169.4
+      ],
+      [
+       1986,
+       183.1
+      ],
+      [
+       1987,
+       196.9
+      ],
+      [
+       1988,
+       211.9
+      ],
+      [
+       1989,
+       228.7
+      ],
+      [
+       1990,
+       247.2
+      ],
+      [
+       1991,
+       272.3
+      ],
+      [
+       1992,
+       301.6
+      ],
+      [
+       1993,
+       329.8
+      ],
+      [
+       1994,
+       352.8
+      ],
+      [
+       1995,
+       374.0
+      ],
+      [
+       1996,
+       395.2
+      ],
+      [
+       1997,
+       415.4
+      ],
+      [
+       1998,
+       432.9
+      ],
+      [
+       1999,
+       450.1
+      ],
+      [
+       2000,
+       468.8
+      ],
+      [
+       2001,
+       492.7
+      ],
+      [
+       2002,
+       526.3
+      ],
+      [
+       2003,
+       570.5
+      ],
+      [
+       2004,
+       624.4
+      ],
+      [
+       2005,
+       671.0
+      ],
+      [
+       2006,
+       716.1
+      ],
+      [
+       2007,
+       760.9
+      ],
+      [
+       2008,
+       808.3
+      ],
+      [
+       2009,
+       856.9
+      ],
+      [
+       2010,
+       901.4
+      ],
+      [
+       2011,
+       946.7
+      ],
+      [
+       2012,
+       992.6
+      ],
+      [
+       2013,
+       1034.5
+      ],
+      [
+       2014,
+       1072.7
+      ],
+      [
+       2015,
+       1110.0
+      ],
+      [
+       2016,
+       1139.8
+      ],
+      [
+       2017,
+       1162.6
+      ],
+      [
+       2018,
+       1188.3
+      ],
+      [
+       2019,
+       1222.3
+      ],
+      [
+       2020,
+       1239.1
+      ],
+      [
+       2021,
+       1249.8
+      ],
+      [
+       2022,
+       1276.8
+      ],
+      [
+       2023,
+       1301.4
+      ],
+      [
+       2024,
+       1323.9
+      ],
+      [
+       2025,
+       1349.3
+      ]
+     ]
+    },
+    {
+     "name": "Median household income",
+     "short": "Income",
+     "role": "compare",
+     "points": [
+      [
+       1980,
+       100.0
+      ],
+      [
+       1981,
+       107.7
+      ],
+      [
+       1982,
+       113.9
+      ],
+      [
+       1983,
+       118.0
+      ],
+      [
+       1984,
+       126.6
+      ],
+      [
+       1985,
+       133.4
+      ],
+      [
+       1986,
+       140.6
+      ],
+      [
+       1987,
+       147.1
+      ],
+      [
+       1988,
+       153.8
+      ],
+      [
+       1989,
+       163.2
+      ],
+      [
+       1990,
+       169.1
+      ],
+      [
+       1991,
+       170.1
+      ],
+      [
+       1992,
+       173.0
+      ],
+      [
+       1993,
+       176.4
+      ],
+      [
+       1994,
+       182.2
+      ],
+      [
+       1995,
+       192.4
+      ],
+      [
+       1996,
+       200.4
+      ],
+      [
+       1997,
+       209.0
+      ],
+      [
+       1998,
+       219.6
+      ],
+      [
+       1999,
+       229.8
+      ],
+      [
+       2000,
+       237.1
+      ],
+      [
+       2001,
+       238.5
+      ],
+      [
+       2002,
+       239.5
+      ],
+      [
+       2003,
+       244.6
+      ],
+      [
+       2004,
+       250.3
+      ],
+      [
+       2005,
+       261.6
+      ],
+      [
+       2006,
+       272.2
+      ],
+      [
+       2007,
+       283.6
+      ],
+      [
+       2008,
+       284.0
+      ],
+      [
+       2009,
+       281.1
+      ],
+      [
+       2010,
+       278.3
+      ],
+      [
+       2011,
+       282.6
+      ],
+      [
+       2012,
+       288.1
+      ],
+      [
+       2013,
+       302.6
+      ],
+      [
+       2014,
+       303.0
+      ],
+      [
+       2015,
+       319.1
+      ],
+      [
+       2016,
+       333.4
+      ],
+      [
+       2017,
+       345.2
+      ],
+      [
+       2018,
+       356.7
+      ],
+      [
+       2019,
+       387.9
+      ],
+      [
+       2020,
+       384.0
+      ],
+      [
+       2021,
+       399.7
+      ],
+      [
+       2022,
+       421.1
+      ],
+      [
+       2023,
+       455.2
+      ],
+      [
+       2024,
+       469.6
+      ],
+      [
+       2025,
+       493.8
+      ]
+     ]
+    },
+    {
+     "name": "Average hourly earnings",
+     "short": "Hourly pay",
+     "role": "third",
+     "points": [
+      [
+       1980,
+       100.0
+      ],
+      [
+       1981,
+       108.6
+      ],
+      [
+       1982,
+       114.9
+      ],
+      [
+       1983,
+       119.7
+      ],
+      [
+       1984,
+       124.0
+      ],
+      [
+       1985,
+       127.6
+      ],
+      [
+       1986,
+       130.4
+      ],
+      [
+       1987,
+       133.5
+      ],
+      [
+       1988,
+       137.8
+      ],
+      [
+       1989,
+       143.2
+      ],
+      [
+       1990,
+       148.9
+      ],
+      [
+       1991,
+       153.6
+      ],
+      [
+       1992,
+       157.3
+      ],
+      [
+       1993,
+       161.4
+      ],
+      [
+       1994,
+       165.6
+      ],
+      [
+       1995,
+       170.1
+      ],
+      [
+       1996,
+       175.8
+      ],
+      [
+       1997,
+       182.6
+      ],
+      [
+       1998,
+       190.0
+      ],
+      [
+       1999,
+       197.0
+      ],
+      [
+       2000,
+       204.6
+      ],
+      [
+       2001,
+       212.3
+      ],
+      [
+       2002,
+       218.5
+      ],
+      [
+       2003,
+       224.4
+      ],
+      [
+       2004,
+       229.1
+      ],
+      [
+       2005,
+       235.4
+      ],
+      [
+       2006,
+       244.5
+      ],
+      [
+       2007,
+       254.3
+      ],
+      [
+       2008,
+       263.9
+      ],
+      [
+       2009,
+       271.8
+      ],
+      [
+       2010,
+       278.3
+      ],
+      [
+       2011,
+       283.9
+      ],
+      [
+       2012,
+       288.1
+      ],
+      [
+       2013,
+       294.1
+      ],
+      [
+       2014,
+       300.8
+      ],
+      [
+       2015,
+       307.1
+      ],
+      [
+       2016,
+       314.6
+      ],
+      [
+       2017,
+       322.0
+      ],
+      [
+       2018,
+       331.6
+      ],
+      [
+       2019,
+       343.4
+      ],
+      [
+       2020,
+       360.6
+      ],
+      [
+       2021,
+       378.5
+      ],
+      [
+       2022,
+       402.6
+      ],
+      [
+       2023,
+       422.4
+      ],
+      [
+       2024,
+       440.0
+      ],
+      [
+       2025,
+       457.8
+      ]
+     ]
+    },
+    {
+     "name": "All consumer prices (CPI)",
+     "short": "All prices",
+     "role": "context",
+     "points": [
+      [
+       1980,
+       100.0
+      ],
+      [
+       1981,
+       110.3
+      ],
+      [
+       1982,
+       117.1
+      ],
+      [
+       1983,
+       120.9
+      ],
+      [
+       1984,
+       126.1
+      ],
+      [
+       1985,
+       130.6
+      ],
+      [
+       1986,
+       133.0
+      ],
+      [
+       1987,
+       137.9
+      ],
+      [
+       1988,
+       143.6
+      ],
+      [
+       1989,
+       150.5
+      ],
+      [
+       1990,
+       158.6
+      ],
+      [
+       1991,
+       165.3
+      ],
+      [
+       1992,
+       170.3
+      ],
+      [
+       1993,
+       175.4
+      ],
+      [
+       1994,
+       179.9
+      ],
+      [
+       1995,
+       185.0
+      ],
+      [
+       1996,
+       190.4
+      ],
+      [
+       1997,
+       194.8
+      ],
+      [
+       1998,
+       197.8
+      ],
+      [
+       1999,
+       202.2
+      ],
+      [
+       2000,
+       209.0
+      ],
+      [
+       2001,
+       214.9
+      ],
+      [
+       2002,
+       218.3
+      ],
+      [
+       2003,
+       223.3
+      ],
+      [
+       2004,
+       229.2
+      ],
+      [
+       2005,
+       237.0
+      ],
+      [
+       2006,
+       244.7
+      ],
+      [
+       2007,
+       251.6
+      ],
+      [
+       2008,
+       261.3
+      ],
+      [
+       2009,
+       260.4
+      ],
+      [
+       2010,
+       264.6
+      ],
+      [
+       2011,
+       273.0
+      ],
+      [
+       2012,
+       278.6
+      ],
+      [
+       2013,
+       282.7
+      ],
+      [
+       2014,
+       287.3
+      ],
+      [
+       2015,
+       287.6
+      ],
+      [
+       2016,
+       291.3
+      ],
+      [
+       2017,
+       297.5
+      ],
+      [
+       2018,
+       304.7
+      ],
+      [
+       2019,
+       310.3
+      ],
+      [
+       2020,
+       314.1
+      ],
+      [
+       2021,
+       328.8
+      ],
+      [
+       2022,
+       355.2
+      ],
+      [
+       2023,
+       369.8
+      ],
+      [
+       2024,
+       380.7
+      ],
+      [
+       2025,
+       390.7
+      ]
+     ]
+    }
+   ],
+   "sources": [
+    [
+     "BLS CPI-U series CUUR0000SEEB01 and CUUR0000SA0",
+     "https://data.bls.gov/timeseries/CUUR0000SEEB01"
+    ],
+    [
+     "Census CPS Table H-5",
+     "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-households/h05.xlsx"
+    ],
+    [
+     "FRED AHETPI",
+     "https://fred.stlouisfed.org/series/AHETPI"
+    ]
+   ],
+   "note": "Annual averages. The tuition index tracks published prices, before grant aid."
+  },
+  {
+   "id": "sticker",
+   "kind": "line",
+   "num": "Figure 2",
+   "title": "A year of tuition costs about three to four times what it did in 1980, after inflation",
+   "subtitle": "Average published tuition and fees per year, in 2026 dollars, 1980-81 to 2026-27.",
+   "alt": "Line chart of published tuition in 2026 dollars. Private nonprofit four-year rises from $14,610 to $46,350; public four-year from $3,230 to $12,290; public two-year from $1,570 to $4,210.",
+   "unit": "$",
+   "series": [
+    {
+     "name": "Private nonprofit four-year",
+     "short": "Private",
+     "role": "compare",
+     "points": [
+      [
+       1980,
+       14610
+      ],
+      [
+       1981,
+       15040
+      ],
+      [
+       1982,
+       15990
+      ],
+      [
+       1983,
+       17000
+      ],
+      [
+       1984,
+       17800
+      ],
+      [
+       1985,
+       18920
+      ],
+      [
+       1986,
+       20210
+      ],
+      [
+       1987,
+       20640
+      ],
+      [
+       1988,
+       22490
+      ],
+      [
+       1989,
+       23230
+      ],
+      [
+       1990,
+       23770
+      ],
+      [
+       1991,
+       23950
+      ],
+      [
+       1992,
+       24770
+      ],
+      [
+       1993,
+       25340
+      ],
+      [
+       1994,
+       26300
+      ],
+      [
+       1995,
+       26670
+      ],
+      [
+       1996,
+       27530
+      ],
+      [
+       1997,
+       28570
+      ],
+      [
+       1998,
+       30010
+      ],
+      [
+       1999,
+       30980
+      ],
+      [
+       2000,
+       31040
+      ],
+      [
+       2001,
+       32640
+      ],
+      [
+       2002,
+       33390
+      ],
+      [
+       2003,
+       34250
+      ],
+      [
+       2004,
+       35300
+      ],
+      [
+       2005,
+       35730
+      ],
+      [
+       2006,
+       36800
+      ],
+      [
+       2007,
+       37570
+      ],
+      [
+       2008,
+       38340
+      ],
+      [
+       2009,
+       39900
+      ],
+      [
+       2010,
+       40830
+      ],
+      [
+       2011,
+       41220
+      ],
+      [
+       2012,
+       41990
+      ],
+      [
+       2013,
+       43010
+      ],
+      [
+       2014,
+       43940
+      ],
+      [
+       2015,
+       45380
+      ],
+      [
+       2016,
+       46420
+      ],
+      [
+       2017,
+       47090
+      ],
+      [
+       2018,
+       47260
+      ],
+      [
+       2019,
+       47980
+      ],
+      [
+       2020,
+       47890
+      ],
+      [
+       2021,
+       46730
+      ],
+      [
+       2022,
+       45390
+      ],
+      [
+       2023,
+       45560
+      ],
+      [
+       2024,
+       45850
+      ],
+      [
+       2025,
+       46190
+      ],
+      [
+       2026,
+       46350
+      ]
+     ]
+    },
+    {
+     "name": "Public four-year, in state",
+     "short": "Public 4-yr",
+     "role": "cost",
+     "points": [
+      [
+       1980,
+       3230
+      ],
+      [
+       1981,
+       3330
+      ],
+      [
+       1982,
+       3550
+      ],
+      [
+       1983,
+       3840
+      ],
+      [
+       1984,
+       3940
+      ],
+      [
+       1985,
+       4080
+      ],
+      [
+       1986,
+       4280
+      ],
+      [
+       1987,
+       4360
+      ],
+      [
+       1988,
+       4440
+      ],
+      [
+       1989,
+       4560
+      ],
+      [
+       1990,
+       4860
+      ],
+      [
+       1991,
+       5150
+      ],
+      [
+       1992,
+       5520
+      ],
+      [
+       1993,
+       5850
+      ],
+      [
+       1994,
+       6080
+      ],
+      [
+       1995,
+       6130
+      ],
+      [
+       1996,
+       6320
+      ],
+      [
+       1997,
+       6440
+      ],
+      [
+       1998,
+       6630
+      ],
+      [
+       1999,
+       6710
+      ],
+      [
+       2000,
+       6780
+      ],
+      [
+       2001,
+       7080
+      ],
+      [
+       2002,
+       7580
+      ],
+      [
+       2003,
+       8400
+      ],
+      [
+       2004,
+       9030
+      ],
+      [
+       2005,
+       9350
+      ],
+      [
+       2006,
+       9570
+      ],
+      [
+       2007,
+       9930
+      ],
+      [
+       2008,
+       10200
+      ],
+      [
+       2009,
+       10960
+      ],
+      [
+       2010,
+       11640
+      ],
+      [
+       2011,
+       12240
+      ],
+      [
+       2012,
+       12530
+      ],
+      [
+       2013,
+       12690
+      ],
+      [
+       2014,
+       12850
+      ],
+      [
+       2015,
+       13230
+      ],
+      [
+       2016,
+       13400
+      ],
+      [
+       2017,
+       13540
+      ],
+      [
+       2018,
+       13520
+      ],
+      [
+       2019,
+       13580
+      ],
+      [
+       2020,
+       13580
+      ],
+      [
+       2021,
+       13190
+      ],
+      [
+       2022,
+       12490
+      ],
+      [
+       2023,
+       12340
+      ],
+      [
+       2024,
+       12310
+      ],
+      [
+       2025,
+       12330
+      ],
+      [
+       2026,
+       12290
+      ]
+     ]
+    },
+    {
+     "name": "Public two-year",
+     "short": "Public 2-yr",
+     "role": "third",
+     "points": [
+      [
+       1980,
+       1570
+      ],
+      [
+       1981,
+       1570
+      ],
+      [
+       1982,
+       1620
+      ],
+      [
+       1983,
+       1770
+      ],
+      [
+       1984,
+       1860
+      ],
+      [
+       1985,
+       1980
+      ],
+      [
+       1986,
+       2000
+      ],
+      [
+       1987,
+       2170
+      ],
+      [
+       1988,
+       2250
+      ],
+      [
+       1989,
+       2250
+      ],
+      [
+       1990,
+       2320
+      ],
+      [
+       1991,
+       2860
+      ],
+      [
+       1992,
+       2650
+      ],
+      [
+       1993,
+       2880
+      ],
+      [
+       1994,
+       2940
+      ],
+      [
+       1995,
+       2900
+      ],
+      [
+       1996,
+       3120
+      ],
+      [
+       1997,
+       3250
+      ],
+      [
+       1998,
+       3160
+      ],
+      [
+       1999,
+       3290
+      ],
+      [
+       2000,
+       3170
+      ],
+      [
+       2001,
+       3020
+      ],
+      [
+       2002,
+       3090
+      ],
+      [
+       2003,
+       3450
+      ],
+      [
+       2004,
+       3660
+      ],
+      [
+       2005,
+       3710
+      ],
+      [
+       2006,
+       3740
+      ],
+      [
+       2007,
+       3670
+      ],
+      [
+       2008,
+       3680
+      ],
+      [
+       2009,
+       3980
+      ],
+      [
+       2010,
+       4180
+      ],
+      [
+       2011,
+       4390
+      ],
+      [
+       2012,
+       4560
+      ],
+      [
+       2013,
+       4630
+      ],
+      [
+       2014,
+       4690
+      ],
+      [
+       2015,
+       4770
+      ],
+      [
+       2016,
+       4790
+      ],
+      [
+       2017,
+       4800
+      ],
+      [
+       2018,
+       4810
+      ],
+      [
+       2019,
+       4810
+      ],
+      [
+       2020,
+       4820
+      ],
+      [
+       2021,
+       4660
+      ],
+      [
+       2022,
+       4420
+      ],
+      [
+       2023,
+       4310
+      ],
+      [
+       2024,
+       4280
+      ],
+      [
+       2025,
+       4250
+      ],
+      [
+       2026,
+       4210
+      ]
+     ]
+    }
+   ],
+   "sources": [
+    [
+     "College Board, Trends in College Pricing 2026",
+     "https://research.collegeboard.org/media/xlsx/trends-in-college-pricing-2026-excel-data.xlsx"
+    ]
+   ],
+   "note": "Year shown is the fall of the academic year. Prices since 2019-20 have eased in real terms."
+  },
+  {
+   "id": "net",
+   "kind": "line",
+   "num": "Figure 3",
+   "title": "Grants cut tuition, but not the cost of being a student",
+   "subtitle": "Public four-year, in state, first-time full-time students, 2026 dollars. Net means after grant aid.",
+   "alt": "Line chart, 2006-07 to 2026-27. Net cost of attendance stays near $21,000 to $25,000; published tuition rises to about $12,300; net tuition after grants falls to about $1,900.",
+   "unit": "$",
+   "series": [
+    {
+     "name": "Net cost of attendance (with housing, food, books)",
+     "short": "Net cost",
+     "role": "cost",
+     "points": [
+      [
+       2006,
+       21660
+      ],
+      [
+       2007,
+       21910
+      ],
+      [
+       2008,
+       22150
+      ],
+      [
+       2009,
+       22780
+      ],
+      [
+       2010,
+       23160
+      ],
+      [
+       2011,
+       24010
+      ],
+      [
+       2012,
+       24260
+      ],
+      [
+       2013,
+       24350
+      ],
+      [
+       2014,
+       24400
+      ],
+      [
+       2015,
+       25100
+      ],
+      [
+       2016,
+       25330
+      ],
+      [
+       2017,
+       25010
+      ],
+      [
+       2018,
+       24880
+      ],
+      [
+       2019,
+       24560
+      ],
+      [
+       2020,
+       24430
+      ],
+      [
+       2021,
+       22980
+      ],
+      [
+       2022,
+       22140
+      ],
+      [
+       2023,
+       21460
+      ],
+      [
+       2024,
+       21250
+      ],
+      [
+       2025,
+       21630
+      ],
+      [
+       2026,
+       21660
+      ]
+     ]
+    },
+    {
+     "name": "Published tuition and fees",
+     "short": "Sticker",
+     "role": "compare",
+     "points": [
+      [
+       2006,
+       9570
+      ],
+      [
+       2007,
+       9930
+      ],
+      [
+       2008,
+       10200
+      ],
+      [
+       2009,
+       10960
+      ],
+      [
+       2010,
+       11640
+      ],
+      [
+       2011,
+       12240
+      ],
+      [
+       2012,
+       12530
+      ],
+      [
+       2013,
+       12690
+      ],
+      [
+       2014,
+       12850
+      ],
+      [
+       2015,
+       13230
+      ],
+      [
+       2016,
+       13400
+      ],
+      [
+       2017,
+       13540
+      ],
+      [
+       2018,
+       13520
+      ],
+      [
+       2019,
+       13580
+      ],
+      [
+       2020,
+       13580
+      ],
+      [
+       2021,
+       13190
+      ],
+      [
+       2022,
+       12490
+      ],
+      [
+       2023,
+       12340
+      ],
+      [
+       2024,
+       12310
+      ],
+      [
+       2025,
+       12330
+      ],
+      [
+       2026,
+       12290
+      ]
+     ]
+    },
+    {
+     "name": "Net tuition and fees",
+     "short": "Net tuition",
+     "role": "third",
+     "points": [
+      [
+       2006,
+       4170
+      ],
+      [
+       2007,
+       4080
+      ],
+      [
+       2008,
+       3980
+      ],
+      [
+       2009,
+       3640
+      ],
+      [
+       2010,
+       3720
+      ],
+      [
+       2011,
+       4500
+      ],
+      [
+       2012,
+       4600
+      ],
+      [
+       2013,
+       4470
+      ],
+      [
+       2014,
+       4380
+      ],
+      [
+       2015,
+       4540
+      ],
+      [
+       2016,
+       4540
+      ],
+      [
+       2017,
+       4210
+      ],
+      [
+       2018,
+       4070
+      ],
+      [
+       2019,
+       3550
+      ],
+      [
+       2020,
+       3400
+      ],
+      [
+       2021,
+       2610
+      ],
+      [
+       2022,
+       2820
+      ],
+      [
+       2023,
+       2270
+      ],
+      [
+       2024,
+       1850
+      ],
+      [
+       2025,
+       1960
+      ],
+      [
+       2026,
+       1920
+      ]
+     ]
+    }
+   ],
+   "sources": [
+    [
+     "College Board, Trends in College Pricing 2026",
+     "https://research.collegeboard.org/media/xlsx/trends-in-college-pricing-2026-excel-data.xlsx"
+    ]
+   ],
+   "note": "Values from 2024-25 on are College Board projections."
+  },
+  {
+   "id": "debt",
+   "kind": "line",
+   "num": "Figure 4",
+   "title": "Student debt became one of the largest debts American households carry",
+   "subtitle": "Balances on consumer credit reports, end of each year, not adjusted for inflation.",
+   "alt": "Line chart, 2006 to 2026. Student loans rise from about $0.48 trillion to $1.66 trillion; auto loans reach $1.73 trillion; credit cards $1.29 trillion.",
+   "unit": "$",
+   "series": [
+    {
+     "name": "Student loans",
+     "short": "Student",
+     "role": "cost",
+     "points": [
+      [
+       2006,
+       481600000000
+      ],
+      [
+       2007,
+       547500000000
+      ],
+      [
+       2008,
+       639300000000
+      ],
+      [
+       2009,
+       721300000000
+      ],
+      [
+       2010,
+       811800000000
+      ],
+      [
+       2011,
+       873600000000
+      ],
+      [
+       2012,
+       966000000000
+      ],
+      [
+       2013,
+       1080000000000
+      ],
+      [
+       2014,
+       1157000000000
+      ],
+      [
+       2015,
+       1232000000000
+      ],
+      [
+       2016,
+       1310000000000
+      ],
+      [
+       2017,
+       1378000000000
+      ],
+      [
+       2018,
+       1457000000000
+      ],
+      [
+       2019,
+       1508000000000
+      ],
+      [
+       2020,
+       1555000000000
+      ],
+      [
+       2021,
+       1576000000000
+      ],
+      [
+       2022,
+       1595000000000
+      ],
+      [
+       2023,
+       1601000000000
+      ],
+      [
+       2024,
+       1615000000000
+      ],
+      [
+       2025,
+       1664000000000
+      ],
+      [
+       2026,
+       1655700000000
+      ]
+     ]
+    },
+    {
+     "name": "Auto loans",
+     "short": "Auto",
+     "role": "compare",
+     "points": [
+      [
+       2006,
+       821000000000
+      ],
+      [
+       2007,
+       815000000000
+      ],
+      [
+       2008,
+       791000000000
+      ],
+      [
+       2009,
+       721900000000
+      ],
+      [
+       2010,
+       711000000000
+      ],
+      [
+       2011,
+       734100000000
+      ],
+      [
+       2012,
+       783000000000
+      ],
+      [
+       2013,
+       863000000000
+      ],
+      [
+       2014,
+       955000000000
+      ],
+      [
+       2015,
+       1064000000000
+      ],
+      [
+       2016,
+       1157000000000
+      ],
+      [
+       2017,
+       1221000000000
+      ],
+      [
+       2018,
+       1274000000000
+      ],
+      [
+       2019,
+       1331000000000
+      ],
+      [
+       2020,
+       1374000000000
+      ],
+      [
+       2021,
+       1458000000000
+      ],
+      [
+       2022,
+       1552000000000
+      ],
+      [
+       2023,
+       1607000000000
+      ],
+      [
+       2024,
+       1655000000000
+      ],
+      [
+       2025,
+       1667000000000
+      ],
+      [
+       2026,
+       1734000000000
+      ]
+     ]
+    },
+    {
+     "name": "Credit cards",
+     "short": "Cards",
+     "role": "third",
+     "points": [
+      [
+       2006,
+       767000000000
+      ],
+      [
+       2007,
+       839000000000
+      ],
+      [
+       2008,
+       866000000000
+      ],
+      [
+       2009,
+       795000000000
+      ],
+      [
+       2010,
+       729600000000
+      ],
+      [
+       2011,
+       704000000000
+      ],
+      [
+       2012,
+       679000000000
+      ],
+      [
+       2013,
+       683000000000
+      ],
+      [
+       2014,
+       700000000000
+      ],
+      [
+       2015,
+       733000000000
+      ],
+      [
+       2016,
+       779000000000
+      ],
+      [
+       2017,
+       834000000000
+      ],
+      [
+       2018,
+       870000000000
+      ],
+      [
+       2019,
+       927000000000
+      ],
+      [
+       2020,
+       819000000000
+      ],
+      [
+       2021,
+       856000000000
+      ],
+      [
+       2022,
+       986000000000
+      ],
+      [
+       2023,
+       1129000000000
+      ],
+      [
+       2024,
+       1211000000000
+      ],
+      [
+       2025,
+       1277000000000
+      ],
+      [
+       2026,
+       1285000000000
+      ]
+     ]
+    }
+   ],
+   "sources": [
+    [
+     "Federal Reserve Bank of New York, Household Debt and Credit, 2026 Q3",
+     "https://www.newyorkfed.org/medialibrary/interactives/householdcredit/data/xls/HHD_C_Report_2026Q3.xlsx"
+    ]
+   ],
+   "note": "2026 is the third quarter. The Federal Reserve's G.19 count, which includes all lenders, is higher: $1.88 trillion."
+  },
+  {
+   "id": "finish",
+   "kind": "bars",
+   "num": "Figure 5",
+   "title": "Who finishes depends on who you are when you start",
+   "subtitle": "Share of students who started in fall 2019 and earned any credential within six years.",
+   "alt": "Bar chart of six-year completion: highest-income neighborhoods 75.9 percent, full-time starters 67.1, all starters 61.1, lowest-income neighborhoods 50.1, part-time starters 34.1.",
+   "unit": "%",
+   "value_label": "Completed within six years",
+   "label_width": 300,
+   "bars": [
+    {
+     "label": "Highest-income neighborhoods",
+     "value": 75.9,
+     "role": "context",
+     "text": "75.9%"
+    },
+    {
+     "label": "Full-time starters",
+     "value": 67.1,
+     "role": "context",
+     "text": "67.1%"
+    },
+    {
+     "label": "All starters",
+     "value": 61.1,
+     "role": "context",
+     "text": "61.1%"
+    },
+    {
+     "label": "Lowest-income neighborhoods",
+     "value": 50.1,
+     "role": "cost",
+     "text": "50.1%"
+    },
+    {
+     "label": "Part-time starters",
+     "value": 34.1,
+     "role": "cost",
+     "text": "34.1%"
+    }
+   ],
+   "sources": [
+    [
+     "National Student Clearinghouse Research Center",
+     "https://nscresearchcenter.org/yearly-progress-and-completion/"
+    ]
+   ],
+   "note": "Income is measured by the student's home neighborhood."
+  },
+  {
+   "id": "pays",
+   "kind": "bars",
+   "num": "Figure 6",
+   "title": "The degree still pays. Starting and stopping barely does",
+   "subtitle": "Median weekly earnings, workers 25 and older, 2025.",
+   "alt": "Bar chart of median weekly earnings in 2025: bachelor's $1,578, associate's $1,135, some college no degree $1,062, high school $966, less than high school (see table).",
+   "unit": "$",
+   "value_label": "Median weekly earnings",
+   "label_width": 260,
+   "bars": [
+    {
+     "label": "Bachelor's degree",
+     "value": 1578,
+     "role": "compare"
+    },
+    {
+     "label": "Associate's degree",
+     "value": 1135,
+     "role": "context"
+    },
+    {
+     "label": "Some college, no degree",
+     "value": 1062,
+     "role": "cost"
+    },
+    {
+     "label": "High school diploma",
+     "value": 966,
+     "role": "context"
+    },
+    {
+     "label": "Less than high school",
+     "value": 770,
+     "role": "context"
+    }
+   ],
+   "sources": [
+    [
+     "BLS, Education pays",
+     "https://www.bls.gov/emp/tables/unemployment-earnings-education.htm"
+    ]
+   ],
+   "note": "Some college, no degree is the group that pays the costs and gets the smallest premium."
+  },
+  {
+   "id": "mooc",
+   "kind": "bars",
+   "num": "Figure 7",
+   "title": "Free courses alone did not get people to the finish",
+   "subtitle": "Completion in HarvardX and MITx courses on edX, 2017-18 cohort.",
+   "alt": "Bar chart: 3.1 percent of all participants completed, 15.4 percent of those who said they intended to, and 46 percent of those who paid for a verified certificate.",
+   "unit": "%",
+   "value_label": "Completed",
+   "label_width": 280,
+   "bars": [
+    {
+     "label": "Everyone who opened a course",
+     "value": 3.13,
+     "role": "cost",
+     "text": "3.13%"
+    },
+    {
+     "label": "Said they intended to finish",
+     "value": 15.42,
+     "role": "context",
+     "text": "15.42%"
+    },
+    {
+     "label": "Paid for a verified certificate",
+     "value": 46.02,
+     "role": "compare",
+     "text": "46.02%"
+    }
+   ],
+   "sources": [
+    [
+     "Reich and Ruiperez-Valiente, The MOOC Pivot, Science (2019)",
+     "https://webs.um.es/jruiperez/papers/journals/2019_Science_MOOCPivot_postprint.pdf"
+    ]
+   ],
+   "note": "Covers HarvardX and MITx only. Completion did not improve over six years."
+  },
+  {
+   "id": "tutor",
+   "kind": "bars",
+   "num": "Figure 8",
+   "title": "Tutoring helps a lot, but not as much as legend says",
+   "subtitle": "Measured effect on learning, in standard deviations. Studies differ in length and test breadth, so read these as ranges, not a league table.",
+   "alt": "Bar chart of tutoring effect sizes: Bloom's 1984 claim 2.0; human tutoring 0.79; intelligent tutoring systems 0.76; a 2025 AI tutor trial 0.63; a PreK-12 tutoring meta-analysis 0.37; a 1982 meta-analysis 0.33.",
+   "unit": "",
+   "value_label": "Effect size (SD)",
+   "label_width": 330,
+   "bars": [
+    {
+     "label": "Bloom's 1984 claim (3-week studies)",
+     "value": 2.0,
+     "role": "context",
+     "text": "2.0"
+    },
+    {
+     "label": "Human tutoring (VanLehn 2011)",
+     "value": 0.79,
+     "role": "compare",
+     "text": "0.79"
+    },
+    {
+     "label": "Step-based tutoring software (VanLehn 2011)",
+     "value": 0.76,
+     "role": "compare",
+     "text": "0.76"
+    },
+    {
+     "label": "Guarded AI tutor, Harvard physics (2025)",
+     "value": 0.63,
+     "role": "third",
+     "text": "0.63"
+    },
+    {
+     "label": "PreK-12 tutoring meta-analysis (2020)",
+     "value": 0.37,
+     "role": "compare",
+     "text": "0.37"
+    },
+    {
+     "label": "Tutoring meta-analysis (1982)",
+     "value": 0.33,
+     "role": "compare",
+     "text": "0.33"
+    }
+   ],
+   "sources": [
+    [
+     "von Hippel, Education Next (2024)",
+     "https://www.educationnext.org/two-sigma-tutoring-separating-science-fiction-from-science-fact/"
+    ],
+    [
+     "VanLehn (2011)",
+     "https://eric.ed.gov/?id=EJ946764"
+    ],
+    [
+     "Kestin et al., Scientific Reports (2025)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC12179260/"
+    ],
+    [
+     "Nickow, Oreopoulos and Quan, NBER (2020)",
+     "https://www.nber.org/papers/w27476"
+    ]
+   ],
+   "note": "The AI result is a two-week trial with an immediate, narrow test."
+  },
+  {
+   "id": "spend",
+   "kind": "bars",
+   "num": "Figure 9",
+   "title": "What it costs to teach one student for a year, and what it costs to serve a page",
+   "subtitle": "Instruction spending per full-time-equivalent student, 2020-21, against the per-learner cost of delivering static course files.",
+   "alt": "Bar chart: private nonprofit four-year $20,060 per student on instruction; public four-year $13,540; public two-year $8,040; delivering Open Campus pages to one more learner, about $0.",
+   "unit": "$",
+   "value_label": "Per student per year",
+   "label_width": 300,
+   "bars": [
+    {
+     "label": "Private nonprofit four-year",
+     "value": 20060,
+     "role": "context",
+     "text": "$20,060"
+    },
+    {
+     "label": "Public four-year",
+     "value": 13540,
+     "role": "context",
+     "text": "$13,540"
+    },
+    {
+     "label": "Public two-year",
+     "value": 8040,
+     "role": "context"
+    },
+    {
+     "label": "Open Campus, delivery only",
+     "value": 0,
+     "role": "third",
+     "text": "about $0"
+    }
+   ],
+   "sources": [
+    [
+     "NCES, Postsecondary Institution Expenses",
+     "https://nces.ed.gov/programs/coe/indicator/cue/postsecondary-institution-expense"
+    ],
+    [
+     "Cloudflare static assets billing",
+     "https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/"
+    ]
+   ],
+   "note": "Delivery only. Writing and reviewing courses, exam fees and the learner's own AI are real costs and are not zero."
+  }
+ ]
+}
