@@ -1,0 +1,27 @@
+{
+  "name": "@open-campus/tools",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./diagrams": "./src/diagrams/index.ts"
+  },
+  "scripts": {
+    "validate": "tsx src/cli.ts validate",
+    "lint:originality": "tsx src/cli.ts originality",
+    "typecheck": "tsc --noEmit -p ../tsconfig.json",
+    "coverage": "tsx src/cli.ts coverage",
+    "clinical:packet": "tsx src/cli.ts clinical-packet",
+    "clinical:apply": "tsx src/cli.ts clinical-apply",
+    "check": "tsx src/cli.ts all"
+  },
+  "dependencies": {
+    "@open-campus/schema": "workspace:*",
+    "gray-matter": "^4.0.3",
+    "openchemlib": "^9.25.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.0"
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "section": {
+      "type": "string",
+      "enum": [
+        "bio-biochem",
+        "chem-phys",
+        "psych-soc",
+        "cars"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "topics": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "passage": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "body"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "questions": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "stem": {
+            "type": "string",
+            "minLength": 1
+          },
+          "choices": {
+            "minItems": 4,
+            "maxItems": 4,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "key",
+                "text",
+                "explanation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "answer": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "tags": {
+            "type": "object",
+            "properties": {
+              "fc": {
+                "type": "string",
+                "enum": [
+                  "FC1",
+                  "FC2",
+                  "FC3",
+                  "FC4",
+                  "FC5",
+                  "FC6",
+                  "FC7",
+                  "FC8",
+                  "FC9",
+                  "FC10"
+                ]
+              },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "1A",
+                  "1B",
+                  "1C",
+                  "1D",
+                  "2A",
+                  "2B",
+                  "2C",
+                  "3A",
+                  "3B",
+                  "4A",
+                  "4B",
+                  "4C",
+                  "4D",
+                  "4E",
+                  "5A",
+                  "5B",
+                  "5C",
+                  "5D",
+                  "5E",
+                  "6A",
+                  "6B",
+                  "6C",
+                  "7A",
+                  "7B",
+                  "7C",
+                  "8A",
+                  "8B",
+                  "8C",
+                  "9A",
+                  "9B",
+                  "10A"
+                ]
+              },
+              "skill": {
+                "type": "string",
+                "enum": [
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S4",
+                  "C1",
+                  "C2",
+                  "C3"
+                ]
+              }
+            },
+            "required": [
+              "fc",
+              "category",
+              "skill"
+            ],
+            "additionalProperties": false
+          },
+          "difficulty": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "clinical": {
+            "default": false,
+            "type": "boolean"
+          },
+          "sean_review": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "approved",
+              "rejected"
+            ]
+          },
+          "verification": {
+            "type": "object",
+            "properties": {
+              "drafted_by": {
+                "type": "string",
+                "enum": [
+                  "claude",
+                  "codex",
+                  "grok",
+                  "sean"
+                ]
+              },
+              "verified_by": {
+                "type": "string",
+                "enum": [
+                  "claude",
+                  "codex",
+                  "grok",
+                  "sean"
+                ]
+              },
+              "model": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "result": {
+                "type": "string",
+                "enum": [
+                  "pass",
+                  "fixed",
+                  "disputed"
+                ]
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "drafted_by",
+              "verified_by",
+              "model",
+              "date",
+              "result"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "stem",
+          "choices",
+          "answer",
+          "tags",
+          "difficulty",
+          "clinical"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "drafted_by": {
+          "type": "string",
+          "enum": [
+            "claude",
+            "codex",
+            "grok",
+            "sean"
+          ]
+        },
+        "verified_by": {
+          "type": "string",
+          "enum": [
+            "claude",
+            "codex",
+            "grok",
+            "sean"
+          ]
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+        },
+        "result": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fixed",
+            "disputed"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "drafted_by",
+        "verified_by",
+        "model",
+        "date",
+        "result"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "section",
+    "title",
+    "topics",
+    "passage",
+    "questions"
+  ],
+  "additionalProperties": false
+}

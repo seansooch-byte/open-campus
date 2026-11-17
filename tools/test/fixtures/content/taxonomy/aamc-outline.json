@@ -1,0 +1,257 @@
+{
+  "outlineVersion": "2020 outline (unchanged on site as of 2026-10-07)",
+  "source": "https://students-residents.aamc.org/prepare-mcat-exam/whats-mcat-exam-pdf-outline",
+  "retrieved": "2026-10-07",
+  "note": "IDs and structure follow the AAMC MCAT content outline, referenced by code; every title is our own short wording.",
+  "sections": [
+    {
+      "id": "bio-biochem",
+      "title": "Cells and molecules"
+    },
+    {
+      "id": "chem-phys",
+      "title": "Matter and motion"
+    },
+    {
+      "id": "psych-soc",
+      "title": "Behavior and society"
+    },
+    {
+      "id": "cars",
+      "title": "Reading arguments"
+    }
+  ],
+  "foundationalConcepts": [
+    {
+      "id": "FC1",
+      "title": "Molecules of life",
+      "section": "bio-biochem",
+      "categories": [
+        {
+          "id": "1A",
+          "title": "Proteins and amino acids"
+        },
+        {
+          "id": "1B",
+          "title": "From gene to protein"
+        },
+        {
+          "id": "1C",
+          "title": "Inheritance and genetic variation"
+        },
+        {
+          "id": "1D",
+          "title": "Metabolism and energy use"
+        }
+      ]
+    },
+    {
+      "id": "FC2",
+      "title": "Cells and their assemblies",
+      "section": "bio-biochem",
+      "categories": [
+        {
+          "id": "2A",
+          "title": "Cell structure, membranes and tissues"
+        },
+        {
+          "id": "2B",
+          "title": "Bacteria and viruses"
+        },
+        {
+          "id": "2C",
+          "title": "Cell division and specialization"
+        }
+      ]
+    },
+    {
+      "id": "FC3",
+      "title": "Organ systems",
+      "section": "bio-biochem",
+      "categories": [
+        {
+          "id": "3A",
+          "title": "Nerves and hormones"
+        },
+        {
+          "id": "3B",
+          "title": "Body systems working together"
+        }
+      ]
+    },
+    {
+      "id": "FC4",
+      "title": "Physics of living systems",
+      "section": "chem-phys",
+      "categories": [
+        {
+          "id": "4A",
+          "title": "Motion, force and energy"
+        },
+        {
+          "id": "4B",
+          "title": "Fluids and gas behavior"
+        },
+        {
+          "id": "4C",
+          "title": "Charge, circuits and redox"
+        },
+        {
+          "id": "4D",
+          "title": "Light, sound and spectra"
+        },
+        {
+          "id": "4E",
+          "title": "Atoms and nuclear change"
+        }
+      ]
+    },
+    {
+      "id": "FC5",
+      "title": "Chemistry of reactions",
+      "section": "chem-phys",
+      "categories": [
+        {
+          "id": "5A",
+          "title": "Water, solutions, acids and bases"
+        },
+        {
+          "id": "5B",
+          "title": "Bonding and molecular forces"
+        },
+        {
+          "id": "5C",
+          "title": "Separating and purifying mixtures"
+        },
+        {
+          "id": "5D",
+          "title": "Biomolecule structure and reactivity"
+        },
+        {
+          "id": "5E",
+          "title": "Energy and rates of reactions"
+        }
+      ]
+    },
+    {
+      "id": "FC6",
+      "title": "Perception and response",
+      "section": "psych-soc",
+      "categories": [
+        {
+          "id": "6A",
+          "title": "The senses"
+        },
+        {
+          "id": "6B",
+          "title": "Thinking, memory and language"
+        },
+        {
+          "id": "6C",
+          "title": "Emotion and stress"
+        }
+      ]
+    },
+    {
+      "id": "FC7",
+      "title": "What drives behavior",
+      "section": "psych-soc",
+      "categories": [
+        {
+          "id": "7A",
+          "title": "Biology, personality and disorders"
+        },
+        {
+          "id": "7B",
+          "title": "Group and social influence"
+        },
+        {
+          "id": "7C",
+          "title": "Learning and changing behavior"
+        }
+      ]
+    },
+    {
+      "id": "FC8",
+      "title": "Self and others",
+      "section": "psych-soc",
+      "categories": [
+        {
+          "id": "8A",
+          "title": "Identity and the self"
+        },
+        {
+          "id": "8B",
+          "title": "Perceiving other people"
+        },
+        {
+          "id": "8C",
+          "title": "Interpersonal behavior"
+        }
+      ]
+    },
+    {
+      "id": "FC9",
+      "title": "Society and culture",
+      "section": "psych-soc",
+      "categories": [
+        {
+          "id": "9A",
+          "title": "Institutions and culture"
+        },
+        {
+          "id": "9B",
+          "title": "Population and demographics"
+        }
+      ]
+    },
+    {
+      "id": "FC10",
+      "title": "Inequality",
+      "section": "psych-soc",
+      "categories": [
+        {
+          "id": "10A",
+          "title": "Class, inequality and health"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "S1",
+      "title": "Recall connections",
+      "kind": "sirs"
+    },
+    {
+      "id": "S2",
+      "title": "Solve from principles",
+      "kind": "sirs"
+    },
+    {
+      "id": "S3",
+      "title": "Assess study design",
+      "kind": "sirs"
+    },
+    {
+      "id": "S4",
+      "title": "Interpret measured patterns",
+      "kind": "sirs"
+    },
+    {
+      "id": "C1",
+      "title": "Locate central claims",
+      "kind": "cars"
+    },
+    {
+      "id": "C2",
+      "title": "Connect textual reasons",
+      "kind": "cars"
+    },
+    {
+      "id": "C3",
+      "title": "Extend an argument",
+      "kind": "cars"
+    }
+  ]
+}

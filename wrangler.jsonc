@@ -1,0 +1,16 @@
+// Cloudflare: one Worker on its own hostname, serving site/ as static files.
+// Deploy from the repo root with `npx wrangler deploy` (it creates the DNS record and certificate
+// for campus.seansooch.dev on first run). When the web app is ready, point assets.directory at its
+// static export instead of site/.
+{
+  "name": "open-campus",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [{ "pattern": "campus.seansooch.dev", "custom_domain": true }]
+}

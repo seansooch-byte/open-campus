@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "biology",
+        "biochemistry",
+        "general-chemistry",
+        "organic-chemistry",
+        "physics",
+        "psychology-sociology"
+      ]
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "1A",
+          "1B",
+          "1C",
+          "1D",
+          "2A",
+          "2B",
+          "2C",
+          "3A",
+          "3B",
+          "4A",
+          "4B",
+          "4C",
+          "4D",
+          "4E",
+          "5A",
+          "5B",
+          "5C",
+          "5D",
+          "5E",
+          "6A",
+          "6B",
+          "6C",
+          "7A",
+          "7B",
+          "7C",
+          "8A",
+          "8B",
+          "8C",
+          "9A",
+          "9B",
+          "10A"
+        ]
+      }
+    },
+    "skills": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "C1",
+          "C2",
+          "C3"
+        ]
+      }
+    },
+    "prerequisites": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "learning_objectives": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "diagrams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "file": {
+            "type": "string",
+            "pattern": "^diagrams\\/(?:[a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.(svg|mmd|smi)$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "svg",
+              "mermaid",
+              "smiles"
+            ]
+          },
+          "alt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "file",
+          "kind",
+          "alt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "updated": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    },
+    "clinical": {
+      "default": false,
+      "type": "boolean"
+    },
+    "sean_review": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ]
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "drafted_by": {
+          "type": "string",
+          "enum": [
+            "claude",
+            "codex",
+            "grok",
+            "sean"
+          ]
+        },
+        "verified_by": {
+          "type": "string",
+          "enum": [
+            "claude",
+            "codex",
+            "grok",
+            "sean"
+          ]
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+        },
+        "result": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fixed",
+            "disputed"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "drafted_by",
+        "verified_by",
+        "model",
+        "date",
+        "result"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "subject",
+    "categories",
+    "prerequisites",
+    "learning_objectives",
+    "diagrams",
+    "version",
+    "updated",
+    "clinical"
+  ],
+  "additionalProperties": false
+}

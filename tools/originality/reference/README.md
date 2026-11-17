@@ -1,0 +1,1 @@
+Place local-only `.txt` reference files here to check for copied word runs. Never commit reference text. With no `.txt` files, the lint reports that its reference corpus is empty. Keep this README and .gitkeep committed.

@@ -1,0 +1,33 @@
+{
+  "topic_id": "example-amino-acid-structure",
+  "example": true,
+  "cards": [
+    {
+      "id": "backbone-groups",
+      "front": "Which groups meet at the alpha carbon of a typical amino acid?",
+      "back": "An amino group, a carboxyl group, a hydrogen atom, and a side chain.",
+      "categories": [
+        "1A"
+      ],
+      "clinical": false
+    },
+    {
+      "id": "glycine-symmetry",
+      "front": "Why is the alpha carbon of glycine achiral?",
+      "back": "It has two identical hydrogen substituents.",
+      "categories": [
+        "1A"
+      ],
+      "clinical": false
+    },
+    {
+      "id": "alanine-side-chain",
+      "front": "What side chain distinguishes alanine?",
+      "back": "A methyl group, written CH3.",
+      "categories": [
+        "1A"
+      ],
+      "clinical": false
+    }
+  ]
+}

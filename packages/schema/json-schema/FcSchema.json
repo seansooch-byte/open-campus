@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "string",
+  "enum": [
+    "FC1",
+    "FC2",
+    "FC3",
+    "FC4",
+    "FC5",
+    "FC6",
+    "FC7",
+    "FC8",
+    "FC9",
+    "FC10"
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+<title id="title">Alpha amino acid connectivity</title>
+<desc id="desc">The alpha carbon joins an amino group, carboxyl group, hydrogen, and side chain R. Neutral labels emphasize connectivity.</desc>
+<g stroke="currentColor" stroke-width="2"><path d="M160 100V50M160 120V170M145 110H75M175 110H240"/></g>
+<g font-family="sans-serif" font-size="20" fill="currentColor" text-anchor="middle"><text x="160" y="118">C</text><text x="160" y="40">H</text><text x="160" y="198">R</text><text x="45" y="117">NH₂</text><text x="278" y="117">COOH</text></g>
+</svg>

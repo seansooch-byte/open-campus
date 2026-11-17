@@ -1,0 +1,78 @@
+{
+  "id": "example-amino-acids-discrete",
+  "section": "bio-biochem",
+  "title": "Example \u2014 amino acid connectivity",
+  "topics": ["example-amino-acid-structure"],
+  "passage": null,
+  "example": true,
+  "questions": [
+    {
+      "id": "glycine-substituent",
+      "stem": "Replacing the side chain of alanine with hydrogen produces which amino acid?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Alanine",
+          "explanation": "Alanine retains a methyl side chain; the replacement changes its identity."
+        },
+        {
+          "key": "B",
+          "text": "Glycine",
+          "explanation": "Glycine has hydrogen as its side chain, giving two hydrogens on the alpha carbon."
+        },
+        {
+          "key": "C",
+          "text": "Valine",
+          "explanation": "Valine has a branched carbon side chain rather than hydrogen."
+        },
+        {
+          "key": "D",
+          "text": "Serine",
+          "explanation": "Serine has a hydroxymethyl side chain rather than hydrogen."
+        }
+      ],
+      "answer": "B",
+      "tags": {
+        "fc": "FC1",
+        "category": "1A",
+        "skill": "S1"
+      },
+      "difficulty": 1,
+      "clinical": false
+    },
+    {
+      "id": "chiral-center",
+      "stem": "An alpha carbon is attached to amino, carboxyl, hydrogen, and methyl groups. Which feature makes it a chiral center?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It has a double bond to oxygen.",
+          "explanation": "The carbon described has four single bonds; the carboxyl group contains the oxygen double bond."
+        },
+        {
+          "key": "B",
+          "text": "Two attached groups are identical.",
+          "explanation": "Identical groups prevent this tetrahedral carbon from being a chiral center."
+        },
+        {
+          "key": "C",
+          "text": "All four attached groups differ.",
+          "explanation": "Four distinct groups on this tetrahedral carbon permit two mirror-related configurations."
+        },
+        {
+          "key": "D",
+          "text": "Its side chain contains nitrogen.",
+          "explanation": "A methyl group contains carbon and hydrogen; nitrogen in the side chain is not required for chirality."
+        }
+      ],
+      "answer": "C",
+      "tags": {
+        "fc": "FC1",
+        "category": "1A",
+        "skill": "S2"
+      },
+      "difficulty": 1,
+      "clinical": false
+    }
+  ]
+}

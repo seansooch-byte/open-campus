@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+@source '../../../packages/ui/src';
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  background: #fff;
+  color: #18181b;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #09090b;
+    color: #e4e4e7;
+  }
+  a { color: #7dd3fc; }
+}
+
+a { color: #0369a1; text-decoration: underline; }
