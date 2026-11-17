@@ -19,3 +19,10 @@ Append-only. A later entry supersedes an earlier one; earlier entries are never 
 - **Colour:** taken from a validated reference palette (orange for cost, blue and aqua for comparison, grey for context). A green and red pairing was tested and failed colour-blind separation.
 - **Honesty rules in the argument:** the page states that net price after grants fell at public colleges and that real tuition has eased since 2019, that a degree still pays, and that AI tutoring evidence is mixed. The claim of near-zero cost is limited to delivery.
 - **Design:** a new editorial design written from a blank page (Newsreader, IBM Plex Sans and Mono, paper and a brand green), replacing the first catalog-style landing page.
+
+## 2026-11-17: the catalog page
+
+- **What:** `/catalog/` lists 70 programs in 11 colleges, each with its CIP code, the outside exams or standards it is measured against, and its course sequence, plus the 42-credit general education core and the 60 largest US majors with their share of bachelor's degrees.
+- **Honesty:** every program shows T0 Listed and the page says no course is ready to study. Majors with a researched course sequence are not called "outlined", because Outlined is the T1 tier.
+- **Public data only:** capability levels, human-review gates and sourcing notes from the research stay out; MCAT anchors are removed; pre-medicine is a partner link to AdmissionsAcademy.
+- **CIP codes:** the 60 seed majors' codes were checked against the NCES CIP 2020 file; other program codes come from the research and are not yet checked against that file.

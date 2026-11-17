@@ -1,0 +1,2460 @@
+{
+ "as_of": "2026-11-17",
+ "source_note": "Majors and degree counts: NCES Digest of Education Statistics Table 318.30 (2021-22). Course sequences: Open Campus catalog research, 2026-11-17.",
+ "bachelors_total": 2015035,
+ "seed": [
+  {
+   "cip": "51.3801",
+   "name": "Registered Nursing",
+   "degrees": 152040
+  },
+  {
+   "cip": "52.0201",
+   "name": "Business Administration and Management",
+   "degrees": 135173
+  },
+  {
+   "cip": "42.0101",
+   "name": "Psychology",
+   "degrees": 110144
+  },
+  {
+   "cip": "26.0101",
+   "name": "Biology",
+   "degrees": 78254
+  },
+  {
+   "cip": "52.0301",
+   "name": "Accounting",
+   "degrees": 42668
+  },
+  {
+   "cip": "52.0801",
+   "name": "Finance",
+   "degrees": 42307
+  },
+  {
+   "cip": "11.0701",
+   "name": "Computer Science",
+   "degrees": 40073
+  },
+  {
+   "cip": "52.1401",
+   "name": "Marketing",
+   "degrees": 39030
+  },
+  {
+   "cip": "45.1001",
+   "name": "Political Science",
+   "degrees": 36001
+  },
+  {
+   "cip": "14.1901",
+   "name": "Mechanical Engineering",
+   "degrees": 34886
+  },
+  {
+   "cip": "43.0104",
+   "name": "Criminal Justice/Safety Studies",
+   "degrees": 30084
+  },
+  {
+   "cip": "13.1202",
+   "name": "Elementary Education",
+   "degrees": 29923
+  },
+  {
+   "cip": "09.0101",
+   "name": "Speech Communication and Rhetoric",
+   "degrees": 28183
+  },
+  {
+   "cip": "23.0101",
+   "name": "English",
+   "degrees": 26568
+  },
+  {
+   "cip": "31.0505",
+   "name": "Exercise Science and Kinesiology",
+   "degrees": 26347
+  },
+  {
+   "cip": "11.0101",
+   "name": "Computer and Information Sciences",
+   "degrees": 25124
+  },
+  {
+   "cip": "52.0101",
+   "name": "Business/Commerce",
+   "degrees": 24532
+  },
+  {
+   "cip": "45.1101",
+   "name": "Sociology",
+   "degrees": 24303
+  },
+  {
+   "cip": "24.0101",
+   "name": "Liberal Arts and Sciences",
+   "degrees": 21429
+  },
+  {
+   "cip": "54.0101",
+   "name": "History",
+   "degrees": 20807
+  },
+  {
+   "cip": "44.0701",
+   "name": "Social Work",
+   "degrees": 20634
+  },
+  {
+   "cip": "45.0601",
+   "name": "Economics",
+   "degrees": 17655
+  },
+  {
+   "cip": "27.0101",
+   "name": "Mathematics",
+   "degrees": 16978
+  },
+  {
+   "cip": "14.1001",
+   "name": "Electrical Engineering",
+   "degrees": 15840
+  },
+  {
+   "cip": "51.0000",
+   "name": "Health Sciences, General",
+   "degrees": 15406
+  },
+  {
+   "cip": "14.0801",
+   "name": "Civil Engineering",
+   "degrees": 14379
+  },
+  {
+   "cip": "45.0603",
+   "name": "Econometrics and Quantitative Economics",
+   "degrees": 14079
+  },
+  {
+   "cip": "51.0701",
+   "name": "Health Care Administration",
+   "degrees": 13446
+  },
+  {
+   "cip": "11.0103",
+   "name": "Information Technology",
+   "degrees": 13069
+  },
+  {
+   "cip": "13.1210",
+   "name": "Early Childhood Education",
+   "degrees": 13032
+  },
+  {
+   "cip": "43.0103",
+   "name": "Criminal Justice/Law Enforcement Administration",
+   "degrees": 12968
+  },
+  {
+   "cip": "24.0102",
+   "name": "General Studies",
+   "degrees": 12400
+  },
+  {
+   "cip": "40.0501",
+   "name": "Chemistry",
+   "degrees": 12385
+  },
+  {
+   "cip": "31.0504",
+   "name": "Sport and Fitness Administration",
+   "degrees": 10874
+  },
+  {
+   "cip": "51.2201",
+   "name": "Public Health",
+   "degrees": 10691
+  },
+  {
+   "cip": "09.0100",
+   "name": "Communication",
+   "degrees": 10055
+  },
+  {
+   "cip": "50.0701",
+   "name": "Art/Art Studies",
+   "degrees": 9772
+  },
+  {
+   "cip": "14.0901",
+   "name": "Computer Engineering",
+   "degrees": 9746
+  },
+  {
+   "cip": "26.1501",
+   "name": "Neuroscience",
+   "degrees": 9288
+  },
+  {
+   "cip": "14.0701",
+   "name": "Chemical Engineering",
+   "degrees": 9132
+  },
+  {
+   "cip": "26.0202",
+   "name": "Biochemistry",
+   "degrees": 9086
+  },
+  {
+   "cip": "50.0702",
+   "name": "Fine/Studio Arts",
+   "degrees": 9003
+  },
+  {
+   "cip": "09.0401",
+   "name": "Journalism",
+   "degrees": 8844
+  },
+  {
+   "cip": "45.0401",
+   "name": "Criminology",
+   "degrees": 8673
+  },
+  {
+   "cip": "14.0501",
+   "name": "Bioengineering",
+   "degrees": 8433
+  },
+  {
+   "cip": "50.0501",
+   "name": "Theatre Arts",
+   "degrees": 8314
+  },
+  {
+   "cip": "09.0102",
+   "name": "Mass Communication",
+   "degrees": 8000
+  },
+  {
+   "cip": "52.1201",
+   "name": "Management Information Systems",
+   "degrees": 7458
+  },
+  {
+   "cip": "03.0104",
+   "name": "Environmental Science",
+   "degrees": 7423
+  },
+  {
+   "cip": "45.0201",
+   "name": "Anthropology",
+   "degrees": 7278
+  },
+  {
+   "cip": "19.0701",
+   "name": "Human Development and Family Studies",
+   "degrees": 7834
+  },
+  {
+   "cip": "45.0901",
+   "name": "International Relations",
+   "degrees": 7261
+  },
+  {
+   "cip": "50.0901",
+   "name": "Music",
+   "degrees": 7037
+  },
+  {
+   "cip": "40.0801",
+   "name": "Physics",
+   "degrees": 6758
+  },
+  {
+   "cip": "13.1001",
+   "name": "Special Education",
+   "degrees": 6070
+  },
+  {
+   "cip": "14.0201",
+   "name": "Aerospace Engineering",
+   "degrees": 5869
+  },
+  {
+   "cip": "38.0101",
+   "name": "Philosophy",
+   "degrees": 5722
+  },
+  {
+   "cip": "14.3501",
+   "name": "Industrial Engineering",
+   "degrees": 5359
+  },
+  {
+   "cip": "50.0409",
+   "name": "Graphic Design",
+   "degrees": 5193
+  },
+  {
+   "cip": "16.0905",
+   "name": "Spanish",
+   "degrees": 4761
+  }
+ ],
+ "general_education": [
+  {
+   "code": "GE-101",
+   "name": "College Composition",
+   "anchor": "CLEP College Composition (or College Composition Modular)"
+  },
+  {
+   "code": "GE-102",
+   "name": "Writing about Literature",
+   "anchor": "CLEP Analyzing and Interpreting Literature"
+  },
+  {
+   "code": "GE-103",
+   "name": "Public Speaking",
+   "anchor": "DSST Principles of Public Speaking"
+  },
+  {
+   "code": "GE-111",
+   "name": "College Algebra",
+   "anchor": "CLEP College Algebra"
+  },
+  {
+   "code": "GE-112",
+   "name": "Statistics",
+   "anchor": "DSST Principles of Statistics"
+  },
+  {
+   "code": "GE-121",
+   "name": "Biology",
+   "anchor": "CLEP Biology"
+  },
+  {
+   "code": "GE-122",
+   "name": "Physical Science",
+   "anchor": "CLEP Chemistry or CLEP Natural Sciences"
+  },
+  {
+   "code": "GE-131",
+   "name": "Humanities",
+   "anchor": "CLEP Humanities"
+  },
+  {
+   "code": "GE-132",
+   "name": "Ethics",
+   "anchor": "DSST Ethics in America"
+  },
+  {
+   "code": "GE-141",
+   "name": "American Government",
+   "anchor": "CLEP American Government"
+  },
+  {
+   "code": "GE-142",
+   "name": "US History",
+   "anchor": "CLEP History of the United States I and II"
+  },
+  {
+   "code": "GE-143",
+   "name": "Western Civilization",
+   "anchor": "CLEP Western Civilization I and II"
+  },
+  {
+   "code": "GE-151",
+   "name": "Psychology",
+   "anchor": "CLEP Introductory Psychology"
+  },
+  {
+   "code": "GE-152",
+   "name": "Sociology or Economics",
+   "anchor": "CLEP Introductory Sociology, or CLEP Principles of Macroeconomics / Microeconomics"
+  }
+ ],
+ "colleges": [
+  {
+   "id": "business",
+   "name": "Business",
+   "first_course": "Financial Accounting, mapped by code to the CLEP Financial Accounting outline (General Topics, Income Statement, Balance Sheet, Statement of Cash Flows, Miscellaneous)",
+   "programs": [
+    {
+     "name": "Business Administration and Management, General",
+     "cip": "52.0201",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Principles of Management",
+      "CLEP Principles of Marketing",
+      "CLEP Introductory Business Law",
+      "CLEP Financial Accounting",
+      "CLEP Information Systems"
+     ],
+     "courses": [
+      "Introduction to Business (DSST Intro to Business)",
+      "Principles of Microeconomics (AP/CLEP Micro; MFT II)",
+      "Principles of Macroeconomics (AP/CLEP Macro; MFT II)",
+      "Business Statistics (MFT IV)",
+      "Financial Accounting (CLEP Financial Accounting; MFT I.A)",
+      "Managerial Accounting (MFT I.B)",
+      "Business Law and the Legal Environment (CLEP Introductory Business Law; MFT VIII)",
+      "Principles of Management (CLEP Principles of Management; MFT III)",
+      "Principles of Marketing (CLEP Principles of Marketing; MFT VII)",
+      "Information Systems (CLEP Information Systems; DSST MIS; MFT V)",
+      "Principles of Finance (DSST Principles of Finance; MFT VI)",
+      "Organizational Behavior and Human Resource Management (DSST OB, DSST HRM; MFT III.B)",
+      "Operations Management (MFT III.C)",
+      "Business Ethics and Society (DSST Business Ethics and Society)",
+      "International Business (MFT International Issues)",
+      "Strategic Management capstone (MFT III.D; case-based)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Accounting (through CPA exam readiness)",
+     "cip": "52.0301",
+     "listed_in_seed": true,
+     "anchors": [
+      "Uniform CPA Examination, 2026 and 2027 blueprints",
+      "CPA licensure pathways after the 2025 UAA update",
+      "CLEP Financial Accounting",
+      "IRS Link & Learn Taxes VITA/TCE certification",
+      "IRS Special Enrollment Examination"
+     ],
+     "courses": [
+      "Financial Accounting (CLEP Financial Accounting; FAR foundations)",
+      "Managerial Accounting (BAR cost and managerial)",
+      "Intermediate Accounting I: framework, revenue, receivables, inventory, PP&E (FAR)",
+      "Intermediate Accounting II: liabilities, leases, income taxes, pensions, equity, EPS (FAR)",
+      "Intermediate Accounting III: cash flows, changes and errors, disclosures (FAR)",
+      "Cost Accounting (BAR)",
+      "Accounting Information Systems and Internal Control (ISC; AUD internal control)",
+      "Federal Income Taxation of Individuals (REG; SEE Part 1; Link & Learn Advanced)",
+      "Taxation of Business Entities: C and S corporations, partnerships (REG; TCP; SEE Part 2)",
+      "Business Law for Accountants: contracts, agency, business structures (REG)",
+      "Auditing and Attestation (AUD)",
+      "Advanced Accounting: consolidations, foreign currency, partnerships (FAR, BAR)",
+      "Governmental and Not-for-Profit Accounting (FAR state and local government)",
+      "Accounting Data Analytics (BAR; AACSB A5)",
+      "Ethics, Professional Responsibility and Circular 230 (AUD, REG; SEE Part 3)",
+      "CPA Readiness capstone: full timed task-based simulation exams per section"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Finance, General",
+     "cip": "52.0801",
+     "listed_in_seed": true,
+     "anchors": [
+      "CFA Program Level I",
+      "DSST Principles of Finance, DSST Money and Banking, DSST Personal Finance",
+      "ETS MFT Business Finance section",
+      "FINRA Securities Industry Essentials",
+      "CLEP Financial Accounting as the prerequisite anchor"
+     ],
+     "courses": [
+      "Financial Accounting",
+      "Principles of Microeconomics",
+      "Principles of Macroeconomics",
+      "Business Statistics and Quantitative Methods (CFA QM)",
+      "Principles of Finance: time value, risk and return (DSST Principles of Finance)",
+      "Financial Statement Analysis (CFA FSA)",
+      "Corporate Finance: capital budgeting, capital structure, payout (CFA Corporate Finance)",
+      "Investments and Equity Valuation (CFA Equities)",
+      "Fixed Income (CFA Fixed Income)",
+      "Derivatives and Risk Management (CFA Derivatives)",
+      "Financial Institutions, Money and Banking (DSST Money and Banking)",
+      "International Finance",
+      "Financial Modeling in Spreadsheets and Python",
+      "Personal Finance (DSST Personal Finance)",
+      "Ethics and Regulation in Finance (CFA Ethics)",
+      "Portfolio Management capstone (CFA Portfolio Construction; managed paper portfolio)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Marketing / Marketing Management, General",
+     "cip": "52.1401",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Principles of Marketing",
+      "ETS MFT Business Marketing section",
+      "Free vendor certifications",
+      "American Marketing Association professional certifications"
+     ],
+     "courses": [
+      "Principles of Marketing (CLEP Principles of Marketing)",
+      "Principles of Microeconomics",
+      "Business Statistics",
+      "Consumer Behavior",
+      "Marketing Research",
+      "Digital Marketing",
+      "Integrated Marketing Communications and Advertising",
+      "Brand and Product Management",
+      "Pricing Strategy",
+      "Sales and Sales Management",
+      "Marketing Analytics (A/B testing, attribution, customer lifetime value)",
+      "International Marketing",
+      "Marketing Law and Ethics (FTC Act, advertising substantiation, privacy)",
+      "Marketing Strategy capstone (marketing plan portfolio)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Entrepreneurship / Entrepreneurial Studies",
+     "cip": "52.0701",
+     "listed_in_seed": false,
+     "anchors": [
+      "No licensing or credit-by-exam anchor exists for the major itself",
+      "ETS MFT Business III.F Entrepreneurship",
+      "Common-core anchors",
+      "Proposed measurable anchor"
+     ],
+     "courses": [
+      "Introduction to Business",
+      "Financial Accounting",
+      "Principles of Marketing",
+      "Principles of Management",
+      "Entrepreneurship: opportunity recognition and the venture process",
+      "Customer Discovery and Design Thinking (interview log portfolio)",
+      "Business Models and Lean Startup",
+      "Managerial Accounting for small business (pricing, break-even, cash budgeting)",
+      "New Venture Finance (bootstrapping, debt, equity, crowdfunding rules)",
+      "Legal Foundations: entity choice, contracts, intellectual property",
+      "Small Business Management and Operations",
+      "Social Entrepreneurship and Innovation",
+      "Business Plan and Pitch capstone (written plan, financial model, recorded pitch)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Logistics, Materials, and Supply Chain Management",
+     "cip": "52.0203",
+     "listed_in_seed": false,
+     "anchors": [
+      "ASCM CSCP",
+      "ASCM CPIM",
+      "ETS MFT Business III.C Operations Management",
+      "ISM CPSM procurement certification"
+     ],
+     "courses": [
+      "Business Statistics",
+      "Financial and Managerial Accounting (combined)",
+      "Operations Management",
+      "Supply Chain Management Fundamentals",
+      "Demand Planning and Forecasting",
+      "Inventory Management and Production Planning",
+      "Procurement and Strategic Sourcing",
+      "Logistics and Transportation",
+      "Quality Management and Lean Six Sigma",
+      "Management Science: linear programming and optimization",
+      "ERP and Supply Chain Information Systems",
+      "Global Supply Chains and Trade Compliance",
+      "Supply Chain Risk and Sustainability",
+      "Supply Chain Simulation capstone"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Business Analytics",
+     "cip": "30.7102",
+     "listed_in_seed": false,
+     "anchors": [
+      "INFORMS CAP-Essentials",
+      "AP Statistics",
+      "ETS MFT Business IV Quantitative Business Analysis ~11% and V Information Systems ~10%",
+      "CLEP Information Systems"
+     ],
+     "courses": [
+      "Calculus for Business",
+      "Business Statistics",
+      "Probability and Statistical Inference",
+      "Programming for Analytics (Python)",
+      "Databases and SQL",
+      "Data Wrangling and Visualization",
+      "Regression and Predictive Modeling",
+      "Machine Learning for Business",
+      "Optimization and Management Science",
+      "Simulation and Decision Analysis",
+      "Experimentation and Causal Inference (A/B tests)",
+      "Forecasting and Time Series",
+      "Data Ethics, Privacy and Governance",
+      "Analytics capstone on a public dataset (CAP-Essentials framework)"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "law",
+   "name": "Law and Public Service",
+   "first_course": "LSAT Logical Reasoning and Reading Comprehension, as one course mapped to the LSAT's two scored section types and its question-type taxonomy",
+   "programs": [
+    {
+     "name": "Criminal Justice",
+     "cip": "43.0104",
+     "listed_in_seed": true,
+     "anchors": [
+      "DSST Criminal Justice",
+      "DSST Introduction to Law Enforcement",
+      "DSST Substance Abuse",
+      "CLEP American Government",
+      "ETS Major Field Test in Criminal Justice"
+     ],
+     "courses": [
+      "Introduction to Criminal Justice",
+      "American Government and Constitutional Structure (shared)",
+      "Criminology: Theories of Criminal Behavior",
+      "Substantive Criminal Law (elements, defenses, liability)",
+      "Criminal Procedure (4th, 5th, 6th, 14th Amendments)",
+      "Policing: History, Organization, Issues",
+      "Courts and the Judicial Process (pretrial, plea bargaining, sentencing)",
+      "Corrections, Probation and Parole",
+      "Juvenile Justice",
+      "Research Methods in Criminal Justice",
+      "Statistics for Social Science (shared)",
+      "Ethics in Criminal Justice",
+      "Victimology and Victim Services",
+      "Homeland Security and Emergency Management (FEMA ICS/NIMS)",
+      "Capstone: data-driven policy paper on BJS/NIBRS data"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Public Administration and Public Policy",
+     "cip": "44.0401",
+     "listed_in_seed": false,
+     "anchors": [
+      "NASPAA Accreditation Standards, Standard 5.1 Universal Required Competencies, five domains",
+      "CLEP American Government",
+      "DSST Organizational Behavior",
+      "FEMA EMI IS-100, IS-200, IS-700, IS-800",
+      "GFOA Certified Public Finance Officer and ICMA credentials"
+     ],
+     "courses": [
+      "Introduction to Public Administration",
+      "American Government, Federalism and Intergovernmental Relations (shared)",
+      "The Public Policy Process",
+      "Organization Theory and Behavior",
+      "Public Budgeting and Finance",
+      "Public Human Resource Management",
+      "Administrative Law and the Regulatory Process (APA, 5 U.S.C. 551 et seq.)",
+      "Microeconomics for Public Policy and Cost-Benefit Analysis",
+      "Statistics for Public Affairs (shared)",
+      "Research Methods and Program Evaluation",
+      "Public Service Ethics",
+      "Nonprofit Management",
+      "Performance Management and Public Data",
+      "Emergency Management (FEMA ICS/NIMS)",
+      "State and Local Government Management",
+      "Capstone: client policy memo plus budget proposal"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Legal Studies and Paralegal (AAS, BA, certificate)",
+     "cip": "22.0302",
+     "listed_in_seed": false,
+     "anchors": [
+      "NALA Certified Paralegal",
+      "NFPA Paralegal CORE Competency Exam",
+      "NFPA PACE",
+      "ABA Guidelines for the Approval of Paralegal Education Programs, G-302",
+      "CLEP Introductory Business Law"
+     ],
+     "courses": [
+      "Introduction to Law and the American Legal System",
+      "Legal Ethics and the Unauthorized Practice of Law",
+      "Legal Research I: primary authority (govinfo, CourtListener, state codes)",
+      "Legal Writing I: objective memo (IRAC)",
+      "Civil Litigation and the Federal Rules of Civil Procedure",
+      "Contracts (common law and UCC Article 2, referenced by section)",
+      "Torts",
+      "Criminal Law and Procedure (shared with Criminal Justice)",
+      "Evidence (Federal Rules of Evidence)",
+      "Business Organizations",
+      "Wills, Trusts and Probate",
+      "Family Law",
+      "Real Property",
+      "Administrative Law (shared with Public Administration)",
+      "Law Office Technology and E-Discovery",
+      "Capstone: complete case file portfolio and a timed CP-Skills-style written exercise"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Pre-Law: LSAT, Legal Reasoning and Writing",
+     "cip": "22.0001",
+     "listed_in_seed": false,
+     "anchors": [
+      "LSAC LawHub",
+      "CLEP College Composition",
+      "California First-Year Law Students' Examination"
+     ],
+     "courses": [
+      "Critical Reading of Dense Argument",
+      "Informal Logic and Argument Structure",
+      "Formal Logic: conditionals, quantifiers, valid inference (shared with Philosophy)",
+      "LSAT Logical Reasoning I: assumption, flaw, strengthen and weaken",
+      "LSAT Logical Reasoning II: inference, principle, parallel reasoning, conditional chains",
+      "LSAT Reading Comprehension (including comparative passages)",
+      "Argumentative Writing (LSAT Writing style)",
+      "American Government and Constitutional Structure (shared)",
+      "Introduction to the Legal System and Reading Cases",
+      "Foundations of Legal Writing",
+      "Contracts Primer",
+      "Torts Primer",
+      "Criminal Law Primer",
+      "Jurisprudence and Philosophy of Law",
+      "Full-Length Timed Practice and Error Analysis",
+      "Applying to Law School: personal statement and application strategy"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "computing",
+   "name": "Computing",
+   "first_course": "CS1 Programming in Python, anchored to CS2023 SDF (Software Development Fundamentals) units and cross-mapped to AP CSP and the DSST Computing and Information Technology exam",
+   "programs": [
+    {
+     "name": "Computer Science",
+     "cip": "11.0701",
+     "listed_in_seed": true,
+     "anchors": [
+      "ACM/IEEE-CS/AAAI CS2023 knowledge areas and knowledge units, mapped by code",
+      "ABET CAC Computer Science program criteria",
+      "ETS Major Field Test in Computer Science",
+      "AP Computer Science A",
+      "CLEP Calculus, College Algebra, Precalculus"
+     ],
+     "courses": [
+      "CS1 Programming in Python (CS2023 SDF)",
+      "CS2 Object-oriented programming and data structures in Java (aligns to AP CSA)",
+      "Discrete Mathematics and proofs (CS2023 MSF)",
+      "Calculus I (shared with Math college)",
+      "Data Structures and Algorithms I (CS2023 AL)",
+      "Computer Organization and Assembly (CS2023 AR)",
+      "Probability and Statistics for Computing (MSF)",
+      "Systems Programming in C and Unix",
+      "Algorithms II and Complexity, Automata and Computability (AL, FPL foundations)",
+      "Operating Systems (CS2023 OS)",
+      "Databases and SQL (CS2023 DM)",
+      "Computer Networks (CS2023 NC)",
+      "Programming Languages and paradigms (CS2023 FPL)",
+      "Software Engineering and team project (CS2023 SE)",
+      "Security, Society, Ethics and Professionalism (CS2023 SEC and SEP)",
+      "Capstone integrative project (ABET requirement)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Information Technology and Information Systems",
+     "cip": "11.0103",
+     "listed_in_seed": true,
+     "anchors": [
+      "ACM/IEEE IT2017 competencies",
+      "ACM/AIS IS2020",
+      "ABET CAC IT criteria",
+      "CompTIA A+ Core 1 and Core 2, Network+, Linux+, Security+ SY0-701",
+      "CLEP Information Systems"
+     ],
+     "courses": [
+      "Introduction to IT and computing (DSST Computing and IT)",
+      "Programming fundamentals in Python",
+      "Hardware, operating systems and troubleshooting (A+ Core 1)",
+      "Operating systems administration, Windows and Linux (A+ Core 2, Linux+)",
+      "Discrete math and statistics for IT",
+      "Networking fundamentals (Network+)",
+      "Databases and SQL",
+      "Web and mobile systems",
+      "Systems analysis and design (IS2020)",
+      "Information security fundamentals (Security+)",
+      "Cloud and virtualization platforms",
+      "Scripting and automation (Bash, PowerShell, Python)",
+      "Human-computer interaction and UX",
+      "IT project management and service management",
+      "Capstone experiential project (ABET requires experiential learning)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Cybersecurity",
+     "cip": "11.1003",
+     "listed_in_seed": false,
+     "anchors": [
+      "ACM/IEEE/AIS/IFIP CSEC2017",
+      "ABET CAC Cybersecurity criteria",
+      "NICE Workforce Framework for Cybersecurity",
+      "CompTIA Security+ SY0-701",
+      "ISC2 Certified in Cybersecurity"
+     ],
+     "courses": [
+      "Programming fundamentals in Python",
+      "Discrete math and statistics",
+      "Computer organization and operating systems",
+      "Networking fundamentals",
+      "Linux and scripting for security",
+      "Security principles and risk (CSEC2017 crosscutting, Security+ domain 1)",
+      "Cryptography (data security)",
+      "Secure software development and web application security (software security)",
+      "Network defense and security operations (connection and system security)",
+      "Threats, vulnerabilities and penetration testing in sandboxed targets",
+      "Digital forensics and incident response",
+      "Human and organizational security: social engineering, governance, policy",
+      "Law, ethics, privacy and compliance (societal security; NIST CSF)",
+      "Capstone: a red/blue exercise or a security assessment report"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Data Science and Machine Learning",
+     "cip": "30.7001",
+     "listed_in_seed": false,
+     "anchors": [
+      "ACM DS2021 Data Science curricular volume",
+      "CS2023 AI knowledge area",
+      "AP Statistics and CLEP Calculus, College Algebra",
+      "No widely recognized independent data science licensing or credit-by-exam test found",
+      "Public benchmark and competition datasets as performance anchors"
+     ],
+     "courses": [
+      "Programming in Python for data",
+      "Calculus I and II (shared)",
+      "Linear Algebra (shared; MIT OCW 18.06)",
+      "Probability and Statistics",
+      "Data wrangling and visualization (pandas, plotting)",
+      "Databases and SQL",
+      "Statistical modeling and regression",
+      "Algorithms and data structures (shared with CS)",
+      "Machine learning",
+      "Data ethics, privacy and governance",
+      "Deep learning",
+      "Big data and distributed computing (concepts; scaled labs)",
+      "Experimental design and causal inference",
+      "Natural language processing or another applied ML elective",
+      "Capstone: an end-to-end data project with a written report"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Software Engineering",
+     "cip": "14.0903",
+     "listed_in_seed": false,
+     "anchors": [
+      "ACM/IEEE-CS SE2014 curriculum guidelines",
+      "CS2023 SE knowledge area",
+      "IEEE Computer Society SWEBOK Guide",
+      "ABET EAC Software Engineering program criteria",
+      "No US licensing exam currently offered for software engineering"
+     ],
+     "courses": [
+      "CS1 Programming",
+      "CS2 Object-oriented programming and data structures",
+      "Discrete mathematics",
+      "Calculus I",
+      "Algorithms",
+      "Computer organization",
+      "Software construction and testing",
+      "Requirements engineering",
+      "Software design and architecture",
+      "Databases",
+      "Operating systems and concurrency",
+      "Human-computer interaction",
+      "Software process, project management and DevOps",
+      "Software verification and formal methods",
+      "Security engineering",
+      "Two-semester team capstone"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "engineering",
+   "name": "Engineering",
+   "first_course": "Engineering Statics",
+   "programs": [
+    {
+     "name": "Mechanical Engineering",
+     "cip": "14.1901",
+     "listed_in_seed": true,
+     "anchors": [
+      "NCEES FE Mechanical",
+      "ABET EAC Criterion 3 outcomes 1-7 and Criterion 5",
+      "CLEP Calculus",
+      "AP Calculus BC, AP Physics C Mechanics and E&M",
+      "Later"
+     ],
+     "courses": [
+      "Shared math and science core reused from Gen Ed: Calculus I to III, Differential Equations with Linear Algebra, Physics I (mechanics) and II (E&M), General Chemistry I",
+      "Introduction to Engineering, Computing and Numerical Methods (Python)",
+      "Engineering Graphics and CAD",
+      "Statics",
+      "Dynamics and Vibrations",
+      "Mechanics of Materials",
+      "Materials Science and Manufacturing Processes",
+      "Thermodynamics",
+      "Fluid Mechanics",
+      "Heat Transfer",
+      "Electrical Circuits for Mechanical Engineers",
+      "Measurements, Instrumentation and Controls",
+      "Machine Design",
+      "Engineering Economics, Ethics and Professional Practice",
+      "Capstone Design (two terms in accredited programs)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Electrical Engineering",
+     "cip": "14.1001",
+     "listed_in_seed": true,
+     "anchors": [
+      "NCEES FE Electrical and Computer",
+      "ABET program criteria 'Electrical, Computer, Communications, Telecommunication(s), and Sim",
+      "CLEP Calculus",
+      "Later"
+     ],
+     "courses": [
+      "Shared math and science core: Calculus I to III, Differential Equations and Linear Algebra, Physics I and II",
+      "Programming for Engineers (Python and C)",
+      "Digital Logic Design",
+      "Circuits I (DC, transients)",
+      "Circuits II (AC steady state, phasors, power)",
+      "Electronics I (diodes, transistors, op amps)",
+      "Signals and Systems",
+      "Probability and Random Processes for EE",
+      "Electromagnetics",
+      "Computer Organization and Embedded Systems",
+      "Control Systems",
+      "Communication Systems and Networks",
+      "Power Systems and Energy Conversion",
+      "Electrical Materials and Devices",
+      "Engineering Economics, Ethics and Professional Practice",
+      "Capstone Design"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Civil Engineering",
+     "cip": "14.0801",
+     "listed_in_seed": true,
+     "anchors": [
+      "NCEES FE Civil",
+      "ABET program criteria 'Civil and Similarly Named Engineering Programs'",
+      "CLEP Calculus",
+      "Later"
+     ],
+     "courses": [
+      "Shared math and science core: Calculus I to III, Differential Equations, Physics I, General Chemistry I, Statistics",
+      "Introduction to Civil Engineering, CAD and Computing",
+      "Statics",
+      "Surveying and Geomatics",
+      "Mechanics of Materials",
+      "Civil Engineering Materials (concrete, steel, aggregates)",
+      "Fluid Mechanics and Hydraulics",
+      "Structural Analysis",
+      "Geotechnical Engineering",
+      "Hydrology and Water Resources",
+      "Environmental Engineering",
+      "Transportation Engineering",
+      "Reinforced Concrete and Steel Design",
+      "Construction Engineering and Management",
+      "Engineering Economics, Ethics and Professional Practice",
+      "Capstone Design"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Chemical Engineering",
+     "cip": "14.0701",
+     "listed_in_seed": true,
+     "anchors": [
+      "NCEES FE Chemical",
+      "ABET program criteria 'Chemical, Biochemical, Biomolecular, and Similarly Named Engineerin",
+      "CLEP Calculus, CLEP Chemistry, AP Chemistry",
+      "Later"
+     ],
+     "courses": [
+      "Shared core: Calculus I to III, Differential Equations, Physics I and II, General Chemistry I and II, Organic Chemistry I (reused from Pre-Health)",
+      "Material and Energy Balances",
+      "Chemical Engineering Thermodynamics",
+      "Physical Chemistry",
+      "Numerical Methods for Chemical Engineers (Python)",
+      "Fluid Mechanics",
+      "Heat Transfer",
+      "Mass Transfer and Separations",
+      "Chemical Reaction Engineering",
+      "Materials Science for Chemical Engineers",
+      "Process Dynamics and Control",
+      "Process Safety, Health and Environment",
+      "Unit Operations Laboratory (simulated and data-based)",
+      "Process Design and Economics",
+      "Capstone Plant Design"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Biomedical Engineering",
+     "cip": "14.0501",
+     "listed_in_seed": true,
+     "anchors": [
+      "NCEES FE Other Disciplines",
+      "ABET program criteria 'Bioengineering and Biomedical and Similarly Named Engineering Progr",
+      "FDA Quality Management System Regulation, 21 CFR 820, effective 2026-02-02, incorporates I",
+      "RAPS Regulatory Affairs Certification"
+     ],
+     "courses": [
+      "Shared core: Calculus I to III, Differential Equations, Physics I and II, General Chemistry I and II, Organic Chemistry I, Cell Biology (reused from Pre-Health)",
+      "Human Anatomy and Physiology for Engineers",
+      "Statics and Mechanics of Materials (combined)",
+      "Circuits and Bioinstrumentation",
+      "Signals and Systems with Biomedical Applications",
+      "Biomechanics",
+      "Biomaterials",
+      "Biotransport (fluids, heat and mass transfer)",
+      "Quantitative Physiology and Systems Modeling",
+      "Biostatistics and Experimental Design",
+      "Medical Imaging",
+      "Cell and Tissue Engineering",
+      "Medical Device Design Controls, Regulation and Ethics",
+      "Capstone Device Design"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Industrial and Systems Engineering",
+     "cip": "14.3501",
+     "listed_in_seed": true,
+     "anchors": [
+      "NCEES FE Industrial and Systems",
+      "ABET program criteria 'Industrial and Similarly Named Engineering Programs'",
+      "ASQ Certified Six Sigma Green Belt",
+      "CLEP Calculus"
+     ],
+     "courses": [
+      "Shared core: Calculus I to III, Linear Algebra, Physics I, Programming",
+      "Probability for Engineers",
+      "Engineering Statistics and Design of Experiments",
+      "Engineering Economics",
+      "Deterministic Operations Research (linear and integer programming)",
+      "Stochastic Models (queues, Markov chains)",
+      "Discrete-Event Simulation",
+      "Work Design, Human Factors and Ergonomics",
+      "Manufacturing Processes and Production Systems",
+      "Quality Engineering and Statistical Process Control",
+      "Facilities Planning and Supply Chain",
+      "Engineering Management and Project Management",
+      "Information Systems and Databases for IE",
+      "Systems Engineering",
+      "Capstone Design"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Health Professions",
+   "first_course": "Population Health I: Epidemiology and Biostatistics",
+   "programs": [
+    {
+     "name": "Registered Nursing",
+     "cip": "51.3801",
+     "listed_in_seed": true,
+     "anchors": [
+      "NCLEX-RN 2026 Test Plan, effective April 2026",
+      "NCLEX eligibility is set by each nursing regulatory body. NCSBN keeps no list, and a free ",
+      "Sittable by anyone, for prerequisites",
+      "ATI TEAS"
+     ],
+     "courses": [
+      "Anatomy and Physiology I",
+      "Anatomy and Physiology II",
+      "Microbiology",
+      "Chemistry for Health Sciences (general, organic, biochemistry survey)",
+      "Lifespan Human Development",
+      "Statistics for Health Sciences",
+      "Nutrition",
+      "Fundamentals of Nursing and Clinical Judgment (NCJMM)",
+      "Health Assessment",
+      "Pharmacology and Dosage Calculation",
+      "Medical-Surgical Nursing I (Health Alterations)",
+      "Medical-Surgical Nursing II (Complex Health Alterations)",
+      "Maternal-Newborn and Pediatric Nursing",
+      "Psychiatric-Mental Health Nursing",
+      "Population and Community Health Nursing",
+      "Leadership, Management and NCLEX Capstone"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Health Care Administration / Health Services Management",
+     "cip": "51.0701",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Principles of Management, CLEP Financial Accounting, CLEP Information Systems, CLEP I",
+      "AAPC CPC",
+      "ACHE FACHE Board of Governors Examination in Healthcare Management",
+      "AUPHA undergraduate program certification and CAHME graduate accreditation as curriculum g"
+     ],
+     "courses": [
+      "The US Health Care System",
+      "Principles of Microeconomics and Health Economics",
+      "Financial Accounting",
+      "Statistics for Health Sciences",
+      "Principles of Management and Organizational Behavior",
+      "Health Care Finance and Budgeting",
+      "Health Law and Ethics",
+      "Health Information Systems and Informatics",
+      "Medical Terminology and Coding (ICD-10-CM; CPT by reference only)",
+      "Human Resources in Health Care",
+      "Quality Improvement and Patient Safety",
+      "Operations and Revenue Cycle Management",
+      "Epidemiology for Managers",
+      "Health Policy",
+      "Strategic Management Capstone"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Public Health",
+     "cip": "51.2201",
+     "listed_in_seed": true,
+     "anchors": [
+      "NBPHE Certified in Public Health",
+      "NCHEC CHES Nine Areas of Responsibility. Eligibility",
+      "CEPH Standalone Baccalaureate Program criteria",
+      "Sittable by anyone"
+     ],
+     "courses": [
+      "Introduction to Public Health and its History",
+      "Biology of Human Disease",
+      "Biostatistics I",
+      "Epidemiology",
+      "Environmental and Occupational Health",
+      "Social and Behavioral Determinants of Health",
+      "Health Communication and Health Literacy",
+      "Public Health Data Analysis in R or Python",
+      "Health Policy, Law and Ethics",
+      "Program Planning and Evaluation",
+      "Global Health",
+      "Research Methods (quantitative and qualitative)",
+      "Community Engagement and Partnerships",
+      "Applied Practice Portfolio and Capstone"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Pre-Medicine",
+     "cip": "51.1102",
+     "partner": {
+      "name": "AdmissionsAcademy",
+      "url": "https://admissionsacademy.org/"
+     }
+    },
+    {
+     "name": "Nutrition and Dietetics",
+     "cip": "51.3101",
+     "listed_in_seed": false,
+     "anchors": [
+      "CDR RDN exam. Eligibility since January 1, 2024",
+      "NDTR pathway",
+      "ACEND Knowledge and Competency requirements as the curriculum guideline",
+      "Sittable by anyone"
+     ],
+     "courses": [
+      "General Chemistry",
+      "Organic and Biochemistry for Nutrition",
+      "Anatomy and Physiology",
+      "Microbiology",
+      "Introduction to Human Nutrition",
+      "Macronutrient Metabolism",
+      "Micronutrients",
+      "Lifecycle Nutrition",
+      "Food Science",
+      "Nutrition Assessment and the Nutrition Care Process",
+      "Medical Nutrition Therapy I",
+      "Medical Nutrition Therapy II",
+      "Community and Public Health Nutrition",
+      "Foodservice Systems Management",
+      "Nutrition Counseling",
+      "Research Methods and Statistics"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Exercise Science / Kinesiology",
+     "cip": "31.0505",
+     "listed_in_seed": true,
+     "anchors": [
+      "NSCA CSCS",
+      "ACSM Certified Exercise Physiologist",
+      "Sittable by anyone"
+     ],
+     "courses": [
+      "Anatomy and Physiology I",
+      "Anatomy and Physiology II",
+      "Introduction to Kinesiology",
+      "Biomechanics",
+      "Exercise Physiology",
+      "Motor Learning and Control",
+      "Nutrition for Performance",
+      "Strength and Conditioning Program Design",
+      "Exercise Testing and Prescription",
+      "Exercise for Special Populations",
+      "Sport and Exercise Psychology",
+      "Statistics and Research Methods",
+      "Applied Practicum Portfolio (in person)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Allied Health Clinical Programs",
+     "cip": "51.0911",
+     "listed_in_seed": false,
+     "anchors": [
+      "ARRT primary pathway",
+      "NBCOT",
+      "NBRC TMC",
+      "NREMT and PTCB",
+      "For the shared core, sittable by anyone"
+     ],
+     "courses": [
+      "Medical Terminology",
+      "Anatomy and Physiology I",
+      "Anatomy and Physiology II",
+      "Microbiology",
+      "Chemistry for Health Sciences",
+      "Physics for Health Sciences (radiation, gas laws)",
+      "Statistics",
+      "Lifespan Development",
+      "Pathophysiology",
+      "Pharmacology Basics",
+      "Patient Care, Ethics and Communication",
+      "Discipline Track Theory (imaging physics and protection, or cardiopulmonary physiology, or clinical chemistry and hematology)",
+      "Discipline Registry Exam Review",
+      "Clinical Placement Placeholder (in person, not online)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Preclinical Medicine",
+     "cip": "51.1201",
+     "listed_in_seed": false,
+     "anchors": [
+      "USMLE Step 1 content outline as the code map. Eligibility requires enrollment in or gradua",
+      "COMLEX Level 1 blueprint",
+      "NBME self-assessments"
+     ],
+     "courses": [
+      "Biochemistry, Genetics and Molecular Biology",
+      "Cell Biology and Histology",
+      "Gross Anatomy and Embryology",
+      "Physiology",
+      "Immunology",
+      "Microbiology and Infectious Disease",
+      "General Pathology",
+      "Pharmacology Principles",
+      "Neuroscience and Behavior",
+      "Cardiovascular, Respiratory and Renal Systems",
+      "Gastrointestinal, Endocrine and Reproductive Systems",
+      "Hematology, Oncology and Musculoskeletal Systems",
+      "Biostatistics, Epidemiology and Ethics",
+      "Step 1 Integrated Capstone"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "natural-sciences",
+   "name": "Natural Sciences",
+   "first_course": "General Chemistry I and II",
+   "programs": [
+    {
+     "name": "Biology, general",
+     "cip": "26.0101",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Biology",
+      "AP Biology",
+      "ETS Major Field Test in Biology",
+      "Vision and Change, five core concepts, interpreted by the BioCore Guide",
+      "GRE Biology"
+     ],
+     "courses": [
+      "General Biology I: cells, molecules, genetics",
+      "General Biology II: organisms, evolution, ecology",
+      "General Chemistry I",
+      "General Chemistry II",
+      "Introductory Statistics / Biostatistics",
+      "Calculus I",
+      "Organic Chemistry I",
+      "Organic Chemistry II",
+      "Physics I (algebra-based)",
+      "Physics II (algebra-based)",
+      "Genetics",
+      "Cell and Molecular Biology",
+      "Evolution",
+      "Ecology",
+      "Biochemistry (reuse pre-med M1)",
+      "Physiology (animal or human)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Chemistry, general",
+     "cip": "40.0501",
+     "listed_in_seed": true,
+     "anchors": [
+      "ACS Guidelines for Bachelor's Degree Programs",
+      "ACS Examinations Institute standardized exams",
+      "CLEP Chemistry",
+      "AP Chemistry",
+      "ETS Major Field Test in Chemistry"
+     ],
+     "courses": [
+      "General Chemistry I",
+      "General Chemistry II",
+      "Calculus I",
+      "Calculus II",
+      "Multivariable Calculus / Math for Chemists",
+      "Physics I (calculus-based)",
+      "Physics II (calculus-based)",
+      "Organic Chemistry I",
+      "Organic Chemistry II",
+      "Analytical (Quantitative) Chemistry",
+      "Inorganic Chemistry (foundation)",
+      "Biochemistry (foundation; reuse pre-med M1)",
+      "Physical Chemistry I: thermodynamics and kinetics",
+      "Physical Chemistry II: quantum and spectroscopy",
+      "Instrumental Analysis (in-depth)",
+      "Chemical Safety, Green Chemistry and Research Capstone"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Neuroscience",
+     "cip": "26.1501",
+     "listed_in_seed": true,
+     "anchors": [
+      "Neuroscience Core Concepts",
+      "GRE Psychology subject test",
+      "CLEP Biology for the biology core"
+     ],
+     "courses": [
+      "Introduction to Neuroscience",
+      "General Biology I",
+      "General Biology II",
+      "General Chemistry I",
+      "General Chemistry II",
+      "Organic Chemistry I",
+      "Introductory Psychology",
+      "Statistics for the Behavioral Sciences",
+      "Cellular and Molecular Neuroscience",
+      "Neuroanatomy",
+      "Systems Neuroscience",
+      "Behavioral Neuroscience",
+      "Cognitive Neuroscience",
+      "Computational Neuroscience",
+      "Research Methods and Capstone"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Biochemistry",
+     "cip": "26.0202",
+     "listed_in_seed": true,
+     "anchors": [
+      "ASBMB core concepts",
+      "ASBMB certification exam",
+      "ACS Guidelines",
+      "CLEP Chemistry and CLEP Biology for the lower-division core"
+     ],
+     "courses": [
+      "General Chemistry I",
+      "General Chemistry II",
+      "General Biology I",
+      "General Biology II",
+      "Calculus I",
+      "Organic Chemistry I",
+      "Organic Chemistry II",
+      "Physics I",
+      "Physics II",
+      "Analytical Chemistry",
+      "Biochemistry I: structure and function (pre-med M1)",
+      "Biochemistry II: metabolism (pre-med M1)",
+      "Molecular Biology",
+      "Physical Chemistry for the Life Sciences",
+      "Biochemistry Laboratory Methods (pre-med lab-methods topics)",
+      "Bioinformatics"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Environmental Science",
+     "cip": "03.0104",
+     "listed_in_seed": true,
+     "anchors": [
+      "AP Environmental Science",
+      "DSST Environmental Science",
+      "CLEP Natural Sciences",
+      "ASBOG Fundamentals of Geology, Domain F Hydrogeology",
+      "Interdisciplinary environmental competencies"
+     ],
+     "courses": [
+      "Introduction to Environmental Science",
+      "General Biology I",
+      "General Biology II",
+      "General Chemistry I",
+      "General Chemistry II",
+      "Physical Geology",
+      "Introductory Statistics",
+      "Ecology",
+      "Environmental Chemistry",
+      "Hydrology and Water Resources",
+      "Atmospheric and Climate Science",
+      "GIS and Remote Sensing",
+      "Environmental Policy and Law",
+      "Field and Lab Methods",
+      "Capstone: environmental assessment project"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Physics, general",
+     "cip": "40.0801",
+     "listed_in_seed": true,
+     "anchors": [
+      "GRE Physics subject test",
+      "AP Physics 1, AP Physics 2, AP Physics C",
+      "ETS Major Field Test in Physics",
+      "APS/AAPT EP3 Guide to Effective Practices for Physics Programs"
+     ],
+     "courses": [
+      "Calculus I",
+      "Calculus II",
+      "Multivariable Calculus",
+      "Linear Algebra and Differential Equations",
+      "Physics I: Mechanics (calculus-based)",
+      "Physics II: Electricity and Magnetism",
+      "Physics III: Waves, Optics and Modern Physics",
+      "Mathematical Methods for Physics",
+      "Classical Mechanics",
+      "Electromagnetism (upper division)",
+      "Thermal and Statistical Physics",
+      "Quantum Mechanics I",
+      "Quantum Mechanics II",
+      "Computational Physics",
+      "Experimental Physics / Electronics Lab"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Geology / Earth Science, general",
+     "cip": "40.0601",
+     "listed_in_seed": false,
+     "anchors": [
+      "ASBOG Fundamentals of Geology",
+      "CLEP Natural Sciences",
+      "DSST Astronomy"
+     ],
+     "courses": [
+      "Physical Geology",
+      "Historical Geology",
+      "General Chemistry I",
+      "General Chemistry II",
+      "Calculus I",
+      "Physics I",
+      "Mineralogy",
+      "Petrology (igneous, metamorphic, sedimentary)",
+      "Sedimentology and Stratigraphy",
+      "Structural Geology",
+      "Geomorphology",
+      "Hydrogeology",
+      "Geochemistry",
+      "Engineering Geology",
+      "GIS for Geoscience",
+      "Field Methods / Field Camp"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "math-stats",
+   "name": "Mathematics and Statistics",
+   "first_course": "Calculus I, anchored to CLEP Calculus (limits about 10%, differential about 50%, integral about 40%; ACE recommends a credit score of 50 for 4 semester hours) and to AP Calculus AB",
+   "programs": [
+    {
+     "name": "Mathematics, B.S. (general and pure)",
+     "cip": "27.0101",
+     "listed_in_seed": true,
+     "anchors": [
+      "GRE Mathematics Subject Test",
+      "ETS Major Field Test in Mathematics",
+      "CLEP Calculus",
+      "CLEP College Algebra, CLEP Precalculus, CLEP College Mathematics",
+      "AP Calculus AB/BC, AP Precalculus"
+     ],
+     "courses": [
+      "Precalculus",
+      "Calculus I (limits, derivatives)",
+      "Calculus II (integrals, series)",
+      "Introduction to Proof (logic, sets, induction, functions, relations)",
+      "Multivariable Calculus",
+      "Linear Algebra (computational, then abstract)",
+      "Discrete Mathematics and Combinatorics",
+      "Ordinary Differential Equations",
+      "Probability",
+      "Real Analysis I",
+      "Abstract Algebra I (groups, rings)",
+      "Real Analysis II or Topology",
+      "Abstract Algebra II or Number Theory",
+      "Complex Analysis",
+      "Senior capstone: expository paper plus oral defense"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Statistics, B.S.",
+     "cip": "27.0501",
+     "listed_in_seed": false,
+     "anchors": [
+      "AP Statistics",
+      "ASA Curriculum Guidelines for Undergraduate Programs in Statistical Science",
+      "SOA Exam P",
+      "CAS MAS-I and MAS-II",
+      "INFORMS CAP-Essentials"
+     ],
+     "courses": [
+      "Calculus I",
+      "Calculus II",
+      "Introductory Statistics (data, inference)",
+      "Programming for Data (R or Python)",
+      "Multivariable Calculus",
+      "Linear Algebra",
+      "Probability (calculus-based)",
+      "Mathematical Statistics (estimation, likelihood, testing)",
+      "Regression and Linear Models",
+      "Experimental Design and Sampling",
+      "Data Management and Visualization",
+      "Bayesian Statistics",
+      "Statistical Learning",
+      "Time Series or Categorical Data",
+      "Capstone: consulting-style analysis report with reproducible code"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Applied and Computational Mathematics, B.S.",
+     "cip": "27.0301",
+     "listed_in_seed": false,
+     "anchors": [
+      "GRE Mathematics Subject Test",
+      "CLEP Calculus",
+      "MAA CUPM 2015",
+      "SIAM undergraduate applied math guidance",
+      "Overlap with the engineering college's FE exam math section"
+     ],
+     "courses": [
+      "Calculus I",
+      "Calculus II",
+      "Multivariable Calculus",
+      "Linear Algebra",
+      "Introduction to Proof",
+      "Ordinary Differential Equations",
+      "Scientific Programming (Python)",
+      "Probability",
+      "Numerical Analysis",
+      "Partial Differential Equations",
+      "Real Analysis I",
+      "Mathematical Modeling",
+      "Optimization",
+      "Complex Variables and Transforms",
+      "Capstone: modeling project with code and report"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Actuarial Science, B.S.",
+     "cip": "52.1304",
+     "listed_in_seed": false,
+     "anchors": [
+      "SOA ASA path",
+      "CAS ACAS path",
+      "SOA publishes syllabi and past exams with solutions",
+      "Exam P fee is $275"
+     ],
+     "courses": [
+      "Calculus I",
+      "Calculus II",
+      "Multivariable Calculus",
+      "Linear Algebra",
+      "Probability for Exam P",
+      "Financial Mathematics (interest theory) for Exam FM",
+      "Microeconomics and Macroeconomics (VEE Economics; from the economics college)",
+      "Accounting and Corporate Finance (VEE; from the business college)",
+      "Mathematical Statistics (VEE Mathematical Statistics)",
+      "Regression and Statistical Learning for SRM and MAS-I",
+      "Long-Term Actuarial Mathematics (life contingencies) for FAM and ALTAM",
+      "Short-Term Actuarial Mathematics (loss models, credibility) for FAM, ASTAM, MAS-II",
+      "Predictive Analytics project for SOA PA and CAS PCPA (R)",
+      "Professionalism and ethics (reading the SOA and CAS codes)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Operations Research, B.S.",
+     "cip": "14.3701",
+     "listed_in_seed": false,
+     "anchors": [
+      "INFORMS CAP-Essentials and CAP-Pro",
+      "SOA SRM and CAS MAS-I",
+      "No licensing exam for OR"
+     ],
+     "courses": [
+      "Calculus I",
+      "Calculus II",
+      "Multivariable Calculus",
+      "Linear Algebra",
+      "Probability",
+      "Programming (Python)",
+      "Linear Programming and the Simplex Method",
+      "Integer and Combinatorial Optimization",
+      "Nonlinear Optimization",
+      "Stochastic Processes and Queueing",
+      "Discrete-Event Simulation",
+      "Statistics and Regression",
+      "Decision Analysis",
+      "Capstone: modeling and analytics project"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "social-sciences",
+   "name": "Social Sciences",
+   "first_course": "Introductory Psychology",
+   "programs": [
+    {
+     "name": "Psychology",
+     "cip": "42.0101",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Introductory Psychology",
+      "CLEP Human Growth and Development",
+      "AP Psychology",
+      "GRE Subject Test",
+      "ETS Major Field Test in Psychology"
+     ],
+     "courses": [
+      "Introductory Psychology",
+      "Statistics for the Behavioral Sciences",
+      "Research Methods in Psychology (with lab)",
+      "Lifespan Development",
+      "Biological Psychology / Behavioral Neuroscience",
+      "Cognitive Psychology",
+      "Learning and Behavior",
+      "Sensation and Perception",
+      "Social Psychology",
+      "Personality",
+      "Abnormal Psychology / Psychopathology",
+      "History and Systems of Psychology",
+      "Elective: Health, I/O, or Developmental Psychopathology",
+      "Capstone: independent research proposal and simulated-data study"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Economics",
+     "cip": "45.0601",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Principles of Microeconomics",
+      "CLEP Principles of Macroeconomics",
+      "AP Microeconomics",
+      "AP Macroeconomics",
+      "ETS Major Field Test in Economics"
+     ],
+     "courses": [
+      "Principles of Microeconomics",
+      "Principles of Macroeconomics",
+      "Calculus for Economists (reuse Math)",
+      "Statistics for Economics",
+      "Intermediate Microeconomic Theory",
+      "Intermediate Macroeconomic Theory",
+      "Econometrics I",
+      "Money and Banking",
+      "International Economics",
+      "Public Finance",
+      "Labor Economics",
+      "Game Theory",
+      "History of Economic Thought",
+      "Senior empirical research paper"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Political Science and Government",
+     "cip": "45.1001",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP American Government",
+      "AP United States Government and Politics",
+      "AP Comparative Government and Politics",
+      "ETS Major Field Test in Political Science",
+      "USCIS civics test as a floor for American government"
+     ],
+     "courses": [
+      "Introduction to American Government",
+      "Introduction to Comparative Politics",
+      "Introduction to International Relations",
+      "Political Theory I: Classical to Early Modern",
+      "Political Theory II: Modern and Contemporary",
+      "Research Methods and Statistics for Political Science",
+      "Constitutional Law and the Courts",
+      "Congress, the Presidency, and the Bureaucracy",
+      "Public Opinion, Parties, and Elections",
+      "Public Policy Analysis",
+      "Political Economy",
+      "Regional Comparative Politics (one region)",
+      "Senior seminar and research paper"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Sociology",
+     "cip": "45.1101",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Introductory Sociology",
+      "ETS Major Field Test in Sociology"
+     ],
+     "courses": [
+      "Introduction to Sociology",
+      "Social Problems",
+      "Statistics for Social Science",
+      "Research Methods (quantitative and qualitative)",
+      "Classical Sociological Theory",
+      "Contemporary Sociological Theory",
+      "Social Stratification and Inequality",
+      "Race and Ethnicity",
+      "Sex and Gender",
+      "Family",
+      "Deviance and Criminology",
+      "Urban Sociology",
+      "Medical Sociology (reuse Pre-Health)",
+      "Capstone: secondary data analysis paper"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Social Work",
+     "cip": "44.0701",
+     "listed_in_seed": true,
+     "anchors": [
+      "CSWE 2022 EPAS",
+      "ASWB Bachelors exam",
+      "NASW Code of Ethics"
+     ],
+     "courses": [
+      "Introduction to Social Work and Social Welfare",
+      "Human Behavior and the Social Environment I (life course)",
+      "Human Behavior and the Social Environment II (groups, organizations, communities)",
+      "Social Welfare Policy and Services",
+      "Diversity, Oppression, and Social Justice",
+      "Social Work Ethics and Values",
+      "Statistics for Social Work",
+      "Social Work Research Methods",
+      "Generalist Practice I: Individuals",
+      "Generalist Practice II: Families and Groups",
+      "Generalist Practice III: Organizations and Communities",
+      "Field Seminar (knowledge only; practicum not provided)"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Anthropology",
+     "cip": "45.0201",
+     "listed_in_seed": true,
+     "anchors": [
+      "DSST General Anthropology",
+      "No CLEP, AP, or ETS Major Field Test found"
+     ],
+     "courses": [
+      "Introduction to Cultural Anthropology",
+      "Introduction to Biological Anthropology",
+      "Introduction to Archaeology",
+      "Linguistic Anthropology",
+      "Human Evolution and Primatology",
+      "Ethnographic Methods",
+      "History of Anthropological Theory",
+      "Kinship, Gender, and Social Organization",
+      "Medical Anthropology",
+      "Economic and Political Anthropology",
+      "Regional Ethnography (one world region)",
+      "Applied Anthropology and Ethics",
+      "Capstone: library ethnography or archaeological data project"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "International Relations and Affairs",
+     "cip": "45.0901",
+     "listed_in_seed": true,
+     "anchors": [
+      "AP Comparative Government and Politics",
+      "ETS Major Field Test in Political Science",
+      "US Foreign Service Officer Test",
+      "No CLEP, licensing exam, or confirmed professional-body curriculum guideline"
+     ],
+     "courses": [
+      "Introduction to International Relations",
+      "International Relations Theory",
+      "Comparative Politics",
+      "International Political Economy (reuse Economics principles)",
+      "International Security",
+      "International Law and Organizations",
+      "Foreign Policy Analysis",
+      "Human Rights and Global Governance",
+      "Global Development",
+      "Research Methods for IR",
+      "Regional Studies (one region)",
+      "Modern Language sequence (reuse Humanities)",
+      "Capstone: crisis simulation and policy paper"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "humanities",
+   "name": "Humanities and Communication",
+   "first_course": "College Composition I, mapped to CLEP College Composition (sittable by any adult) and coded against the CWPA Five Knowledge Domains 4.0, with AP English Language as a secondary anchor",
+   "programs": [
+    {
+     "name": "Communication",
+     "cip": "09.0100",
+     "listed_in_seed": true,
+     "anchors": [
+      "DSST Principles of Public Speaking",
+      "CLEP Humanities",
+      "ACEJMC 10 professional values and competencies",
+      "National Communication Association learning outcomes in communication",
+      "PRSA / Universal Accreditation Board APR, experience-gated, post-degree only"
+     ],
+     "courses": [
+      "Introduction to Human Communication",
+      "Public Speaking",
+      "Writing for Communication",
+      "Interpersonal Communication",
+      "Communication Theory",
+      "Research Methods in Communication (quantitative and qualitative)",
+      "Persuasion and Rhetorical Criticism",
+      "Small Group and Organizational Communication",
+      "Intercultural Communication",
+      "Media and Society / Mass Communication",
+      "Communication Law and Ethics",
+      "Digital and Visual Communication",
+      "Elective track (PR, health communication, or advocacy and debate)",
+      "Capstone: research project or campaign portfolio"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Journalism",
+     "cip": "09.0401",
+     "listed_in_seed": true,
+     "anchors": [
+      "ACEJMC 10 professional values and competencies, mapped by number",
+      "Published clips in real outlets",
+      "No licensing exam exists for journalists"
+     ],
+     "courses": [
+      "Introduction to Journalism and Media",
+      "News Writing and Reporting I",
+      "Our own open style guide and editing (AP Stylebook is proprietary, so it can't be copied)",
+      "Media Law (First Amendment, defamation, privacy, FOIA)",
+      "Journalism Ethics",
+      "News Writing and Reporting II (beats, interviews, public records)",
+      "Statistics for Journalists",
+      "Data Journalism (spreadsheets and data cleaning)",
+      "Visual and Multimedia Storytelling",
+      "Audio and Video Journalism",
+      "Fact-Checking and Verification (OSINT)",
+      "Feature and Long-Form Writing",
+      "Media Innovation and Entrepreneurship",
+      "Capstone: reporting portfolio of published or publish-ready work"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "English Language and Literature",
+     "cip": "23.0101",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP Analyzing and Interpreting Literature, American Literature, English Literature, Colle",
+      "AP English Literature and Composition, AP English Language and Composition",
+      "ETS Major Field Test in Literature in English",
+      "GRE Literature in English",
+      "CWPA First-Year Composition Five Knowledge Domains 4.0, approved 2026-03-04"
+     ],
+     "courses": [
+      "College Composition I",
+      "College Composition II: research writing",
+      "Introduction to Literary Analysis (poetry, prose, drama)",
+      "British Literature I: medieval to 1660",
+      "British Literature II: 1660 to 1900",
+      "American Literature I: to 1865",
+      "American Literature II: 1865 to present",
+      "World and Anglophone Literature",
+      "Shakespeare",
+      "History of the English Language (shared with linguistics)",
+      "Literary Theory and Criticism",
+      "Twentieth and Twenty-First Century Literature",
+      "Major Author or Period Seminar",
+      "Senior Thesis: 25 to 40 page research essay"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Writing and Rhetoric",
+     "cip": "23.1301",
+     "listed_in_seed": false,
+     "anchors": [
+      "CLEP College Composition and College Composition Modular",
+      "AP English Language and Composition",
+      "DSST Technical Writing",
+      "CWPA Five Knowledge Domains 4.0",
+      "Society for Technical Communication CPTC certification"
+     ],
+     "courses": [
+      "College Composition I",
+      "College Composition II",
+      "Rhetorical Theory and Analysis",
+      "Grammar, Style and Editing",
+      "Writing in the Disciplines",
+      "Technical Writing (instructions, specs, documentation)",
+      "Business and Professional Writing",
+      "Writing with Data and Visual Rhetoric",
+      "Digital Writing and Content Strategy",
+      "Creative Writing: Fiction",
+      "Creative Writing: Poetry and Creative Nonfiction",
+      "Editing and Publishing",
+      "Writing and AI: authorship, disclosure, integrity",
+      "Capstone portfolio with reflective essay"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "History",
+     "cip": "54.0101",
+     "listed_in_seed": true,
+     "anchors": [
+      "CLEP History of the United States I and II, Western Civilization I and II, Social Sciences",
+      "AP United States History, AP European History, AP World History",
+      "AHA History Discipline Core",
+      "ETS MFT History"
+     ],
+     "courses": [
+      "US History I: to 1877",
+      "US History II: 1865 to present",
+      "Western Civilization I: to 1648",
+      "Western Civilization II: 1648 to present",
+      "World History I: to 1500",
+      "World History II: 1500 to present",
+      "The Historian's Craft: sources, methods, historiography",
+      "Regional survey: Latin America, Africa, Asia or Middle East (pick two)",
+      "Research Methods and Digital History",
+      "Historiography",
+      "Thematic or period seminar (for example, the Cold War, the Atlantic World)",
+      "Senior Thesis from primary sources"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "World Languages (Spanish first)",
+     "cip": "16.0905",
+     "listed_in_seed": true,
+     "anchors": [
+      "ACTFL OPI, OPIc, Reading",
+      "CLEP Spanish Levels 1 and 2, Spanish with Writing, French, German",
+      "AP Spanish Language and Culture, AP Spanish Literature and Culture, plus AP Chinese, Frenc",
+      "ACTFL Proficiency Guidelines and CEFR levels as the scale every unit maps to",
+      "ATA translation certification for a translation track"
+     ],
+     "courses": [
+      "Elementary I (Novice Low to Mid)",
+      "Elementary II (Novice High)",
+      "Intermediate I (Intermediate Low to Mid)",
+      "Intermediate II (Intermediate Mid to High)",
+      "Conversation and Composition",
+      "Advanced Grammar and Stylistics",
+      "Phonetics and Pronunciation",
+      "Introduction to Literary Analysis in the target language",
+      "Survey of Peninsular Literature",
+      "Survey of Latin American Literature",
+      "Culture and Civilization",
+      "Translation and Interpreting",
+      "Spanish Linguistics (shared with linguistics)",
+      "Capstone: ACTFL OPI or WPT target of Advanced Low, plus portfolio"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Linguistics",
+     "cip": "16.0102",
+     "listed_in_seed": false,
+     "anchors": [
+      "No credit-by-exam or licensing exam found for linguistics",
+      "Linguistic Society of America undergraduate guideline",
+      "North American Computational Linguistics Olympiad",
+      "Leipzig Glossing Rules and the IPA chart as notational standards"
+     ],
+     "courses": [
+      "Introduction to Linguistics",
+      "Phonetics (articulatory and acoustic)",
+      "Phonology",
+      "Morphology",
+      "Syntax I",
+      "Semantics",
+      "Pragmatics",
+      "Historical Linguistics",
+      "Sociolinguistics",
+      "Psycholinguistics (shared with psychology)",
+      "Field Methods (language documentation)",
+      "Computational Linguistics (shared with CS)",
+      "Syntax II or Phonology II",
+      "Capstone: grammar sketch or research paper"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Philosophy and Religious Studies",
+     "cip": "38.0101",
+     "listed_in_seed": true,
+     "anchors": [
+      "DSST Ethics in America, DSST Introduction to World Religions",
+      "CLEP Humanities",
+      "LSAT and GRE General reasoning sections as indirect measures",
+      "No APA undergraduate curriculum standard found",
+      "Formal logic"
+     ],
+     "courses": [
+      "Introduction to Philosophy",
+      "Critical Thinking and Informal Logic",
+      "Formal Logic I (sentential and predicate)",
+      "Ethics (normative theories)",
+      "Ancient Philosophy",
+      "Early Modern Philosophy",
+      "Metaphysics",
+      "Epistemology",
+      "Philosophy of Mind",
+      "Political and Social Philosophy",
+      "Applied Ethics (bioethics shared with medicine, tech ethics shared with CS)",
+      "Philosophy of Science",
+      "Advanced seminar (a figure or a problem)",
+      "Senior Thesis with oral defense"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "education",
+   "name": "Education",
+   "first_course": "Educational Psychology, mapped to CLEP Introduction to Educational Psychology (100 questions, 90 min, scaled 20 to 80) and to the PLT 5621 to 5624 codes",
+   "programs": [
+    {
+     "name": "Elementary Education and Teaching",
+     "cip": "13.1202",
+     "listed_in_seed": true,
+     "anchors": [
+      "Praxis Elementary Education",
+      "Praxis Principles of Learning and Teaching K-6",
+      "Praxis Teaching Reading",
+      "Pearson Foundations of Reading",
+      "Praxis Core Academic Skills for Educators 5752"
+     ],
+     "courses": [
+      "Foundations of American Education (history, law, school finance, ethics)",
+      "Child and Adolescent Development",
+      "Educational Psychology (maps to CLEP Ed Psych and PLT)",
+      "Mathematics for Elementary Teachers I (number, operations)",
+      "Mathematics for Elementary Teachers II (geometry, measurement, data)",
+      "Foundations of Reading: phonological awareness, phonics, fluency, vocabulary, comprehension (5205 or 890)",
+      "Literacy Assessment and Intervention (running records, screening, diagnostic use)",
+      "Teaching Elementary Science (5005)",
+      "Teaching Elementary Social Studies (5004)",
+      "Classroom Management and Learning Environments",
+      "Assessment, Data and Grading",
+      "Inclusive Teaching: Exceptional Learners, IDEA, Section 504, UDL",
+      "Teaching Multilingual Learners",
+      "Instructional Planning and Technology (lesson and unit design)",
+      "Clinical Practice Simulation and Teaching Portfolio (practice only; does not satisfy student teaching)",
+      "Capstone: full-length 5001 and PLT 5622 practice exams"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Special Education and Teaching",
+     "cip": "13.1001",
+     "listed_in_seed": true,
+     "anchors": [
+      "Praxis Special Education",
+      "Praxis 5355 Special Education",
+      "Praxis PLT 5621 to 5624, by grade band",
+      "Praxis Teaching Reading 5205 or Pearson Foundations of Reading 890, required of special ed",
+      "CEC 2020 Initial K-12 Practice-Based Professional Preparation Standards, by code. Confirme"
+     ],
+     "courses": [
+      "Introduction to Exceptional Learners and Disability Categories",
+      "Special Education Law: IDEA, FAPE, LRE, procedural safeguards, Section 504, landmark cases",
+      "Child and Adolescent Development including atypical development",
+      "Assessment in Special Education: norm-referenced tests, curriculum-based measurement, eligibility",
+      "IEP Development and Progress Monitoring",
+      "Evidence-Based Reading Instruction and Intervention for students with disabilities",
+      "Evidence-Based Mathematics Intervention",
+      "Applied Behavior Analysis basics, FBA and Behavior Intervention Plans",
+      "Positive Behavioral Interventions and Supports (PBIS) and Classroom Environments",
+      "Universal Design for Learning, Assistive Technology and AAC",
+      "Collaboration with Families, Paraprofessionals and Related Services; Transition Planning",
+      "Students with Extensive Support Needs (severe and profound)",
+      "Early Childhood Special Education and Early Intervention (Part C)",
+      "Clinical Practice Simulation and Case Portfolio (practice only)",
+      "Capstone: 5354 full-length practice exam"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Early Childhood Education (birth to age 8)",
+     "cip": "13.1210",
+     "listed_in_seed": true,
+     "anchors": [
+      "Praxis Early Childhood Education 5025",
+      "Praxis PLT Early Childhood 5621",
+      "Praxis Teaching Reading 5205 or Pearson Foundations of Reading 890 where the state require",
+      "NAEYC Professional Standards and Competencies for Early Childhood Educators",
+      "CEC/DEC Initial Practice-Based Standards for Early Interventionists and Early Childhood Sp"
+     ],
+     "courses": [
+      "Introduction to Early Childhood Education and the Profession (NAEYC 6)",
+      "Child Growth and Development, Prenatal to Age 8 (NAEYC 1)",
+      "Health, Safety and Nutrition",
+      "Observation, Documentation and Assessment (NAEYC 3)",
+      "Families, Communities and Culture (NAEYC 2)",
+      "Guidance and Social-Emotional Development",
+      "Developmentally Appropriate Curriculum and Play (NAEYC 4)",
+      "Early Language and Literacy",
+      "Early Mathematics and Science",
+      "Creative Arts, Movement and Physical Education",
+      "Infants and Toddlers",
+      "Young Children with Disabilities and Early Intervention (shared with Special Education course 13)",
+      "Clinical Practice Simulation and Observation Portfolio (practice only)",
+      "Capstone: 5025 and 5621 practice exams"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Secondary and Middle Grades Teacher Preparation",
+     "cip": "13.1205",
+     "listed_in_seed": false,
+     "anchors": [
+      "Praxis PLT Grades 5-9",
+      "Praxis subject assessments per field, e.g. mathematics, biology, English, social studies",
+      "Praxis Core 5752 for program entry in some states",
+      "AP and CLEP subject exams as proof of content mastery, owned by other colleges",
+      "InTASC standards by code"
+     ],
+     "courses": [
+      "Foundations of American Education",
+      "Adolescent Development and Educational Psychology",
+      "Content major: 8 to 10 courses taken from the matching College (mathematics, sciences, English, history)",
+      "Content-Specific Methods (e.g. Teaching Secondary Mathematics)",
+      "Disciplinary Literacy and Reading in the Content Areas",
+      "Assessment and Data",
+      "Classroom Management for Adolescents",
+      "Inclusive Secondary Teaching and Multilingual Learners",
+      "Clinical Practice Simulation (practice only)",
+      "Capstone: PLT 5624 plus the subject Praxis practice exam"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Instructional Design and Educational Technology",
+     "cip": "13.0501",
+     "listed_in_seed": false,
+     "anchors": [
+      "ATD Certification Institute",
+      "ISTE Standards for Educators and Coaches, cited by code",
+      "WCAG 2.2",
+      "CAST UDL Guidelines, cited by checkpoint",
+      "Not usable"
+     ],
+     "courses": [
+      "Foundations of Learning and Instructional Design Technology (field, history, roles)",
+      "Learning Theories (behaviorist, cognitive, constructivist, sociocultural)",
+      "Instructional Design Models: ADDIE, SAM, backward design",
+      "Needs, Learner and Task Analysis",
+      "Writing Objectives and Aligning Assessment",
+      "Multimedia Learning Principles and Visual Design",
+      "E-Learning Development and Authoring (HTML, LMS, xAPI/SCORM basics)",
+      "Accessibility and UDL (WCAG 2.2)",
+      "Evaluation: Kirkpatrick levels, formative and summative evaluation, learning analytics",
+      "Adult Learning and Workplace Training (APTD/CPTD alignment)",
+      "Project Management and Stakeholder Consulting",
+      "Designing with AI Tutors and Generative Media (Open Campus itself as the case)",
+      "Capstone: design portfolio with one fully built and evaluated module"
+     ],
+     "tier": "T0"
+    }
+   ]
+  },
+  {
+   "id": "arts-design",
+   "name": "Arts, Design and Architecture",
+   "first_course": "Music Theory I and II with Aural Skills, mapped by unit and skill code to AP Music Theory",
+   "programs": [
+    {
+     "name": "Fine and Studio Arts",
+     "cip": "50.0702",
+     "listed_in_seed": true,
+     "anchors": [
+      "AP Drawing, AP 2-D Art and Design and AP 3-D Art and Design portfolios. Confirmed for 2-D",
+      "AP Art History",
+      "CLEP Humanities",
+      "DSST Art of the Western World",
+      "NASAD Handbook 2026-27"
+     ],
+     "courses": [
+      "Drawing I (observational)",
+      "2-D Design (elements and principles, Gestalt)",
+      "Color Theory",
+      "3-D Design",
+      "Art History Survey I (prehistory to 1400)",
+      "Art History Survey II (1400 to present)",
+      "Drawing II (figure)",
+      "Painting I",
+      "Printmaking or Sculpture I",
+      "Photography or Digital Imaging I",
+      "Modern and Contemporary Art and Theory",
+      "Intermediate Studio (concentration)",
+      "Professional Practice (documentation, artist statement, grants, IP)",
+      "Senior Studio: Sustained Investigation",
+      "Thesis Exhibition and Portfolio Review"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Graphic Design / Visual Communication",
+     "cip": "50.0409",
+     "listed_in_seed": true,
+     "anchors": [
+      "NASAD Handbook 2026-27 graphic design degree standards",
+      "AP 2-D Art and Design portfolio",
+      "Adobe Certified Professional exams",
+      "WCAG 2.x success criteria by code, a published standard that maps directly to machine chec",
+      "CLEP Humanities, arts half"
+     ],
+     "courses": [
+      "2-D Design",
+      "Color Theory",
+      "Drawing for Designers",
+      "Typography I (letterform, hierarchy, grid)",
+      "Digital Tools I (vector, raster, layout)",
+      "History of Graphic Design",
+      "Typography II (editorial, multi-page systems)",
+      "Print Production and Prepress",
+      "Identity and Branding Systems",
+      "Information Design and Data Visualization",
+      "Interaction and Web Design I (HTML/CSS, accessibility)",
+      "Motion Design",
+      "UX Research and Prototyping",
+      "Design Ethics, Law and Professional Practice (IP, contracts, licensing type)",
+      "Senior Portfolio and Thesis Project"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Film, Video and Media Production",
+     "cip": "50.0602",
+     "listed_in_seed": false,
+     "anchors": [
+      "CLEP Humanities",
+      "NASAD film/video standards in the Handbook",
+      "No US licensing or credit-by-exam anchor for production"
+     ],
+     "courses": [
+      "Introduction to Film Studies (form, mise-en-scene, editing, sound)",
+      "Film History I (silent to 1960)",
+      "Film History II (1960 to present, world cinema)",
+      "Visual Storytelling and Storyboarding",
+      "Screenwriting I (short form)",
+      "Cinematography and Lighting I",
+      "Sound for Picture",
+      "Editing I (continuity and montage)",
+      "Directing",
+      "Producing (budget, schedule, releases, rights)",
+      "Documentary Production",
+      "Screenwriting II (feature)",
+      "Color and Post-Production",
+      "Senior Thesis Film and Festival Portfolio"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Music",
+     "cip": "50.0901",
+     "listed_in_seed": true,
+     "anchors": [
+      "AP Music Theory. Confirmed format",
+      "ETS Major Field Test in Music",
+      "CLEP Humanities",
+      "NASM Handbook 2025-26",
+      "ABRSM or Trinity graded exams"
+     ],
+     "courses": [
+      "Music Fundamentals (notation, rhythm, scales, intervals)",
+      "Music Theory I (diatonic harmony, voice leading)",
+      "Aural Skills I (sight-singing, dictation)",
+      "Class Piano / Keyboard Skills I",
+      "Music Theory II (chromatic harmony, modulation)",
+      "Aural Skills II",
+      "Music History I (antiquity to 1750)",
+      "Music History II (1750 to 1900)",
+      "Music Theory III (form and analysis)",
+      "Music History III (1900 to present, jazz, popular, world)",
+      "Counterpoint",
+      "Orchestration and Arranging",
+      "Music Technology (DAW, MIDI, recording)",
+      "Conducting",
+      "Applied Lessons and Juried Recitals (performance track, every term)",
+      "Senior Recital or Composition Portfolio"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Architecture",
+     "cip": "04.0201",
+     "listed_in_seed": false,
+     "anchors": [
+      "NAAB 2020 Conditions for Accreditation, Student Criteria by code",
+      "NCARB ARE 5.0, six divisions",
+      "CLEP Humanities",
+      "2010 ADA Standards for Accessible Design"
+     ],
+     "courses": [
+      "Architectural Drawing and Representation (orthographic, axonometric, perspective)",
+      "Design Studio I (space, form, order)",
+      "History of Architecture I (ancient to 1750)",
+      "Design Studio II (site and program)",
+      "History of Architecture II (1750 to present)",
+      "Statics and Strength of Materials",
+      "Building Materials and Construction Methods",
+      "Structures I (beams, columns, trusses, frames)",
+      "Design Studio III (housing and urban site)",
+      "Environmental Systems (thermal, daylight, energy, HVAC basics)",
+      "Digital Design: CAD and BIM",
+      "Codes, Accessibility and Life Safety",
+      "Design Studio IV: Integrated Building (SC.5, SC.6)",
+      "Professional Practice (contracts, project delivery, ethics; ARE PcM and PjM)",
+      "Urban Design and Landscape",
+      "Thesis or Capstone Studio"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Industrial and Product Design",
+     "cip": "50.0404",
+     "listed_in_seed": false,
+     "anchors": [
+      "NASAD Handbook industrial design standards",
+      "IDSA as the professional body",
+      "CAD vendor certifications such as SOLIDWORKS CSWA and Autodesk Certified",
+      "AP 3-D Art and Design portfolio"
+     ],
+     "courses": [
+      "Drawing and Rendering for Designers",
+      "2-D and 3-D Design",
+      "Model Making and Prototyping",
+      "Design History (industrial)",
+      "Materials and Manufacturing Processes",
+      "Human Factors and Ergonomics",
+      "CAD I (parametric solid modeling)",
+      "Design Research Methods",
+      "Product Design Studio I",
+      "Mechanics for Designers (statics, mechanisms)",
+      "Sustainable Design and Life-Cycle Assessment",
+      "Product Design Studio II (product systems)",
+      "Design for Manufacture and Assembly",
+      "Professional Practice (IP, patents, design rights)",
+      "Senior Capstone and Portfolio"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Interior Design",
+     "cip": "50.0408",
+     "listed_in_seed": false,
+     "anchors": [
+      "NCIDQ exam",
+      "CIDA accreditation standards",
+      "NASAD interior design standards"
+     ],
+     "courses": [
+      "Drawing and Drafting for Interiors",
+      "2-D and 3-D Design",
+      "Color and Light",
+      "History of Interiors and Furniture",
+      "Interior Design Studio I (residential)",
+      "Materials, Finishes and Textiles",
+      "Building Systems and Construction for Interiors",
+      "Codes, Accessibility and Life Safety for Interiors",
+      "CAD and BIM for Interiors",
+      "Lighting Design",
+      "Interior Design Studio II (commercial)",
+      "Construction Documents and Specifications",
+      "Professional Practice and Ethics",
+      "Capstone Studio and Portfolio"
+     ],
+     "tier": "T0"
+    },
+    {
+     "name": "Art History",
+     "cip": "50.0703",
+     "listed_in_seed": false,
+     "anchors": [
+      "AP Art History",
+      "DSST Art of the Western World",
+      "CLEP Humanities",
+      "GRE subject test"
+     ],
+     "courses": [
+      "Art History Survey I",
+      "Art History Survey II",
+      "Methods and Theory of Art History",
+      "Ancient Mediterranean Art",
+      "Medieval Art",
+      "Renaissance and Baroque Art",
+      "Asian Art Survey",
+      "Arts of Africa, Oceania and the Americas",
+      "18th and 19th Century European and American Art",
+      "Modern Art",
+      "Contemporary Art and Global Practice",
+      "Museum Studies and Conservation Basics",
+      "Research Seminar",
+      "Senior Thesis"
+     ],
+     "tier": "T0"
+    }
+   ]
+  }
+ ]
+}

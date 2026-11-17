@@ -39,7 +39,7 @@ flowchart LR
 | `tools/` | The gates: `validate`, `originality`, `coverage`, `clinical:packet` and `clinical:apply` |
 | `tools/test/fixtures/content` | Test fixtures only: one example topic, deck and question set (marked `example: true`) and the MCAT outline by code |
 | `content/` | Does not exist yet. The first course will create it |
-| `site/` | The landing page at campus.seansooch.dev, built from `site/src` and `site/data` by `tools/site/` |
+| `site/` | The case page (`/`) and the catalog (`/catalog/`) at campus.seansooch.dev, built from `site/src` and `site/data` by `tools/site/` |
 
 ## What was removed on import
 
@@ -63,7 +63,9 @@ flowchart LR
   CSS[site/assets/site.css] --> OUT
 ```
 
-Rebuild with `python3 tools/site/make_specs.py && python3 tools/site/build.py`; test with `python3 -m unittest tools/site/test_charts.py`. The build refuses unknown or unused chart ids, leftover tokens, and em or en dashes. Bump the `?v=` on `site.css` and `charts.js` in `page.html` when either changes. When the web app is ready, the landing page moves to its front door.
+The catalog page (`/catalog/`) is built the same way: `tools/site/make_catalog.py <research JSON>` writes `site/data/catalog.json` (public fields only; pre-medicine as a partner link; no MCAT anchors), and `tools/site/build_catalog.py` writes `site/catalog/index.html`; `site/assets/catalog.js` adds search. Test with `python3 -m unittest tools/site/test_catalog.py`.
+
+Rebuild the case page with `python3 tools/site/make_specs.py && python3 tools/site/build.py`; test with `python3 -m unittest tools/site/test_charts.py`. The build refuses unknown or unused chart ids, leftover tokens, and em or en dashes. Bump the `?v=` on `site.css` and `charts.js` in `page.html` when either changes. When the web app is ready, the landing page moves to its front door.
 
 ## Known gap
 
