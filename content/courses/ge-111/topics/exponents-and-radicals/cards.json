@@ -1,0 +1,95 @@
+{
+ "topic_id": "exponents-and-radicals",
+ "cards": [
+  {
+   "id": "product-rule",
+   "front": "What is the product rule for exponents?",
+   "back": "aᵐ · aⁿ = aᵐ⁺ⁿ: with the same base, add the exponents. So 2³ · 2⁴ = 2⁷, not 4⁷."
+  },
+  {
+   "id": "quotient-rule",
+   "front": "What is the quotient rule for exponents?",
+   "back": "aᵐ / aⁿ = aᵐ⁻ⁿ for a ≠ 0: with the same base, subtract the bottom exponent from the top. So x⁹ / x⁴ = x⁵."
+  },
+  {
+   "id": "power-of-power",
+   "front": "Simplify (x³)⁴.",
+   "back": "x¹². A power of a power multiplies the exponents."
+  },
+  {
+   "id": "power-of-product",
+   "front": "Simplify (−2x³)⁴.",
+   "back": "16x¹². The power applies to every factor: (−2)⁴ = 16 and (x³)⁴ = x¹²."
+  },
+  {
+   "id": "zero-exponent",
+   "front": "What is a⁰, and why?",
+   "back": "a⁰ = 1 for a ≠ 0. Dividing a³ by itself gives 1, and the quotient rule gives a³⁻³ = a⁰."
+  },
+  {
+   "id": "negative-exponent",
+   "front": "What does a⁻ⁿ mean?",
+   "back": "a⁻ⁿ = 1/aⁿ for a ≠ 0. It is a reciprocal, not a negative number."
+  },
+  {
+   "id": "two-to-minus-three",
+   "front": "Evaluate 2⁻³.",
+   "back": "1/8. The negative exponent gives a reciprocal: 1/2³ = 1/8, a positive number."
+  },
+  {
+   "id": "move-across-bar",
+   "front": "Simplify x⁻³ / y⁻².",
+   "back": "y²/x³. A factor with a negative exponent moves across the fraction bar and its exponent changes sign."
+  },
+  {
+   "id": "nth-root",
+   "front": "What does ⁿ√a mean, and what is n called?",
+   "back": "A number whose nth power is a; n is the index. For example ∛64 = 4 because 4³ = 64."
+  },
+  {
+   "id": "even-root-negative",
+   "front": "Are √(−9) and ∛(−8) real numbers?",
+   "back": "√(−9) is not real, since no real number squared is negative. ∛(−8) = −2 is real, because odd roots keep the sign."
+  },
+  {
+   "id": "principal-root",
+   "front": "Why is √9 equal to 3 and not −3?",
+   "back": "Both 3 and −3 square to 9, but the radical sign means the nonnegative (principal) root."
+  },
+  {
+   "id": "rational-exponent",
+   "front": "What does a^(m/n) mean?",
+   "back": "a^(m/n) = (ⁿ√a)ᵐ = ⁿ√(aᵐ). The denominator is the index and the numerator is the power."
+  },
+  {
+   "id": "evaluate-rational",
+   "front": "Evaluate 8^(−2/3).",
+   "back": "1/4. Take the reciprocal, then the cube root, then square: 1/(∛8)² = 1/2² = 1/4."
+  },
+  {
+   "id": "split-radical",
+   "front": "How do you simplify √72?",
+   "back": "Pull out the largest perfect square: 72 = 36 · 2, so √72 = √36 · √2 = 6√2."
+  },
+  {
+   "id": "simplest-form",
+   "front": "When is a radical in simplest form?",
+   "back": "No factor under ⁿ√ is a perfect nth power (other than 1), no exponent under it is n or more, and the index is as small as possible."
+  },
+  {
+   "id": "sum-trap",
+   "front": "Does √(a + b) equal √a + √b?",
+   "back": "No. Roots split over products, not sums: √(9 + 16) = 5, but √9 + √16 = 7."
+  },
+  {
+   "id": "combine-roots",
+   "front": "Write √x · ∛x as one power of x.",
+   "back": "x^(5/6). Convert to exponents and add: 1/2 + 1/3 = 5/6, so the result is ⁶√(x⁵)."
+  },
+  {
+   "id": "reduce-index",
+   "front": "Simplify ⁶√(x⁴).",
+   "back": "∛(x²). Write it as x^(4/6), reduce to x^(2/3), and convert back."
+  }
+ ]
+}

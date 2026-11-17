@@ -23,6 +23,7 @@ flowchart LR
     CV[coverage: per-code drafted counts]
     CL[clinical review packets]
     PLAN[course-plan: README.md coverage table]
+    PUB[publish: derived queue, cloud drafting, laptop verification]
   end
   STD[content/standards: outlines by code] --> VA
   COURSE[content/courses/id/course.json: the plan] --> VA
@@ -32,6 +33,10 @@ flowchart LR
   COURSE --> PLAN
   STD --> PLAN
   SC --> VA
+  COURSE --> PUB
+  STD --> PUB
+  PUB -- cloud drafts, laptop verifies --> DRAFT
+  PUB -- push to main, ship --> STAGE
   SC --> WEB[apps/web: Next.js static export, basePath /library]
   STD --> WEB
   COURSE --> WEB
@@ -49,12 +54,50 @@ flowchart LR
 | `packages/core` | FSRS scheduler and progress store (localStorage key `open-campus-progress`) |
 | `packages/ui` | React components: `TopicPage` (takes the plan entry and status), `Deck`, `QuestionPlayer` |
 | `apps/web` | Next.js static export with Pagefind search, served under `/library`. Routes: `/` (courses), `/courses/<id>/` (anchors, plan with per-topic status, coverage by weighted area), `/courses/<id>/<topic>/` (lesson with KaTeX and GFM tables, cards, links to practice), `/courses/<id>/questions/<set>/` (tutor-mode player). Internal links go through `lib/paths.ts` `href()` because plain anchors do not get Next's basePath. Empty dynamic routes render a placeholder that `scripts/prune-placeholders.mjs` deletes |
+| `tools/src/publish/`, `tools/publish/` | The daily publish run (below): `queue.ts` derives the queue and picks drafts to carry, `prompts.ts` holds the drafting rules, the verification checklist and both JSON schemas, `run.ts` has the `queue`, `prepare`, `ingest` and `verify` commands; `ROUTINE.md` is the cloud routine's brief; `daily.sh` verifies, gates, commits, pushes and ships; `log.jsonl` records every attempt |
 | `tools/` | The gates: `validate` (standard and course ids; anchors; from T1 every leaf code covered; every drafted topic, deck, set and exam belongs to its course plan, and every card or question code belongs to its topics), `originality` (standards may name their publisher), `coverage` (per course and code: planned and drafted topics, cards, questions), `clinical:packet` and `clinical:apply` (grouped by course); `course-plan` writes each course's generated `README.md` (`--check` fails when stale) |
 | `tools/test/fixtures/content` | Test fixtures only: an example outline and course `ex-100` with one drafted topic (diagrams in svg, mermaid and SMILES), a deck and a question set, all `example: true` |
 | `content/standards/` | Outside outlines by code. First: CLEP College Algebra (codes CA-1 to CA-4.3 assigned by Open Campus; the publisher numbers nothing) |
 | `content/courses/<id>/` | `course.json` (the plan), its generated `README.md`, `topics/<topic>/` (`topic.mdx`, `cards.json`, `diagrams/`), `questions/<set>.json` and `exams/<id>.json`. First: GE-111 |
 | `site/` | The hand-built pages: the catalog (`/catalog/`) and About (`/about/`), with `assets/`, `data/catalog.json`, `404.html` and `_redirects` (old `/library/` links go to the root). Sources in `site/src` and `site/data`, built by `tools/site/` |
 | `dist/` | What the Worker serves, assembled by `pnpm stage` (`tools/site/stage.sh`): the app's export at the root plus the `site/` pages. Generated and gitignored |
+
+## The publish pipeline
+
+Topics are drafted in the cloud and checked on Sean's laptop before they reach `main`. The two halves meet on one branch, `claude/drafts`, which only the cloud writes and which it rebuilds from `main` on every run, so it never drifts. `main` only ever holds verified topics.
+
+```mermaid
+flowchart LR
+  subgraph cloud[Cloud routine, daily: tools/publish/ROUTINE.md]
+    PR[drafts:prepare: branch from main, carry unverified drafts, write next 12 briefs]
+    DR[the routine's Claude writes each topic to .drafts/out]
+    IN[drafts:ingest: topic files, lint and schema findings]
+    PR --> DR --> IN
+    IN -- findings --> DR
+  end
+  PLANS[course.json plans on main] --> PR
+  LOG[tools/publish/log.jsonl on main] --> PR
+  IN -- force-push --> BR[(claude/drafts)]
+  subgraph laptop[Laptop, daily 05:30: tools/publish/daily.sh]
+    VF[drafts:verify: pull unverified drafts]
+    CX[codex exec gpt-5.6-sol, read-only: checklist]
+    RV[claude -p: revise]
+    VF --> CX
+    CX -- findings --> RV --> CX
+    CX -- pass --> OK[write verification frontmatter]
+    CX -- still failing after 4 rounds --> HELD[log held]
+    OK --> GATE[validate, originality, course-plan, tests]
+    GATE --> PUSH[commit, push to main, pnpm ship]
+  end
+  BR --> VF
+```
+
+- **The queue is derived, never stored.** Every topic a `course.json` lists with no `topic.mdx` yet, in course order (a course after its prerequisite courses; otherwise general education first, then by code) and then the plan's teaching order. Writing a new plan is how work is added. `pnpm drafts:queue` prints it.
+- **Unverified means pending.** A topic file without `verification` frontmatter is a draft waiting for the laptop. `prepare` carries such drafts from the old `claude/drafts` into the rebuilt branch, and stops drafting new ones once 40 are waiting, so a laptop that is off for days does not pile up work. `verify` removes every draft it did not verify before committing, so they wait on the branch.
+- **Held topics.** A topic waits when it needs a unit type the players cannot show yet (anything beyond prose, cards, mcq and math), when its latest log line is `held` (it failed verification four times; delete that line to retry), or when an earlier prerequisite is held.
+- **Two lanes.** Claude drafts (the cloud routine) and revises (`claude -p` on the laptop); Codex checks the written files read-only against a fixed checklist with a JSON schema. Drafting and verifying lanes always differ, as `VerificationSchema` requires. The rules and checklist both lanes see are in `tools/src/publish/prompts.ts`.
+- **Gates before anything reaches main:** the repository validator and originality lint (in `run.ts`), then the course plan READMEs and the test suite (in `daily.sh`). A lane error (sign-in, timeout) stops the run and is logged as `error`; the draft stays on the branch.
+- **Settings.** The cloud count is in `tools/publish/ROUTINE.md` (`--count 12`). The laptop reads `~/.config/open-campus/publish.env`: `OC_VERIFY_COUNT` (drafts checked per run, default 40) and `OC_PAUSED=1`. Its Claude lane signs in with a long-lived token in the login Keychain as `open-campus-claude-token`. Install the laptop job with `tools/publish/install.sh`; it logs to `~/Library/Logs/open-campus-publish.log`.
 
 ## What was removed on import
 

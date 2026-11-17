@@ -17,7 +17,11 @@
     "course-plan": "pnpm --silent --filter @open-campus/tools course-plan",
     "clinical:packet": "pnpm --silent --filter @open-campus/tools clinical:packet",
     "clinical:apply": "pnpm --silent --filter @open-campus/tools clinical:apply",
-    "lint:originality": "pnpm --silent --filter @open-campus/tools lint:originality"
+    "lint:originality": "pnpm --silent --filter @open-campus/tools lint:originality",
+    "drafts:queue": "pnpm --silent --filter @open-campus/tools exec tsx src/publish/run.ts queue",
+    "drafts:prepare": "pnpm --silent --filter @open-campus/tools exec tsx src/publish/run.ts prepare",
+    "drafts:ingest": "pnpm --silent --filter @open-campus/tools exec tsx src/publish/run.ts ingest",
+    "drafts:verify": "pnpm --silent --filter @open-campus/tools exec tsx src/publish/run.ts verify"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

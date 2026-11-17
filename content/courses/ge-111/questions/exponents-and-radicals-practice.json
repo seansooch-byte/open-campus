@@ -1,0 +1,381 @@
+{
+ "id": "exponents-and-radicals-practice",
+ "title": "Exponents and radicals: practice",
+ "topics": [
+  "exponents-and-radicals"
+ ],
+ "questions": [
+  {
+   "id": "same-base-product",
+   "stem": "Which expression equals 2³ · 2⁴?",
+   "choices": [
+    {
+     "key": "A",
+     "text": "2⁷",
+     "explanation": "Same base, so add the exponents: 3 + 4 = 7."
+    },
+    {
+     "key": "B",
+     "text": "4⁷",
+     "explanation": "This adds the exponents correctly but also multiplies the bases. The base stays 2."
+    },
+    {
+     "key": "C",
+     "text": "2¹²",
+     "explanation": "This multiplies the exponents. Multiplying exponents is the power of a power rule, (a³)⁴; for a product you add."
+    },
+    {
+     "key": "D",
+     "text": "4¹²",
+     "explanation": "This multiplies the bases and the exponents, two errors at once."
+    }
+   ],
+   "answer": "A",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 1
+  },
+  {
+   "id": "quotient-simplify",
+   "stem": "Simplify x³ / x⁷ for x ≠ 0, writing the result without negative exponents.",
+   "choices": [
+    {
+     "key": "A",
+     "text": "x⁴",
+     "explanation": "This subtracts 3 from 7 instead of 7 from 3. The quotient rule subtracts the bottom exponent from the top, giving x⁻⁴."
+    },
+    {
+     "key": "B",
+     "text": "x^(3/7)",
+     "explanation": "This divides the exponents. The quotient rule subtracts them."
+    },
+    {
+     "key": "C",
+     "text": "x¹⁰",
+     "explanation": "This adds the exponents, which is the rule for multiplying, not dividing."
+    },
+    {
+     "key": "D",
+     "text": "1/x⁴",
+     "explanation": "x³ / x⁷ = x³⁻⁷ = x⁻⁴ = 1/x⁴. Four factors of x are left in the denominator."
+    }
+   ],
+   "answer": "D",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 1
+  },
+  {
+   "id": "zero-and-negative",
+   "stem": "Evaluate 7⁰ + 7⁻¹.",
+   "choices": [
+    {
+     "key": "A",
+     "text": "1/7",
+     "explanation": "This treats 7⁰ as 0. Any nonzero number to the zero power is 1."
+    },
+    {
+     "key": "B",
+     "text": "8/7",
+     "explanation": "7⁰ = 1 and 7⁻¹ = 1/7, so the sum is 1 + 1/7 = 8/7."
+    },
+    {
+     "key": "C",
+     "text": "−6",
+     "explanation": "This treats 7⁻¹ as −7. A negative exponent gives a reciprocal, 1/7, not a negative number."
+    },
+    {
+     "key": "D",
+     "text": "50/7",
+     "explanation": "This treats 7⁰ as 7, giving 7 + 1/7. But 7⁰ = 1."
+    }
+   ],
+   "answer": "B",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 2
+  },
+  {
+   "id": "negative-exponent-value",
+   "stem": "What is the value of 2⁻³?",
+   "choices": [
+    {
+     "key": "A",
+     "text": "−8",
+     "explanation": "This reads the negative exponent as a negative sign on the answer. A negative exponent means a reciprocal."
+    },
+    {
+     "key": "B",
+     "text": "−6",
+     "explanation": "This multiplies the base by the exponent, 2 · (−3). An exponent counts factors; it does not multiply the base."
+    },
+    {
+     "key": "C",
+     "text": "1/8",
+     "explanation": "2⁻³ = 1/2³ = 1/8."
+    },
+    {
+     "key": "D",
+     "text": "1/6",
+     "explanation": "This takes a reciprocal but computes 2 · 3 instead of 2³ = 8."
+    }
+   ],
+   "answer": "C",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 1
+  },
+  {
+   "id": "evaluate-two-thirds",
+   "stem": "Evaluate 27^(2/3).",
+   "choices": [
+    {
+     "key": "A",
+     "text": "18",
+     "explanation": "This multiplies 27 by 2/3. The exponent says take the cube root and then square."
+    },
+    {
+     "key": "B",
+     "text": "9",
+     "explanation": "The denominator 3 is the index and the numerator 2 is the power: (∛27)² = 3² = 9."
+    },
+    {
+     "key": "C",
+     "text": "729",
+     "explanation": "This squares 27 but never takes the cube root. 27² = 729, and ∛729 = 9."
+    },
+    {
+     "key": "D",
+     "text": "3",
+     "explanation": "This takes the cube root but forgets to square it."
+    }
+   ],
+   "answer": "B",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 2
+  },
+  {
+   "id": "negative-rational-exponent",
+   "stem": "Evaluate 16^(−3/4).",
+   "choices": [
+    {
+     "key": "A",
+     "text": "−8",
+     "explanation": "This finds 16^(3/4) = 8 correctly and then makes it negative. A negative exponent calls for a reciprocal, not a minus sign."
+    },
+    {
+     "key": "B",
+     "text": "−12",
+     "explanation": "This multiplies 16 by −3/4. The exponent names a root and a power; it never multiplies the base."
+    },
+    {
+     "key": "C",
+     "text": "8",
+     "explanation": "This ignores the negative sign in the exponent. 16^(3/4) = 8, so 16^(−3/4) is its reciprocal."
+    },
+    {
+     "key": "D",
+     "text": "1/8",
+     "explanation": "16^(−3/4) = 1/16^(3/4) = 1/(∜16)³ = 1/2³ = 1/8."
+    }
+   ],
+   "answer": "D",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 3
+  },
+  {
+   "id": "power-with-coefficient",
+   "stem": "Simplify (−2x³)⁴.",
+   "choices": [
+    {
+     "key": "A",
+     "text": "16x¹²",
+     "explanation": "The power applies to each factor: (−2)⁴ = 16, positive because the exponent is even, and (x³)⁴ = x¹²."
+    },
+    {
+     "key": "B",
+     "text": "−8x¹²",
+     "explanation": "This multiplies −2 by 4 instead of raising it to the fourth power."
+    },
+    {
+     "key": "C",
+     "text": "16x⁷",
+     "explanation": "This adds the exponents 3 and 4. A power of a power multiplies them."
+    },
+    {
+     "key": "D",
+     "text": "−16x¹²",
+     "explanation": "This keeps the negative sign. The −2 is inside the parentheses, so it is raised to an even power and the result is positive."
+    }
+   ],
+   "answer": "A",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 2
+  },
+  {
+   "id": "simplify-root-72",
+   "stem": "Which is √72 in simplest radical form?",
+   "choices": [
+    {
+     "key": "A",
+     "text": "36√2",
+     "explanation": "This finds the factor 36 but leaves it unrooted. √36 = 6, so 6 is what comes out."
+    },
+    {
+     "key": "B",
+     "text": "2√18",
+     "explanation": "This equals √72, but 18 = 9 · 2 still contains the perfect square 9, so it is not simplest form."
+    },
+    {
+     "key": "C",
+     "text": "6√2",
+     "explanation": "72 = 36 · 2 and 36 is the largest perfect square factor, so √72 = 6√2."
+    },
+    {
+     "key": "D",
+     "text": "6√12",
+     "explanation": "This splits 72 as 6 · 12 and pulls 6 out without taking its root. 6 is not a perfect square."
+    }
+   ],
+   "answer": "C",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 2
+  },
+  {
+   "id": "radical-to-exponent",
+   "stem": "Which expression equals ⁵√(x³) for x > 0?",
+   "choices": [
+    {
+     "key": "A",
+     "text": "x^(5/3)",
+     "explanation": "This puts the index in the numerator. The index goes in the denominator."
+    },
+    {
+     "key": "B",
+     "text": "x^(3/5)",
+     "explanation": "The power 3 becomes the numerator and the index 5 becomes the denominator."
+    },
+    {
+     "key": "C",
+     "text": "x¹⁵",
+     "explanation": "This multiplies the power by the index. A root divides the exponent by the index."
+    },
+    {
+     "key": "D",
+     "text": "x⁻²",
+     "explanation": "This subtracts the index from the power. Roots are written as fractional exponents, not by subtracting."
+    }
+   ],
+   "answer": "B",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 1
+  },
+  {
+   "id": "combine-different-roots",
+   "stem": "For x > 0, which expression equals √x · ∛x?",
+   "choices": [
+    {
+     "key": "A",
+     "text": "x^(1/6)",
+     "explanation": "This multiplies the exponents 1/2 and 1/3. When multiplying powers of the same base, add the exponents."
+    },
+    {
+     "key": "B",
+     "text": "x^(2/5)",
+     "explanation": "This adds numerators and denominators separately, (1 + 1)/(2 + 3). Fractions add with a common denominator: 3/6 + 2/6."
+    },
+    {
+     "key": "C",
+     "text": "⁵√x",
+     "explanation": "This adds the indexes 2 and 3. Convert to exponents first and add those instead."
+    },
+    {
+     "key": "D",
+     "text": "x^(5/6)",
+     "explanation": "√x · ∛x = x^(1/2) · x^(1/3) = x^(1/2 + 1/3) = x^(5/6)."
+    }
+   ],
+   "answer": "D",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 3
+  },
+  {
+   "id": "multi-rule-simplify",
+   "stem": "Simplify (2a³b⁻¹)² / (8a⁻¹b²), writing the result without negative exponents.",
+   "choices": [
+    {
+     "key": "A",
+     "text": "a⁷ / (2b⁴)",
+     "explanation": "The numerator is 4a⁶b⁻². Dividing gives (4/8)a⁶⁻⁽⁻¹⁾b⁻²⁻² = (1/2)a⁷b⁻⁴ = a⁷/(2b⁴)."
+    },
+    {
+     "key": "B",
+     "text": "a⁵ / (2b⁴)",
+     "explanation": "This computes a⁶ / a⁻¹ as a⁵. Subtracting −1 means adding 1, so the exponent is 7."
+    },
+    {
+     "key": "C",
+     "text": "a⁷ / (2b)",
+     "explanation": "This adds exponents in (b⁻¹)², getting b¹ instead of b⁻². A power of a power multiplies the exponents."
+    },
+    {
+     "key": "D",
+     "text": "a⁷ / (4b⁴)",
+     "explanation": "This forgets to square the coefficient 2. The power applies to every factor, so 2² = 4 and 4/8 = 1/2."
+    }
+   ],
+   "answer": "A",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 3
+  },
+  {
+   "id": "which-not-real",
+   "stem": "Which of these is not a real number?",
+   "choices": [
+    {
+     "key": "A",
+     "text": "(−8)^(1/3)",
+     "explanation": "This is ∛(−8) = −2. Odd roots of negative numbers are real."
+    },
+    {
+     "key": "B",
+     "text": "−16^(1/4)",
+     "explanation": "The exponent binds before the minus sign, so this is −(∜16) = −2, which is real."
+    },
+    {
+     "key": "C",
+     "text": "(−16)^(1/4)",
+     "explanation": "This is the fourth root of a negative number. No real number to an even power is negative, so it is not real."
+    },
+    {
+     "key": "D",
+     "text": "(−32)^(3/5)",
+     "explanation": "The index 5 is odd: (⁵√(−32))³ = (−2)³ = −8, which is real."
+    }
+   ],
+   "answer": "C",
+   "codes": [
+    "CA-1.1"
+   ],
+   "difficulty": 3
+  }
+ ]
+}

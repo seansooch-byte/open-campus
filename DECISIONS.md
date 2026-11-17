@@ -63,3 +63,23 @@ Append-only. A later entry supersedes an earlier one; earlier entries are never 
 - **Removed:** the nine charts, their generator (`charts.py`, `make_specs.py`, `charts.json`, `charts.js`) and the four chart-only research files (`prices`, `debt`, `outcomes`, `alternatives`). They remain in git history at commit 4145e73 if a figure is wanted again.
 - **Deploy shape:** `dist/` is assembled from the app export plus the hand-built `site/` pages, instead of copying the app into `site/library/`, so no generated file lives inside a source directory.
 - **Dark mode:** the library app now follows `prefers-color-scheme` with the same tokens as `site.css`, including Pagefind's search box.
+
+## 2026-11-17: topics are published a few a day by a scheduled run
+
+- **What:** a launchd job drafts, verifies and ships the next topics every morning (default 4), across the whole catalog in plan order, for as long as plans exist. Sean writes the course plans; the run turns them into lessons, cards and practice questions.
+- **Derived queue:** the queue is every planned topic without a draft, computed from the `course.json` files on each run. Alternative considered: a queue file listing topics, rejected because it would duplicate the plans and drift from them. Failures are recorded in an append-only log, and a topic whose latest entry is `held` is skipped until that line is removed.
+- **Cross-lane verification:** Claude drafts and Codex `gpt-5.6-sol` verifies against a fixed checklist, the recipe used for the first topic, looping up to four rounds. A topic that still fails is removed and held, never published. Mechanical checks (dashes, LaTeX in cards, codes outside the topic, answer balance, schema) run before Codex so it never spends a round on them.
+- **No API spend:** both lanes run on subscriptions through their CLIs (`claude -p`, `codex exec`), per the project's budget rule.
+- **Only what the players can show:** topics that need unit types beyond prose, cards, multiple choice and math wait until those engines exist, instead of being drafted as prose stand-ins.
+- **Isolation:** the run works in its own worktree and branch and pushes to `main` after rebasing, so it never commits anyone's work in progress, and an interactive checkout is never reset under someone.
+- **Coverage tool restored:** `.gitignore` ignored every `coverage/` directory, which kept `tools/src/coverage/` out of the repository; it now ignores only the root `/coverage/`, and the tool is committed.
+
+## 2026-11-17: drafting moves to the cloud; the laptop only verifies and ships
+
+- **Supersedes** the laptop-only run in the entry above. That design took about ten minutes of laptop time per topic, and the catalog is about 880 courses (roughly 16,000 topics), so it could never finish, and each run depended on the laptop being awake, signed in and not out of disk.
+- **What:** a scheduled Claude Code cloud routine drafts the next topics daily (12 per run to start) and force-pushes them to `claude/drafts`; the laptop job pulls the unverified drafts, checks each with Codex, revises with Claude when Codex finds problems, and publishes only verified topics to `main`.
+- **Why a hybrid:** cloud routines draw on the Claude subscription, not API credits, which keeps the no-API-budget rule. The Codex lane signs in with a ChatGPT login, which should not be copied into a cloud environment, and running Codex there on an API key would spend API credits; checking takes about a minute per topic, so it stays local.
+- **Alternatives:** all in the cloud with a second Claude model as the verifier (rejected for now: the verifying lane would no longer be a different vendor, and `VerificationSchema` requires different lanes); all local (the design above).
+- **Branch:** `claude/drafts`, because cloud sessions may push to `claude/` branches without extra permissions. It is rebuilt from `main` on every run, carrying only unverified drafts, so it never conflicts and never needs merging.
+- **Folder hand-off:** the routine writes each topic as `body.mdx`, `cards.json` and `questions.json` rather than one JSON document, because escaping every KaTeX backslash inside a JSON string is an easy way to corrupt a lesson.
+

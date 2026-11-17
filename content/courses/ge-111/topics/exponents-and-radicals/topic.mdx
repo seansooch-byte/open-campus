@@ -1,0 +1,172 @@
+---
+id: exponents-and-radicals
+version: 1
+updated: '2026-11-17'
+verification:
+  drafted_by: "claude"
+  verified_by: "codex"
+  model: "gpt-5.6-sol"
+  date: "2026-11-17"
+  result: "pass"
+  notes: "Drafted by claude-opus-5-5 in the daily publish run. round 1: 0 findings."
+---
+Exponents are shorthand for repeated multiplication, and radicals undo them. Almost every later topic in algebra, from polynomials to exponential functions, assumes you can move between these forms quickly and without slips. This topic sets out the rules for integer exponents, extends exponents to fractions, and shows how to write a root in its simplest form.
+
+## What an exponent means
+
+For a positive integer $n$, the power $a^n$ means $n$ factors of $a$ multiplied together:
+
+$$
+a^n = \underbrace{a \cdot a \cdots a}_{n \text{ factors}}
+$$
+
+The number $a$ is the **base** and $n$ is the **exponent**. So $2^5 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 32$.
+
+Recall from the previous topic that an exponent binds before a leading minus sign: $-2^4 = -(2^4) = -16$, while $(-2)^4 = 16$. The exponent applies only to what sits directly beneath it.
+
+## The rules for integer exponents
+
+Every rule below comes from counting factors. For example, $a^3 \cdot a^4$ is three factors of $a$ followed by four more, which is seven factors, so $a^3 a^4 = a^7$. Assume any base that ends up in a denominator is not zero.
+
+| Rule | Statement | Example |
+|---|---|---|
+| Product | $a^m \cdot a^n = a^{m+n}$ | $x^2 \cdot x^5 = x^7$ |
+| Quotient | $\dfrac{a^m}{a^n} = a^{m-n}$ | $\dfrac{x^9}{x^4} = x^5$ |
+| Power of a power | $(a^m)^n = a^{mn}$ | $(x^3)^4 = x^{12}$ |
+| Power of a product | $(ab)^n = a^n b^n$ | $(3x)^2 = 9x^2$ |
+| Power of a quotient | $\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$ | $\left(\dfrac{x}{2}\right)^3 = \dfrac{x^3}{8}$ |
+
+The product and quotient rules need the **same base**. You cannot combine $x^2 \cdot y^3$ into a single power. Also note what the product rule does not say: $2^3 \cdot 2^4 = 2^7$, not $4^7$. The base stays the same; only the exponents add.
+
+### Zero and negative exponents
+
+The quotient rule forces two definitions. Dividing $a^3$ by itself gives $1$, and the rule gives $a^{3-3} = a^0$, so
+
+$$
+a^0 = 1 \quad (a \neq 0).
+$$
+
+Dividing $a^2$ by $a^5$ leaves three factors of $a$ in the denominator, $\frac{1}{a^3}$, and the rule gives $a^{2-5} = a^{-3}$. So
+
+$$
+a^{-n} = \frac{1}{a^n} \quad (a \neq 0).
+$$
+
+A negative exponent means a reciprocal, not a negative number: $2^{-3} = \frac{1}{8}$, which is positive. The same idea runs in reverse, $\frac{1}{a^{-n}} = a^n$, so a factor with a negative exponent can move across the fraction bar by changing the sign of its exponent:
+
+$$
+\frac{x^{-3}}{y^{-2}} = \frac{y^2}{x^3}.
+$$
+
+The expression $0^0$ is left undefined in this course, and $0$ to a negative power is undefined because it would mean dividing by zero.
+
+With these definitions, all five rules hold for every integer exponent: positive, zero or negative. "Simplified" usually means each base appears once and no exponent is negative or zero.
+
+**Worked example.** Simplify $\dfrac{(2x^3y^{-2})^3}{4x^5y}$.
+
+Raise each factor in the numerator to the third power, using the power of a product and power of a power rules:
+
+$$
+(2x^3y^{-2})^3 = 2^3 \, x^{9} \, y^{-6} = 8x^9y^{-6}.
+$$
+
+Now divide coefficient by coefficient and each base by itself, subtracting exponents:
+
+$$
+\frac{8x^9y^{-6}}{4x^5y^1} = 2\,x^{9-5}\,y^{-6-1} = 2x^4y^{-7} = \frac{2x^4}{y^7}.
+$$
+
+Notice that the $2$ in front stays in the numerator; only $y^{-7}$ moves.
+
+## Roots and radicals
+
+The **$n$th root** of $a$, written $\sqrt[n]{a}$, is a number whose $n$th power is $a$. The small number $n$ is the **index**; for a square root it is $2$ and is not written. So $\sqrt[3]{64} = 4$ because $4^3 = 64$, and $\sqrt[4]{81} = 3$ because $3^4 = 81$.
+
+- **Even index.** When $a > 0$ there are two real numbers with the right power ($3^2 = (-3)^2 = 9$). The radical means the nonnegative one, the **principal root**, so $\sqrt{9} = 3$. A negative number has no real even root: $\sqrt{-9}$ and $\sqrt[4]{-16}$ are not real numbers.
+- **Odd index.** Every real number has exactly one real odd root, and it has the same sign as $a$: $\sqrt[3]{-8} = -2$.
+
+For the rest of this topic, assume variables under a radical stand for positive numbers. That keeps every root real and every rule valid.
+
+## Rational exponents
+
+A fractional exponent is defined so that the power of a power rule keeps working. If $\left(a^{1/n}\right)^n$ is to equal $a^{1} = a$, then $a^{1/n}$ must be the $n$th root of $a$:
+
+$$
+a^{1/n} = \sqrt[n]{a}, \qquad a^{m/n} = \left(\sqrt[n]{a}\right)^m = \sqrt[n]{a^m}.
+$$
+
+In $a^{m/n}$ the **denominator is the index** and the **numerator is the power**. A negative rational exponent still means a reciprocal. When $a$ is negative, $a^{m/n}$ is real only if the fraction, in lowest terms, has an odd denominator.
+
+All five exponent rules hold for rational exponents when the base is positive.
+
+**Worked example.** Evaluate $32^{3/5}$ and $8^{-2/3}$.
+
+Take the root first; the numbers stay small:
+
+$$
+32^{3/5} = \left(\sqrt[5]{32}\right)^3 = 2^3 = 8.
+$$
+
+For the negative exponent, take the reciprocal, then proceed the same way:
+
+$$
+8^{-2/3} = \frac{1}{8^{2/3}} = \frac{1}{\left(\sqrt[3]{8}\right)^2} = \frac{1}{2^2} = \frac{1}{4}.
+$$
+
+A common slip is to multiply the base by the exponent, as in $8 \cdot \left(-\frac{2}{3}\right)$. The exponent says which root and which power to take; it never multiplies the base.
+
+## Simplifying radicals
+
+Because $\sqrt[n]{ab} = \sqrt[n]{a}\,\sqrt[n]{b}$ for nonnegative $a$ and $b$ (it is the power of a product rule with exponent $\frac{1}{n}$), you can split off any factor that is a perfect $n$th power and take its root. A radical is in **simplest form** when no factor under $\sqrt[n]{\ }$ is a perfect $n$th power other than $1$, no exponent under it is $n$ or larger, and the index is as small as possible.
+
+**Worked example.** Simplify $\sqrt{50x^3y^4}$ and $\sqrt[3]{54a^5}$.
+
+For the square root, pull out the largest perfect square from each factor: $50 = 25 \cdot 2$, $x^3 = x^2 \cdot x$, and $y^4 = (y^2)^2$.
+
+$$
+\sqrt{50x^3y^4} = \sqrt{25x^2y^4}\,\sqrt{2x} = 5xy^2\sqrt{2x}.
+$$
+
+For the cube root, look for perfect cubes: $54 = 27 \cdot 2$ and $a^5 = a^3 \cdot a^2$.
+
+$$
+\sqrt[3]{54a^5} = \sqrt[3]{27a^3}\,\sqrt[3]{2a^2} = 3a\sqrt[3]{2a^2}.
+$$
+
+The rule splits products, not sums. $\sqrt{9 + 16} = \sqrt{25} = 5$, but $\sqrt{9} + \sqrt{16} = 7$. Never write $\sqrt{a + b} = \sqrt{a} + \sqrt{b}$.
+
+### Using exponents to combine and reduce roots
+
+Rewriting radicals as rational exponents turns root problems into exponent problems.
+
+**Worked example.** Write $\sqrt{x}\,\sqrt[3]{x}$ as a single radical, and simplify $\sqrt[6]{x^4}$.
+
+The roots have different indexes, so convert to exponents and use the product rule:
+
+$$
+\sqrt{x}\,\sqrt[3]{x} = x^{1/2}\,x^{1/3} = x^{1/2 + 1/3} = x^{5/6} = \sqrt[6]{x^5}.
+$$
+
+For the second, reduce the fraction in the exponent:
+
+$$
+\sqrt[6]{x^4} = x^{4/6} = x^{2/3} = \sqrt[3]{x^2}.
+$$
+
+The index dropped from $6$ to $3$, so the second form is simpler.
+
+| Radical form | Exponent form |
+|---|---|
+| $\sqrt{x}$ | $x^{1/2}$ |
+| $\sqrt[3]{x^2}$ | $x^{2/3}$ |
+| $\dfrac{1}{\sqrt[4]{x}}$ | $x^{-1/4}$ |
+| $\left(\sqrt[5]{x}\right)^3$ | $x^{3/5}$ |
+
+## Summary
+
+- Same base: multiply by adding exponents, divide by subtracting them. A power of a power multiplies exponents.
+- A power of a product or quotient applies to every factor: $(ab)^n = a^nb^n$.
+- $a^0 = 1$ and $a^{-n} = \frac{1}{a^n}$ for $a \neq 0$. A negative exponent means a reciprocal, not a negative number.
+- $a^{m/n} = \left(\sqrt[n]{a}\right)^m$: the denominator is the index, the numerator is the power. Take the root first.
+- Even roots of negative numbers are not real; odd roots keep the sign.
+- Simplify a radical by pulling out perfect $n$th powers. Roots split over products, never over sums.
