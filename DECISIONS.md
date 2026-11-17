@@ -55,3 +55,11 @@ Append-only. A later entry supersedes an earlier one; earlier entries are never 
 - **What:** the Next.js app is built with `basePath: '/library'` and staged into `site/library/` (generated, gitignored) so the one Worker serves the landing page, the catalog and the library. `pnpm ship` builds, stages and deploys. The landing page and catalog link to it.
 - **Alternatives:** the app at `/` with the landing page moved (Sean chose `/library/` so nothing public moves); a second Worker on another hostname.
 - **Base path detail:** plain anchors do not get Next's basePath, so internal links go through `href()`; Pagefind gets `baseUrl` so result links carry the prefix.
+
+## 2026-11-17: the library is the front door; the case became a short About page
+
+- **What:** Sean found the long case page obscured the catalog and the library. The library app now serves `/`, the catalog stays at `/catalog/`, and the argument is compressed into `/about/`: the three sourced headline numbers, what Open Campus is, how a course is built, the six tiers and what it is not. Every page carries one header: Library, Catalog, About. Old `/library/` links redirect to the root (`site/_redirects`).
+- **Supersedes:** the earlier entry placing the app at `/library/` beside the landing page.
+- **Removed:** the nine charts, their generator (`charts.py`, `make_specs.py`, `charts.json`, `charts.js`) and the four chart-only research files (`prices`, `debt`, `outcomes`, `alternatives`). They remain in git history at commit 4145e73 if a figure is wanted again.
+- **Deploy shape:** `dist/` is assembled from the app export plus the hand-built `site/` pages, instead of copying the app into `site/library/`, so no generated file lives inside a source directory.
+- **Dark mode:** the library app now follows `prefers-color-scheme` with the same tokens as `site.css`, including Pagefind's search box.

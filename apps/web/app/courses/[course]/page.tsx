@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { loadCourses } from '../../../lib/content';
 import { courseView } from '../../../lib/courses';
-import { href } from '../../../lib/paths';
 
 type Params = { course: string };
 
@@ -50,7 +49,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         <ol className="topics">
           {v.topics.map((t) => (
             <li key={t.id} id={t.id}>
-              <div className="topic-line"><span className="num">{String(t.number).padStart(2, '0')}</span><span className="topic-title">{t.drafted ? <a href={href(`/courses/${course.id}/${t.id}/`)}>{t.title}</a> : t.title}<span className={t.drafted ? 'status drafted' : 'status'}>{t.status}</span></span><span className="codes">{t.codes.join(' ')}</span></div>
+              <div className="topic-line"><span className="num">{String(t.number).padStart(2, '0')}</span><span className="topic-title">{t.drafted ? <a href={`/courses/${course.id}/${t.id}/`}>{t.title}</a> : t.title}<span className={t.drafted ? 'status drafted' : 'status'}>{t.status}</span></span><span className="codes">{t.codes.join(' ')}</span></div>
               {t.objectives.length > 0 && <ul className="objectives">{t.objectives.map((o) => <li key={o}>{o}</li>)}</ul>}
               {t.prerequisites.length > 0 && <p className="prereq">After: {t.prerequisites.join(', ')}</p>}
             </li>

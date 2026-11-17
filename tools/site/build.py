@@ -1,42 +1,35 @@
-"""Build site/index.html from site/src/page.html and site/src/charts.json.
+"""Build site/about/index.html from site/src/about.html.
 
-The page source holds the argument; each {{chart:<id>}} token is replaced with the figure
-drawn by charts.py from the spec of that id. The build refuses: an unknown or unused chart id,
-an em or en dash anywhere in the output, and a {{ token left unreplaced.
+The About page is hand-written HTML. The build only checks it: every citation (href="#rN") must
+name a source (id="rN") and every source must be cited, and there must be no em or en dash and
+no leftover {{ token. The page is written only when every check passes.
 
 Run from the repo root:  python3 tools/site/build.py
 """
-import json
 import re
-import sys
 from pathlib import Path
-
-sys.path.append(str(Path(__file__).parent))
-import charts  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "site" / "src"
 
 
-def build() -> str:
-    page = (SRC / "page.html").read_text()
-    specs = {s["id"]: s for s in json.loads((SRC / "charts.json").read_text())["charts"]}
-    used = set(re.findall(r"\{\{chart:([a-z0-9-]+)\}\}", page))
-    missing = used - specs.keys()
-    unused = specs.keys() - used
-    if missing:
-        raise SystemExit(f"page asks for unknown charts: {sorted(missing)}")
-    if unused:
-        raise SystemExit(f"charts defined but not placed: {sorted(unused)}")
-    out = re.sub(r"\{\{chart:([a-z0-9-]+)\}\}", lambda m: charts.render(specs[m.group(1)]), page)
-    if "{{" in out:
+def check(page: str) -> str:
+    cited = set(re.findall(r'href="#(r\d+)"', page))
+    sources = set(re.findall(r'id="(r\d+)"', page))
+    if cited - sources:
+        raise SystemExit(f"citations with no source: {sorted(cited - sources)}")
+    if sources - cited:
+        raise SystemExit(f"sources nobody cites: {sorted(sources - cited)}")
+    if "{{" in page:
         raise SystemExit("an unreplaced {{ token is left in the page")
-    if "—" in out or "–" in out:
+    if "—" in page or "–" in page:
         raise SystemExit("the page contains an em or en dash")
-    return out
+    return page
 
 
 if __name__ == "__main__":
-    html = build()
-    (ROOT / "site" / "index.html").write_text(html)
-    print(f"built site/index.html ({len(html):,} bytes)")
+    html = check((SRC / "about.html").read_text())
+    out = ROOT / "site" / "about" / "index.html"
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(html)
+    print(f"built site/about/index.html ({len(html):,} bytes)")

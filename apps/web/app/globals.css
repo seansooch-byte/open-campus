@@ -9,13 +9,25 @@
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper:#121513; --sheet:#181C1A; --ink:#ECE9E2; --soft:#B4B8B2; --mute:#8D928C; --rule:#2A302D; --brand:#8CC7B2; --brand-wash:#1B2925; color-scheme: dark; }
 }
 body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.55; }
 a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
 main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
-.masthead { display: flex; gap: 1.5rem; align-items: baseline; padding: .9rem 1.25rem; border-bottom: 1px solid var(--rule); font-size: .9rem; }
-.masthead a { text-decoration: none; color: var(--soft); }
-.masthead .mark { font-family: var(--mono); font-weight: 600; color: var(--brand); letter-spacing: .02em; }
+/* The bar matches site/assets/site.css so the library, catalog and About pages share one header. */
+.bar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+.bar .in { max-width: 1180px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.bar .mark { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 600 15px/1 var(--sans); letter-spacing: -.01em; }
+.bar .mark i { display: grid; place-items: center; width: 28px; height: 28px; background: var(--brand); color: var(--paper); font: 600 12px/1 var(--mono); font-style: normal; }
+.bar nav { display: flex; gap: 22px; }
+.bar nav a { font: 500 13px/1 var(--sans); color: var(--soft); text-decoration: none; }
+.bar nav a:hover { color: var(--ink); }
+
+/* Pagefind's search box takes the page's colours, so it follows dark mode. */
+html .pagefind-ui { --pagefind-ui-primary: var(--brand); --pagefind-ui-text: var(--ink); --pagefind-ui-background: var(--sheet); --pagefind-ui-border: var(--rule); --pagefind-ui-tag: var(--brand-wash); --pagefind-ui-font: var(--sans); }
 
 h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.2rem, 6vw, 3.1rem); line-height: 1.05; letter-spacing: -.01em; }
 h2 { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; margin: 3rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
@@ -83,5 +95,5 @@ th:nth-child(1) { width: 5.5rem; } th:nth-child(2) { width: 45%; }
 .practice .kicker { margin-bottom: 1rem; }
 .practice legend { font-family: var(--serif); font-size: 1.15rem; }
 .practice fieldset { padding: 1.25rem 0; border-top: 1px solid var(--rule); }
-.practice button { background: var(--brand); color: var(--paper); font-family: var(--mono); font-size: .8rem; letter-spacing: .02em; }
+.practice button { background: var(--brand); color: var(--paper); border: 0; font-family: var(--mono); font-size: .8rem; letter-spacing: .02em; }
 @media (max-width: 560px) { .prose table { font-size: .85rem; } .prose td, .prose th { padding: .4rem .45rem; } }

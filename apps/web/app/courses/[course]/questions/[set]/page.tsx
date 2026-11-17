@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import { QuestionPlayer } from '@open-campus/ui';
 import { loadCourses } from '../../../../../lib/content';
 import { PLACEHOLDER, staticParamsOrPlaceholder } from '../../../../../lib/courses';
-import { href } from '../../../../../lib/paths';
 
 type Params = { course: string; set: string };
 
@@ -21,7 +20,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     <div data-pagefind-body className="practice">
       <p className="kicker">{entry.course.code} {entry.course.title} · Practice</p>
       <QuestionPlayer set={set.set} />
-      <p className="note">{topic && <a href={href(`/courses/${entry.course.id}/${topic.id}/`)}>Back to {topic.title}</a>}</p>
+      <p className="note">{topic && <a href={`/courses/${entry.course.id}/${topic.id}/`}>Back to {topic.title}</a>}</p>
     </div>
   );
 }

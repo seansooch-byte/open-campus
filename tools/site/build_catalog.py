@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-CSS_V = "5"
+CSS_V = "6"
 JS_V = "1"
 
 
@@ -104,10 +104,9 @@ def build() -> str:
 <header class="bar"><div class="in">
   <a class="mark" href="/"><i>OC</i>Open Campus</a>
   <nav aria-label="Site">
-    <a href="/">The case</a>
+    <a href="/" class="keep">Library</a>
     <a href="/catalog/" class="keep" aria-current="page">Catalog</a>
-    <a href="/library/" class="keep">Library</a>
-    <a href="https://github.com/seansooch-byte/open-campus">Source</a>
+    <a href="/about/" class="keep">About</a>
   </nav>
 </div></header>
 

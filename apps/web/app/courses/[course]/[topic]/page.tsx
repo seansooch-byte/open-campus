@@ -3,7 +3,6 @@ import { renderSmilesToSvg } from '@open-campus/tools/diagrams';
 import { Deck, TopicPage, type TopicDiagram } from '@open-campus/ui';
 import { loadCourses, loadDiagramFile } from '../../../../lib/content';
 import { PLACEHOLDER, staticParamsOrPlaceholder, topicStatus } from '../../../../lib/courses';
-import { href } from '../../../../lib/paths';
 import { Mdx } from '../../../../lib/mdx';
 
 type Params = { course: string; topic: string };
@@ -59,10 +58,10 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             {sets.length > 0 && (
               <section>
                 <h2>Practice</h2>
-                <ul className="plain">{sets.map((s) => <li key={s.slug}><a href={href(`/courses/${entry.course.id}/questions/${s.slug}/`)}>{s.set.title}</a> <span className="note">{s.set.questions.length} questions</span></li>)}</ul>
+                <ul className="plain">{sets.map((s) => <li key={s.slug}><a href={`/courses/${entry.course.id}/questions/${s.slug}/`}>{s.set.title}</a> <span className="note">{s.set.questions.length} questions</span></li>)}</ul>
               </section>
             )}
-            <p className="note"><a href={href(`/courses/${entry.course.id}/`)}>Back to {entry.course.code} {entry.course.title}</a>{next && <> · Next: <a href={href(`/courses/${entry.course.id}/${next.id}/`)}>{next.title}</a></>}</p>
+            <p className="note"><a href={`/courses/${entry.course.id}/`}>Back to {entry.course.code} {entry.course.title}</a>{next && <> · Next: <a href={`/courses/${entry.course.id}/${next.id}/`}>{next.title}</a></>}</p>
           </nav>
         }
       >

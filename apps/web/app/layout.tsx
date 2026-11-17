@@ -1,8 +1,10 @@
 import type { ReactNode } from 'react';
 import './globals.css';
-import { href } from '../lib/paths';
 
-export const metadata = { title: 'Open Campus library' };
+export const metadata = {
+  title: 'Open Campus: a free, open library of university courses',
+  description: 'Free university courses written as open data, each planned against an outside exam by code and checked item by item.',
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -13,11 +15,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <nav className="masthead">
-          <a href="/" className="mark">Open Campus</a>
-          <a href={href('/')}>Library</a>
-          <a href="/catalog/">Catalog</a>
-        </nav>
+        <header className="bar">
+          <div className="in">
+            <a href="/" className="mark"><i>OC</i>Open Campus</a>
+            <nav aria-label="Site">
+              <a href="/">Library</a>
+              <a href="/catalog/">Catalog</a>
+              <a href="/about/">About</a>
+            </nav>
+          </div>
+        </header>
         <main>{children}</main>
       </body>
     </html>

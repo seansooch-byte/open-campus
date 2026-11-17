@@ -1,0 +1,3 @@
+# The library moved from /library/ to the site root on 2026-11-17; the long case page became /about/.
+/library / 301
+/library/* /:splat 301
